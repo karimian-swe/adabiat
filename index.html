@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جزوهٔ درس سوم فارسی یازدهم: آغازگری تنها</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lajvard:#1b3a72;
+    --lajvard-dark:#10254d;
+    --firooze:#1f8a8a;
+    --tala:#b8862b;
+    --tala-light:#e9d3a0;
+    --kerem:#fbf7ee;
+    --kaghaz:#fffdf8;
+    --matn:#222;
+    --qermez:#a32a2a;
+    --sabz:#2d6a4f;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn","Vazir",Tahoma,sans-serif;
+    background:var(--kerem);
+    color:var(--matn);
+    line-height:2;
+    font-size:15px;
+  }
+  .page{
+    max-width:900px;
+    margin:24px auto;
+    background:var(--kaghaz);
+    padding:36px 40px;
+    border:2px solid var(--tala);
+    outline:6px double var(--lajvard);
+    outline-offset:6px;
+    position:relative;
+  }
+  /* سربرگ */
+  header.sar{
+    text-align:center;
+    padding:22px 16px 18px;
+    background:linear-gradient(135deg,var(--lajvard-dark),var(--lajvard) 55%,var(--firooze));
+    color:#fff;
+    border-radius:6px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.sar::before,header.sar::after{
+    content:"";
+    position:absolute;
+    width:120px;height:120px;
+    border:2px solid rgba(233,211,160,.45);
+    transform:rotate(45deg);
+    top:-60px;
+  }
+  header.sar::before{right:-40px}
+  header.sar::after{left:-40px}
+  header.sar .payeh{font-size:14px;color:var(--tala-light);letter-spacing:0}
+  header.sar h1{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:38px;margin:6px 0 4px;font-weight:700;
+  }
+  header.sar .nevisandeh{font-size:14px;opacity:.95}
+  .toranj{
+    text-align:center;color:var(--tala);font-size:22px;margin:14px 0 4px;letter-spacing:6px;
+  }
+  /* عنوان بخش‌ها */
+  h2.qalamro{
+    font-size:22px;
+    color:#fff;
+    background:var(--lajvard);
+    padding:6px 18px;
+    margin:34px 0 14px;
+    border-right:10px solid var(--tala);
+    border-radius:4px;
+    page-break-after:avoid;
+  }
+  h2.qalamro.adabi{background:var(--firooze)}
+  h2.qalamro.fekri{background:var(--sabz)}
+  h2.qalamro.dam{background:var(--qermez)}
+  h2.qalamro.ganj{background:#7a5a1e}
+  h3{
+    color:var(--lajvard);
+    font-size:17px;
+    margin:22px 0 8px;
+    padding-bottom:4px;
+    border-bottom:2px dotted var(--tala);
+    page-break-after:avoid;
+  }
+  p{margin:6px 0 10px;text-align:justify}
+  /* جدول‌ها */
+  table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+    margin:10px 0 18px;
+    font-size:14px;
+    border:2px solid var(--lajvard);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  thead th{
+    background:var(--lajvard);
+    color:#fff;
+    font-weight:600;
+    padding:8px 10px;
+    border-bottom:3px solid var(--tala);
+  }
+  tbody td{
+    padding:7px 10px;
+    border-top:1px solid #d9cfb8;
+    vertical-align:top;
+  }
+  tbody td + td{border-right:1px solid #e6dcc4}
+  tbody tr:nth-child(even){background:#f6f0e1}
+  td.vazheh{font-weight:700;color:var(--lajvard-dark);white-space:nowrap}
+  td.ebarat{font-family:"Noto Naskh Arabic","Vazirmatn",serif;font-size:15.5px;color:#3a2a10}
+  td.arayeh{font-weight:700;color:var(--firooze);white-space:nowrap}
+  tr{page-break-inside:avoid}
+  /* جعبه‌ها */
+  .nokteh{
+    background:#eef3fb;
+    border:1px solid #b9c8e6;
+    border-right:6px solid var(--lajvard);
+    padding:10px 14px;
+    margin:12px 0;
+    border-radius:4px;
+    page-break-inside:avoid;
+  }
+  .nokteh b.onvan{color:var(--lajvard)}
+  .hoshdar{
+    background:#fbeeee;
+    border:1px solid #e4b9b9;
+    border-right:6px solid var(--qermez);
+    padding:10px 14px;margin:12px 0;border-radius:4px;
+    page-break-inside:avoid;
+  }
+  .shah-jomleh{
+    text-align:center;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:20px;font-weight:700;
+    color:var(--lajvard-dark);
+    background:linear-gradient(90deg,transparent,#f3e6c4,transparent);
+    padding:14px 10px;margin:16px 0;
+    border-top:2px solid var(--tala);border-bottom:2px solid var(--tala);
+  }
+  .beyt{
+    display:flex;justify-content:center;gap:48px;flex-wrap:wrap;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:18px;color:#3a2a10;margin:8px 0 2px;
+  }
+  .beyt span{min-width:230px;text-align:center}
+  .shaer{text-align:left;font-size:13px;color:var(--tala);font-weight:600;margin-bottom:12px}
+  .qarabat{
+    border:1px solid var(--tala-light);
+    background:#fffaf0;
+    border-radius:6px;
+    padding:8px 12px 4px;
+    margin:10px 0;
+    page-break-inside:avoid;
+  }
+  .qarabat .payam{font-size:13.5px;color:var(--sabz);font-weight:600}
+  ul,ol{margin:6px 0 12px;padding-right:22px}
+  li{margin:3px 0}
+  .tag{
+    display:inline-block;background:var(--tala-light);color:#5a3f0e;
+    font-size:12px;padding:0 8px;border-radius:10px;margin-right:4px;
+  }
+  .flash{color:var(--qermez);font-weight:700}
+  footer{
+    text-align:center;margin-top:30px;font-size:12.5px;color:#7a6a4a;
+    border-top:2px double var(--tala);padding-top:10px;
+  }
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;
+    background:var(--lajvard);color:#fff;border:2px solid var(--tala);
+    font-family:inherit;font-size:15px;padding:8px 18px;border-radius:24px;cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+  }
+  .dokmeh-chap:hover{background:var(--firooze)}
+
+  @media (max-width:640px){
+    .page{padding:20px 14px;margin:10px;outline-offset:3px}
+    header.sar h1{font-size:28px}
+    table{font-size:13px}
+    td.vazheh,td.arayeh{white-space:normal}
+    .beyt{gap:4px;flex-direction:column;align-items:center}
+  }
+
+  @page{size:A4;margin:12mm 11mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;padding:6mm 6mm;outline:none;border:2px solid var(--tala)}
+    .dokmeh-chap{display:none}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    h2.qalamro{margin-top:18px}
+    .shekast{page-break-before:always}
+  }
+</style>
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">چاپ / ذخیره به صورت پی‌دی‌اف</button>
+
+<div class="page">
+
+<header class="sar">
+  <div class="payeh">فارسی و نگارش یازدهم · فصل اوّل: ادبیات تعلیمی و پایداری</div>
+  <h1>درس سوم: آغازگری تنها</h1>
+  <div class="nevisandeh">برگرفته از کتاب «عبّاس میرزا، آغازگری تنها» · نوشتهٔ مجید واعظی · گونهٔ متن: داستان تاریخی و زندگی‌نامه‌ای</div>
+</header>
+<div class="toranj">❖ ❖ ❖</div>
+
+<div class="nokteh">
+  <b class="onvan">درس در یک نگاه:</b>
+  عبّاس میرزا، ولیعهد نوجوان فتحعلی‌شاه، با وزیر خردمندش میرزا عیسی (قائم‌مقام اوّل) به تبریز می‌رود تا در برابر روسیه از مرزهای شمالی دفاع کند. سقوط گنجه، پایداری جوادخان و مردم، شکست‌ها و عهدنامهٔ گلستان، او را به این باور می‌رساند که پیشرفت باید همه‌جانبه باشد و جنگ با افکار پوسیده، از جنگ در میدان دشوارتر است.
+</div>
+
+<!-- ===================== قلمرو زبانی ===================== -->
+<h2 class="qalamro">۱. قلمرو زبانی</h2>
+
+<h3>الف) واژه‌نامه</h3>
+<table>
+  <thead><tr><th style="width:24%">واژه</th><th>معنی</th><th style="width:24%">واژه</th><th>معنی</th></tr></thead>
+  <tbody>
+    <tr><td class="vazheh">خوش‌تراش</td><td>خوش‌اندام، متناسب</td><td class="vazheh">رعنا</td><td>خوش‌قد و قامت، زیبا</td></tr>
+    <tr><td class="vazheh">سینه‌فراخ</td><td>(اسب) پهن‌سینه، تنومند و نیرومند</td><td class="vazheh">دارالسّلطنه</td><td>پایتخت، مرکز فرمانروایی</td></tr>
+    <tr><td class="vazheh">خطّ مقدّم</td><td>نخستین صف رویارویی با دشمن</td><td class="vazheh">دست‌درازی</td><td>تجاوز، تعدّی</td></tr>
+    <tr><td class="vazheh">اِذن</td><td>اجازه</td><td class="vazheh">مُلک</td><td>سرزمین، کشور</td></tr>
+    <tr><td class="vazheh">رعیّت‌پروری</td><td>رسیدگی به مردم و حمایت از آنان</td><td class="vazheh">تاخت و تاز</td><td>هجوم و غارت</td></tr>
+    <tr><td class="vazheh">مُجهّز</td><td>آماده، دارای ساز و برگ</td><td class="vazheh">تصرّف</td><td>به دست گرفتن، چیره شدن</td></tr>
+    <tr><td class="vazheh">دیار</td><td>سرزمین، شهر و کشور</td><td class="vazheh">بساط</td><td>گستردنی؛ در اینجا: جشن و مراسم</td></tr>
+    <tr><td class="vazheh">لُعبَت</td><td>بازیچه، عروسک</td><td class="vazheh">تشریفات</td><td>آداب و رسوم رسمی</td></tr>
+    <tr><td class="vazheh">تب و تاب</td><td>بی‌قراری، اضطراب</td><td class="vazheh">اِلتهاب</td><td>برافروختگی، نگرانی شدید</td></tr>
+    <tr><td class="vazheh">بختک</td><td>کابوس؛ حالتی که در خواب، سنگینی بر سینه حس شود</td><td class="vazheh">چنبره زدن</td><td>حلقه زدن (مانند مار)</td></tr>
+    <tr><td class="vazheh">تدارک</td><td>آماده کردن، فراهم کردن</td><td class="vazheh">تحت‌الحمایگی</td><td>زیر حمایت دولتی دیگر بودن</td></tr>
+    <tr><td class="vazheh">توازن قوا</td><td>برابری نیروها</td><td class="vazheh">چیرگی</td><td>برتری، غلبه</td></tr>
+    <tr><td class="vazheh">زنبورک</td><td>توپ کوچکی که بر پشت شتر می‌بستند</td><td class="vazheh">تنوره کشیدن</td><td>زبانه کشیدن (آتش)</td></tr>
+    <tr><td class="vazheh">کوه‌پیکر</td><td>تنومند، بزرگ‌جثّه</td><td class="vazheh">چابک</td><td>چالاک، تیزرو</td></tr>
+    <tr><td class="vazheh">نَهیب</td><td>فریاد ترسناک، بانگ</td><td class="vazheh">صَفیر</td><td>صدای تیز و سوت‌مانند (گلوله)</td></tr>
+    <tr><td class="vazheh">فَوَران</td><td>جوشیدن و بیرون زدن</td><td class="vazheh">آز</td><td>طمع، حرص</td></tr>
+    <tr><td class="vazheh">پیش‌مرگی</td><td>فداکاری؛ پیش از دیگران جان دادن</td><td class="vazheh">حصار</td><td>دیوار گرداگرد شهر یا قلعه</td></tr>
+    <tr><td class="vazheh">خِفّت</td><td>خواری، سرافکندگی</td><td class="vazheh">مُحاصره</td><td>در میان گرفتن</td></tr>
+    <tr><td class="vazheh">ابزار دهقانی</td><td>ابزار کشاورزی</td><td class="vazheh">مُتجاوز</td><td>کسی که از حدّ خود می‌گذرد، دست‌درازی‌کننده</td></tr>
+    <tr><td class="vazheh">محشر</td><td>روز رستاخیز، قیامت</td><td class="vazheh">رَمَق</td><td>توان اندک، ته‌ماندهٔ جان</td></tr>
+    <tr><td class="vazheh">اِهتزاز</td><td>به جنبش درآمدن (پرچم)</td><td class="vazheh">فزون‌خواهانه</td><td>از روی زیاده‌طلبی</td></tr>
+    <tr><td class="vazheh">وَجد</td><td>شور و شادی بسیار</td><td class="vazheh">توفندگی</td><td>خروشندگی، شور و هیجان</td></tr>
+    <tr><td class="vazheh">خانگی</td><td>داخلی، از درون (دشمنان خانگی)</td><td class="vazheh">کرانه</td><td>ساحل، کناره</td></tr>
+    <tr><td class="vazheh">افسارگسیخته</td><td>سرکش، رها و بی‌مهار</td><td class="vazheh">اُفت و خیز</td><td>فراز و فرود</td></tr>
+    <tr><td class="vazheh">گُسست</td><td>جدایی، شکاف</td><td class="vazheh">نایب‌السّلطنه</td><td>جانشین پادشاه، ولیعهد</td></tr>
+    <tr><td class="vazheh">اِعجاب</td><td>شگفت‌زده کردن، شگفتی</td><td class="vazheh">ننگین</td><td>شرم‌آور، مایهٔ رسوایی</td></tr>
+    <tr><td class="vazheh">سویه</td><td>جانب، جهت</td><td class="vazheh">تک‌بُعدی</td><td>یک‌جانبه</td></tr>
+    <tr><td class="vazheh">ایمن</td><td>در امان، آسوده</td><td class="vazheh">نورگیر</td><td>روشن، دارای روزنه برای ورود نور</td></tr>
+    <tr><td class="vazheh">پوسیده</td><td>کهنه، فرسوده</td><td class="vazheh">دِرایت</td><td>دانایی، تدبیر</td></tr>
+  </tbody>
+</table>
+
+<h3>ب) معنی روان عبارت‌های دشوار</h3>
+<table>
+  <thead><tr><th style="width:46%">عبارت درس</th><th>معنی روان</th></tr></thead>
+  <tbody>
+    <tr><td class="ebarat">شوق وزیر اندیشمند و نیک‌خواه نیز به او کمتر از شوق ولیعهد به وزیر نبود.</td><td>وزیر هم به همان اندازه که ولیعهد او را دوست داشت، به ولیعهد علاقه داشت؛ علاقه‌ای دوسویه.</td></tr>
+    <tr><td class="ebarat">در امتداد نگاه متفکّرش، افق‌های روشنِ تدبیر مُلک و رعیّت‌پروری را می‌خواند.</td><td>در نگاه اندیشمند او، آیندهٔ درخشان کشورداری و مردم‌داری را می‌دید.</td></tr>
+    <tr><td class="ebarat">اختلافات و جنگ‌های داخلی مثل کاردی بر پهلوی این کشور نشسته است.</td><td>درگیری‌های درونی، کشور را زخمی و ناتوان کرده است.</td></tr>
+    <tr><td class="ebarat">دیارشان به تصرّف قدرت‌های اروپایی درآمد.</td><td>سرزمینشان به اشغال کشورهای اروپایی درآمد.</td></tr>
+    <tr><td class="ebarat">مراسم آن سال... تنها لُعبتی از تشریفات به رو داشت.</td><td>جشن آن سال فقط ظاهری تشریفاتی داشت و شادی واقعی در آن نبود.</td></tr>
+    <tr><td class="ebarat">فکر حملهٔ روس، بختک‌وار روی دربار چنبره زده بود.</td><td>ترس از حملهٔ روسیه، مانند کابوسی سنگین بر دربار سایه انداخته بود.</td></tr>
+    <tr><td class="ebarat">آفتاب داشت تیغ می‌کشید.</td><td>خورشید داشت طلوع می‌کرد.</td></tr>
+    <tr><td class="ebarat">شور جنگ و دفاع در دل‌ها تنوره می‌کشید.</td><td>شور و اشتیاق جنگیدن و دفاع، در دل‌ها مانند آتش زبانه می‌کشید.</td></tr>
+    <tr><td class="ebarat">کسی شکفتن صبحی چنین را باور نداشت.</td><td>هیچ‌کس باور نمی‌کرد چنین صبح تلخی فرا برسد.</td></tr>
+    <tr><td class="ebarat">شهری که... اینک بسترِ فَوَران خشم و آز دشمن شده بود.</td><td>شهری که برای بهار آماده می‌شد، حالا جای بروز خشم و طمع دشمن شده بود.</td></tr>
+    <tr><td class="ebarat">دشمن با بار خفّتی بر دوش، وامانده ماندن و رفتن شده بود.</td><td>دشمن شرمسار و سرافکنده، نمی‌دانست بماند یا برگردد.</td></tr>
+    <tr><td class="ebarat">روس‌ها مثل مور و ملخ در پهنهٔ شهر پراکنده شدند.</td><td>روس‌ها با شمار فراوان، همه‌جای شهر را گرفتند و ویران کردند.</td></tr>
+    <tr><td class="ebarat">نگاه فزون‌خواهانه و دهشت‌بار روس‌ها به فراتر از اینها دوخته شده بود.</td><td>روس‌ها با طمع و هراس‌انگیزی، چشم به سرزمین‌های بیشتری داشتند.</td></tr>
+    <tr><td class="ebarat">در ایرانِ آن روز، دو دربار بود! دربار بزم و دربار رزم؛ بزم پدر، رزم پسر.</td><td>پدر (فتحعلی‌شاه) در تهران سرگرم جشن و خوشی بود و پسر (عبّاس میرزا) در مرز درگیر جنگ.</td></tr>
+    <tr><td class="ebarat">پیشرفت و تمدّن نمی‌تواند یک‌سویه و تک‌بُعدی باشد.</td><td>پیشرفت واقعی باید همه‌جانبه باشد: هم نظامی، هم علمی، هم فرهنگی و اداری.</td></tr>
+    <tr><td class="ebarat">مردمی که به خانه‌های تاریک و بی‌دریچه عادت کرده‌اند، از پنجره‌های باز و نورگیر گریزان هستند.</td><td>کسانی که به جهل و فکرهای کهنه خو گرفته‌اند، از اندیشه‌های تازه و آگاهی فرار می‌کنند.</td></tr>
+    <tr><td class="ebarat">در جبههٔ بیرون، شجاعت کارسازتر است و در این یک، درایت.</td><td>در جنگ با دشمن خارجی، دلیری مؤثرتر است؛ اما در جنگ با افکار پوسیده، دانایی و تدبیر.</td></tr>
+  </tbody>
+</table>
+
+<h3>پ) املا و هم‌آواها</h3>
+<table>
+  <thead><tr><th>واژهٔ درس</th><th>معنی</th><th>هم‌آوا یا واژهٔ مشابه</th><th>معنی</th></tr></thead>
+  <tbody>
+    <tr><td class="vazheh">صَفیر</td><td>صدای تیز</td><td class="vazheh">سَفیر</td><td>فرستاده، نمایندهٔ سیاسی</td></tr>
+    <tr><td class="vazheh">اِهتزاز</td><td>به جنبش درآمدن</td><td class="vazheh">اِحتراز</td><td>دوری کردن، پرهیز</td></tr>
+    <tr><td class="vazheh">غَرَض</td><td>قصد، هدف</td><td class="vazheh">قرض</td><td>وام</td></tr>
+    <tr><td class="vazheh">مُلک</td><td>سرزمین</td><td class="vazheh">مَلِک</td><td>پادشاه</td></tr>
+    <tr><td class="vazheh">خواست</td><td>اراده، میل</td><td class="vazheh">خاست</td><td>برخاست، بلند شد</td></tr>
+  </tbody>
+</table>
+<p><b>ترکیب‌های اضافیِ دارای اهمیّت املایی:</b> صفیر گلوله‌ها · حصار شهر · سفارش آغامحمدخان · تحقّق آرمان‌ها · ذهن عبّاس میرزا · حریم زندگی · اهتزاز پرچم (در متن: به اهتزاز درآمد) · عرصهٔ روز محشر</p>
+
+<h3>ت) نکته‌های دستوری</h3>
+
+<div class="nokteh">
+  <b class="onvan">۱. گروه اسمی و وابسته‌های پیشین (یادآوری)</b><br>
+  هر گروه اسمی یک <b>هسته</b> دارد که می‌تواند وابسته‌های پیشین و پسین بگیرد.
+</div>
+<table>
+  <thead><tr><th>نوع وابستهٔ پیشین</th><th>نمونهٔ کتاب</th><th>نمونه از متن درس</th></tr></thead>
+  <tbody>
+    <tr><td>صفت پرسشی</td><td><b>کدام</b> روز</td><td>—</td></tr>
+    <tr><td>صفت تعجّبی</td><td><b>عجب</b> روزی</td><td>—</td></tr>
+    <tr><td>صفت اشاره</td><td><b>آن</b> روز</td><td><b>این</b> شهر کهن · <b>آن</b> سال · <b>این</b> نبردها</td></tr>
+    <tr><td>صفت مبهم</td><td><b>هر</b> روز</td><td><b>همهٔ</b> زبان‌هایش · <b>چند</b> سال · <b>هر</b> دو جبهه · <b>بسیاری</b> از مردم</td></tr>
+    <tr><td>صفت شمارشی اصلی</td><td><b>یک</b> روز</td><td><b>یک</b> قرن · <b>دو</b> دربار · <b>چند</b> تن</td></tr>
+    <tr><td>صفت شمارشی ترتیبی (با «ـُمین»)</td><td><b>دومین</b> روز</td><td>—</td></tr>
+    <tr><td>صفت عالی</td><td><b>بهترین</b> روز</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<div class="nokteh">
+  <b class="onvan">۲. شاخص (نکتهٔ تازهٔ این درس)</b><br>
+  شاخص‌ها لقب‌ها و عنوان‌هایی هستند که <b>بدون هیچ نشانه یا نقش‌نمایی</b> و معمولاً <b>بی‌فاصله پیش از اسم</b> می‌آیند؛ مانند: امام، علّامه، استاد، آقا، حاجی، خاله، کدخدا، سرلشکر، مهندس، سیّد، سرهنگ.
+</div>
+<table>
+  <thead><tr><th>جمله</th><th>نقش واژهٔ «استاد»</th><th>علّت</th></tr></thead>
+  <tbody>
+    <tr><td><b>استاد</b> معین، فرهنگ فارسی را در شش جلد تدوین کرده است.</td><td>شاخص</td><td>بی‌نشانه، پیش از اسم خاص</td></tr>
+    <tr><td>ایشان، <b>استادِ</b> زبان و ادبیات فارسی بودند.</td><td>هستهٔ گروه اسمی</td><td>کسرهٔ اضافه گرفته است</td></tr>
+    <tr><td>کتابِ <b>استاد</b>، دربردارندهٔ مطالب مفیدی است.</td><td>مضاف‌الیه</td><td>پس از کسرهٔ اضافه آمده است</td></tr>
+    <tr><td><b>سرهنگ</b> وزیری فرمان داد. / <b>سرهنگِ</b> ارتش آمد.</td><td>شاخص / هسته</td><td>بار اوّل بی‌نشانه، بار دوم با کسره</td></tr>
+    <tr><td><b>سیّد</b> جمال‌الدّین سخنرانی کرد. / آن <b>سیّد</b> را دیدم.</td><td>شاخص / هسته</td><td>بار اوّل لقب، بار دوم اسم اصلی گروه</td></tr>
+  </tbody>
+</table>
+<p>نمونه از متن: «<b>میرزا</b> عیسی قائم‌مقام» ← «میرزا» لقبی است که بی‌نشانه پیش از نام آمده است.</p>
+
+<div class="nokteh">
+  <b class="onvan">۳. ترکیب‌های وصفی و اضافی از متن</b>
+  <ul>
+    <li><b>وصفی:</b> اسبی سینه‌فراخ · شهر کهن · وزیر خردمند · پدر معنوی · چشم‌های درشت · افکار پوسیده · عهدنامهٔ ننگین · قدم‌های بزرگ · دشمنان خانگی</li>
+    <li><b>اضافی:</b> دروازه‌های تهران · حاکم شهر · حصار شهر · صفیر گلوله‌ها · سلام نوروزی شاه · ذهن عبّاس میرزا · کرانه‌های ارس</li>
+  </ul>
+</div>
+
+<div class="nokteh">
+  <b class="onvan">۴. حذف فعل</b>
+  <ul>
+    <li>«بزم پدر، رزم پسر» ← فعل «بود» حذف شده است (به قرینهٔ معنوی).</li>
+    <li>«در جبههٔ بیرون شجاعت کارسازتر است و در این یک، درایت» ← «کارسازتر است» حذف شده است (به قرینهٔ لفظی).</li>
+  </ul>
+</div>
+
+<div class="nokteh">
+  <b class="onvan">۵. فعل‌ها و ساختار جمله</b>
+  <ul>
+    <li>«داشت تیغ می‌کشید» ← ماضی مستمر · «رسانده بود» ← ماضی بعید · «عادت کرده‌اند» ← ماضی نقلی · «خواهند داشت» ← آینده</li>
+    <li>«شاهزاده، میرزا عیسی را نه تنها <b>وزیر خردمند</b>... می‌دانست» ← فعل «دانستن» در اینجا <b>چهارجزئی</b> است (نهاد + مفعول + مسند + فعل).</li>
+    <li>«دلاوری‌ها... دشمن را به تحسین و اعجاب واداشت» ← نهاد + مفعول + متمّم + فعل</li>
+  </ul>
+</div>
+
+<!-- ===================== قلمرو ادبی ===================== -->
+<h2 class="qalamro adabi shekast">۲. قلمرو ادبی</h2>
+
+<table>
+  <thead><tr><th style="width:40%">عبارت</th><th style="width:16%">آرایه</th><th>توضیح و علّت</th></tr></thead>
+  <tbody>
+    <tr><td class="ebarat">مثل کاردی بر پهلوی این کشور نشسته است</td><td class="arayeh">تشبیه، تشخیص</td><td>اختلافات به کارد مانند شده است؛ کشور مانند انسانی است که «پهلو» دارد.</td></tr>
+    <tr><td class="ebarat">اروپا قدم‌های بزرگی برداشته</td><td class="arayeh">مجاز، کنایه</td><td>«اروپا» مجاز از مردم و دولت‌های اروپا؛ «قدم برداشتن» کنایه از پیشرفت کردن.</td></tr>
+    <tr><td class="ebarat">پا به پای این پیشرفت‌ها</td><td class="arayeh">کنایه</td><td>کنایه از همراه و هم‌زمان.</td></tr>
+    <tr><td class="ebarat">بختک‌وار روی دربار چنبره زده بود</td><td class="arayeh">تشبیه، استعاره</td><td>«ـوار» ادات تشبیه است؛ «فکر حمله» مانند ماری فرض شده که چنبره می‌زند.</td></tr>
+    <tr><td class="ebarat">آفتاب داشت تیغ می‌کشید</td><td class="arayeh">تشخیص، کنایه</td><td>آفتاب مانند جنگجویی تیغ می‌کشد؛ کنایه از طلوع خورشید.</td></tr>
+    <tr><td class="ebarat">شور جنگ و دفاع در دل‌ها تنوره می‌کشید</td><td class="arayeh">استعاره</td><td>«شور» مانند آتشی است که زبانه می‌کشد.</td></tr>
+    <tr><td class="ebarat">سوار بر اسبی کوه‌پیکر... همچون معبدی که بر فراز تپه‌ای جلوه‌گری کند</td><td class="arayeh">تشبیه</td><td>اسب به کوه، و عبّاس میرزا بر اسب به معبدی بر بلندی مانند شده است.</td></tr>
+    <tr><td class="ebarat">دل از ناظران می‌برد</td><td class="arayeh">کنایه</td><td>کنایه از شیفته و مجذوب کردن.</td></tr>
+    <tr><td class="ebarat">شکفتن صبحی چنین</td><td class="arayeh">استعاره</td><td>صبح مانند گلی است که می‌شکفد.</td></tr>
+    <tr><td class="ebarat">با بار خفّتی بر دوش</td><td class="arayeh">تشبیه، کنایه</td><td>خفّت مانند باری سنگین است؛ کنایه از سرافکندگی.</td></tr>
+    <tr><td class="ebarat">روس‌ها مثل مور و ملخ</td><td class="arayeh">تشبیه</td><td>وجه شبه: فراوانی و ویرانگری.</td></tr>
+    <tr><td class="ebarat">سینه‌ها را سپر گلوله‌های آتشین ساختند</td><td class="arayeh">تشبیه، کنایه</td><td>سینه به سپر مانند شده است؛ کنایه از فداکاری و ایستادگی.</td></tr>
+    <tr><td class="ebarat">اجساد... مثل برگ‌های خزان‌زده، زمین را پوشانده بود</td><td class="arayeh">تشبیه</td><td>وجه شبه: فراوانی، بی‌جانی و پراکندگی.</td></tr>
+    <tr><td class="ebarat">گنجه با واپسین رمق‌هایش، زیر سقفی از دود و غبار نفس می‌کشید</td><td class="arayeh">تشخیص، تشبیه</td><td>شهر مانند انسانی نیمه‌جان نفس می‌کشد؛ دود و غبار به سقف مانند شده است.</td></tr>
+    <tr><td class="ebarat">شهر عرصهٔ روز محشر را به خاطر می‌آورد</td><td class="arayeh">تشخیص، تشبیه</td><td>شهر به یاد می‌آورد؛ آشوب شهر مانند روز قیامت است.</td></tr>
+    <tr><td class="ebarat">بادها... ناله‌ها را تا فراز قلّه‌های قفقاز می‌برد</td><td class="arayeh">تشخیص</td><td>باد مانند انسان، ناله‌ها را با خود می‌برد.</td></tr>
+    <tr><td class="ebarat">نگاه فزون‌خواهانه... به فراتر از اینها دوخته شده بود</td><td class="arayeh">کنایه</td><td>«نگاه دوختن» کنایه از چشم طمع داشتن.</td></tr>
+    <tr><td class="ebarat">دروازهٔ قفقاز به روی دشمن باز شد</td><td class="arayeh">استعاره، کنایه</td><td>قفقاز مانند خانه‌ای دروازه دارد؛ کنایه از آسان شدن ورود دشمن.</td></tr>
+    <tr><td class="ebarat">قفقازِ زخم‌خورده و ستم‌دیده، نگاه منتظر... دوخته بود</td><td class="arayeh">تشخیص</td><td>به قفقاز ویژگی انسانی (زخم خوردن، نگاه کردن) داده شده است.</td></tr>
+    <tr><td class="ebarat">موج‌های سنگین و افسارگسیختهٔ ارس</td><td class="arayeh">استعاره</td><td>موج‌ها مانند اسب سرکشی هستند که افسارش پاره شده است.</td></tr>
+    <tr><td class="ebarat">دربار بزم و دربار رزم؛ بزم پدر، رزم پسر</td><td class="arayeh">جناس، تضاد</td><td>«بزم و رزم» و «پدر و پسر» جناس ناهمسان؛ «بزم و رزم» تضاد نیز دارند.</td></tr>
+    <tr><td class="ebarat">پاره‌های تن خود را... از دست دادیم</td><td class="arayeh">استعاره</td><td>سرزمین‌های جداشده به اندام‌های بدن مانند شده‌اند.</td></tr>
+    <tr><td class="ebarat">خانه‌های تاریک و بی‌دریچه / پنجره‌های باز و نورگیر</td><td class="arayeh">استعاره، تضاد</td><td>خانهٔ تاریک: ذهن بسته و جهل؛ پنجرهٔ نورگیر: اندیشهٔ نو و آگاهی.</td></tr>
+    <tr><td class="ebarat">آخر چشمشان را می‌زند</td><td class="arayeh">کنایه</td><td>کنایه از آزار دادن و ناخوشایند بودن.</td></tr>
+    <tr><td class="ebarat">سر به کار خود خواهند داشت</td><td class="arayeh">کنایه</td><td>کنایه از آسوده‌خاطر به کار خود پرداختن.</td></tr>
+  </tbody>
+</table>
+
+<!-- ===================== قلمرو فکری ===================== -->
+<h2 class="qalamro fekri">۳. قلمرو فکری</h2>
+
+<h3>مفهوم کلّی درس</h3>
+<p>درس، تصویری از عبّاس میرزا به عنوان <b>نخستین آغازگر نوسازی در ایران</b> است؛ کسی که در روزگار بی‌خبری دربار، تنها مانده بود. او از شکست‌ها آموخت که دشمن اصلی، فقط ارتش بیگانه نیست؛ بلکه جهل، اختلاف داخلی و افکار کهنه است.</p>
+
+<div class="shah-jomleh">جنگ با افکار پوسیده، دشوارتر از جنگ رودرروی جبهه‌هاست.</div>
+
+<h3>پیام‌های اصلی</h3>
+<ol>
+  <li><b>پیشرفت همه‌جانبه:</b> تمدّن نمی‌تواند تک‌بُعدی باشد؛ قدرت نظامی بدون دانش، اداره و رفاه مردم پایدار نیست.</li>
+  <li><b>علم همراه با اخلاق:</b> پیشرفت اروپا بی‌اخلاق بود و به استعمار انجامید؛ علم بدون اخلاق ویرانگر است.</li>
+  <li><b>زیان اختلاف و خیانت درونی:</b> گنجه با خیانت گروهی از درون سقوط کرد؛ کشور را دشمنان خانگی بیش از بیگانگان آسیب می‌زنند.</li>
+  <li><b>عشق به میهن:</b> مردم با سنگ و چوب و سینهٔ برهنه از خاک خود دفاع کردند؛ عامل مشترک هر دو جبهه، عشق است.</li>
+  <li><b>آگاهی و مبارزه با جهل:</b> مردم خوگرفته به تاریکی، از نور می‌گریزند؛ مصلح باید صبور و دانا باشد.</li>
+  <li><b>تنهایی مصلحان:</b> عبّاس میرزا در برابر دربار بزم، «آغازگری تنها» بود.</li>
+</ol>
+
+<h3>ابیات و عبارات هم‌مفهوم (قرابت معنایی)</h3>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: علم بدون اخلاق خطرناک است</div>
+  <div class="beyt"><span>چو دزدی با چراغ آید</span><span>گزیده‌تر برد کالا</span></div>
+  <div class="shaer">سنایی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: آسیب از درون و از خودی است (سقوط گنجه با خیانت)</div>
+  <div class="beyt"><span>زی تیر نگه کرد و پر خویش بر او دید</span><span>گفتا ز که نالیم که از ماست که بر ماست</span></div>
+  <div class="shaer">ناصرخسرو</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: گریز نادان از نور حقیقت (خانه‌های تاریک و بی‌دریچه)</div>
+  <div class="beyt"><span>گر نبیند به روز شب‌پره چشم</span><span>چشمهٔ آفتاب را چه گناه</span></div>
+  <div class="shaer">سعدی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: دانایی، سرچشمهٔ توانایی است</div>
+  <div class="beyt"><span>توانا بود هر که دانا بود</span><span>ز دانش دل پیر برنا بود</span></div>
+  <div class="shaer">فردوسی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: نادانی از دشمنی زیان‌بارتر است</div>
+  <div class="beyt"><span>دشمن دانا که غم جان بود</span><span>بهتر از آن دوست که نادان بود</span></div>
+  <div class="shaer">نظامی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: عشق به میهن و جان‌فشانی برای آن</div>
+  <div class="beyt"><span>چو ایران نباشد تن من مباد</span><span>بدین بوم و بر زنده یک تن مباد</span></div>
+  <div class="shaer">فردوسی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: تکیه بر توان و خصلت خود (تمرین ۷ کارگاه، در وصف عبّاس میرزا)</div>
+  <div class="beyt"><span>چون شیر به خود سپه‌شکن باش</span><span>فرزند خصال خویشتن باش</span></div>
+  <div class="shaer">نظامی</div>
+</div>
+
+<h3>پاسخ پرسش‌های فکری کارگاه</h3>
+<ul>
+  <li><b>پرسش ۵:</b> مشاهدهٔ صحنه‌های ناب و توفندگی فرزندان میهن برای رویارویی با دشمن، عبّاس میرزا را به وجد می‌آورد و برای تحقّق آرمان‌های ملّی استوارتر و امیدوارتر می‌کرد.</li>
+  <li><b>پرسش ۶:</b> «خانه‌های تاریک و بی‌دریچه» یعنی ذهن بسته، جهل و عادت به افکار کهنه؛ «پنجره‌های باز و نورگیر» یعنی اندیشه‌های نو، دانش و آگاهی.</li>
+  <li><b>پرسش ۷:</b> عبّاس میرزا مانند شیر، به نیروی خود سپاه دشمن را درهم می‌شکند و ارزشش به خصلت‌های خود اوست، نه به نام پدر و مقام شاهزادگی؛ او خودساخته، دلیر و متّکی به خود است.</li>
+</ul>
+
+<!-- ===================== گنج حکمت ===================== -->
+<h2 class="qalamro ganj">گنج حکمت: چو سرو باش...</h2>
+<p><b>معنی متن:</b> از حکیمی پرسیدند: «خداوند درختان نامدار و پرباری آفریده، ولی هیچ‌کدام را آزاد نخوانده‌اند، جز سرو را که میوه‌ای ندارد؛ حکمتش چیست؟» گفت: «هر درختی میوه‌اش فصل مشخّصی دارد؛ گاهی با بودنش شاداب و گاهی با نبودنش پژمرده است. سرو هیچ‌یک از این حالت‌ها را ندارد و همیشه سرسبز است؛ این صفت آزادگان است.»</p>
+
+<div class="beyt"><span>به آنچه می‌گذرد دل منه که دجله بسی</span><span>پس از خلیفه بخواهد گذشت در بغداد</span></div>
+<p><b>معنی:</b> به دنیای گذرا دل نبند؛ رود دجله پس از مرگ خلیفه هم سال‌ها در بغداد جاری خواهد بود.</p>
+
+<div class="beyt"><span>گرت ز دست برآید، چو نخل باش کریم</span><span>ورت ز دست نیاید، چو سرو باش آزاد</span></div>
+<div class="shaer">گلستان، سعدی</div>
+<p><b>معنی:</b> اگر توانایی داری، مانند درخت خرما بخشنده باش؛ و اگر نداری، مانند سرو آزاده و بی‌نیاز باش.</p>
+
+<table>
+  <thead><tr><th>آرایه</th><th>نمونه و توضیح</th></tr></thead>
+  <tbody>
+    <tr><td class="arayeh">تشبیه</td><td>«چو نخل باش کریم» و «چو سرو باش آزاد»</td></tr>
+    <tr><td class="arayeh">ایهام</td><td>«آزاد»: ۱. رها و بی‌نیاز ۲. «سرو آزاد» نام نوعی سرو</td></tr>
+    <tr><td class="arayeh">کنایه</td><td>«از دست برآمدن» کنایه از توانستن؛ «دل نهادن» کنایه از دلبستگی</td></tr>
+    <tr><td class="arayeh">تضاد</td><td>«برآید» و «نیاید»؛ «تازه» و «پژمرده»</td></tr>
+    <tr><td class="arayeh">تناسب</td><td>دجله، خلیفه، بغداد؛ نخل و سرو</td></tr>
+  </tbody>
+</table>
+<p><b>پیوند با درس:</b> عبّاس میرزا نیز مانند سرو، در شکست و پیروزی سربلند و آزاده ماند.</p>
+
+<!-- ===================== نکات دام‌دار ===================== -->
+<h2 class="qalamro dam shekast">۴. نکته‌های دام‌دار امتحانی</h2>
+
+<div class="hoshdar"><span class="flash">⚠ ۱.</span> «<b>صفیر</b> گلوله» با «ص» است؛ «<b>سفیر</b>» یعنی فرستاده. پرسش ۱ کارگاه همین را می‌سنجد.</div>
+<div class="hoshdar"><span class="flash">⚠ ۲.</span> پرچم «به <b>اهتزاز</b> درآمد» با «ز» است؛ «<b>احتراز</b>» با «ر» یعنی دوری کردن.</div>
+<div class="hoshdar"><span class="flash">⚠ ۳.</span> <b>شاخص همیشه پیش از اسم و بدون کسره</b> می‌آید. «خان» در «جوادخان» یا «شاه» در «فتحعلی‌شاه» پس از نام آمده و شاخص نیست. اگر واژه‌ای مثل «استاد» کسره بگیرد (استادِ دانشگاه)، دیگر شاخص نیست.</div>
+<div class="hoshdar"><span class="flash">⚠ ۴.</span> «میرزا عیسی» همان <b>قائم‌مقام اوّل</b> و پدر <b>ابوالقاسم</b> قائم‌مقام فراهانی است؛ این دو را با هم اشتباه نکنید.</div>
+<div class="hoshdar"><span class="flash">⚠ ۵.</span> عهدنامه‌ای که در متن آمده، عهدنامهٔ <b>گلستان</b> است، نه ترکمانچای.</div>
+<div class="hoshdar"><span class="flash">⚠ ۶.</span> در «بزم پدر، رزم پسر»، «پدر» یعنی <b>فتحعلی‌شاه</b> و «پسر» یعنی <b>عبّاس میرزا</b>؛ و فعل «بود» به قرینهٔ معنوی حذف شده است.</div>
+<div class="hoshdar"><span class="flash">⚠ ۷.</span> «اروپا قدم‌های بزرگی برداشته» را فقط تشخیص ننویسید؛ «اروپا» <b>مجاز</b> از مردم اروپاست و «قدم برداشتن» <b>کنایه</b> از پیشرفت.</div>
+<div class="hoshdar"><span class="flash">⚠ ۸.</span> «آفتاب داشت تیغ می‌کشید» به معنی طلوع خورشید است، نه جنگ و شمشیرکشی.</div>
+<div class="hoshdar"><span class="flash">⚠ ۹.</span> «ـوار» در «بختک‌وار» و «مثل» در «مثل مور و ملخ» <b>ادات تشبیه</b> هستند؛ در پرسش تشبیه، ادات را نشان دهید.</div>
+<div class="hoshdar"><span class="flash">⚠ ۱۰.</span> صفت شمارشی ترتیبی با «ـُمین» <b>پیش از اسم</b> می‌آید (دومین روز = وابستهٔ پیشین)؛ اما «روزِ دوم» وابستهٔ <b>پسین</b> است.</div>
+<div class="hoshdar"><span class="flash">⚠ ۱۱.</span> «عجب» در «عجب روزی!» صفت تعجّبی است؛ اما «عجب!» به تنهایی <b>شبه‌جمله</b> است.</div>
+<div class="hoshdar"><span class="flash">⚠ ۱۲.</span> در گنج حکمت، «آزاد» <b>ایهام</b> دارد؛ این نکته در پرسش‌های آرایه زیاد می‌آید.</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش یازدهم · درس سوم: آغازگری تنها<br>
+  ❖ با آرزوی موفّقیت ❖
+</footer>
+
+</div>
+</body>
+</html>
