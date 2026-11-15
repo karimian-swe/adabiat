@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فهرست درس‌های فارسی و نگارش | هنرستان هوانوردی مجمع صنعت</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --lajevard: #1b3a6b;
+        --lajevard-tire: #10264a;
+        --firoozei: #1f8a8a;
+        --tala: #c9a227;
+        --tala-roshan: #f3e3a8;
+        --kaghaz: #fbf7ec;
+        --matn: #2b2b2b;
+        --khakestari: #8a8a8a;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
+        background: var(--kaghaz);
+        color: var(--matn);
+        line-height: 1.9;
+        background-image:
+          radial-gradient(
+            circle at 10% 10%,
+            rgba(201, 162, 39, 0.08) 0 2px,
+            transparent 3px
+          ),
+          radial-gradient(
+            circle at 60% 40%,
+            rgba(27, 58, 107, 0.06) 0 2px,
+            transparent 3px
+          );
+        background-size:
+          40px 40px,
+          55px 55px;
+      }
+
+      /* ---------- سربرگ ---------- */
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--lajevard-tire),
+          var(--lajevard) 60%,
+          var(--firoozei)
+        );
+        color: #fff;
+        text-align: center;
+        padding: 2.2rem 1rem 2.6rem;
+        border-bottom: 6px double var(--tala);
+        position: relative;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -18px;
+        height: 12px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--tala) 0 12px,
+          transparent 12px 24px
+        );
+        opacity: 0.6;
+      }
+      .neshan {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 0.8rem;
+        border: 3px solid var(--tala);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      header h1 {
+        font-size: 1.9rem;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+      header .zir-onvan {
+        color: var(--tala-roshan);
+        font-size: 1.1rem;
+        margin-top: 0.3rem;
+      }
+      header .sal {
+        font-size: 0.95rem;
+        opacity: 0.85;
+        margin-top: 0.4rem;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.2rem 3rem;
+      }
+
+      /* ---------- دکمه‌های پایه ---------- */
+      .paye-ha {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 1.6rem;
+      }
+      .paye-btn {
+        font-family: inherit;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: 2px solid var(--lajevard);
+        background: #fff;
+        color: var(--lajevard);
+        padding: 0.75rem 1.8rem;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.2s;
+        min-width: 150px;
+      }
+      .paye-btn:hover {
+        background: var(--tala-roshan);
+      }
+      .paye-btn.faal {
+        background: var(--lajevard);
+        color: #fff;
+        box-shadow: 0 0 0 4px var(--tala-roshan);
+      }
+
+      /* ---------- جستجو ---------- */
+      .jostoju {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 2rem;
+        font-family: inherit;
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        border: 2px solid var(--tala);
+        border-radius: 14px;
+        background: #fff;
+        outline: none;
+      }
+      .jostoju:focus {
+        border-color: var(--lajevard);
+      }
+
+      /* ---------- بخش هر پایه ---------- */
+      .paye {
+        display: none;
+      }
+      .paye.faal {
+        display: block;
+      }
+      .paye-onvan {
+        text-align: center;
+        color: var(--lajevard);
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 1.4rem;
+      }
+      .paye-onvan::before,
+      .paye-onvan::after {
+        content: " ❖ ";
+        color: var(--tala);
+      }
+
+      /* ---------- کارت درس‌ها ---------- */
+      .kart-ha {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.1rem;
+      }
+      .kart {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: #fff;
+        border: 1.5px solid #e4d9b5;
+        border-right: 6px solid var(--lajevard);
+        border-radius: 14px;
+        padding: 1rem 1.1rem;
+        text-decoration: none;
+        color: var(--matn);
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s,
+          border-color 0.15s;
+        min-height: 84px;
+      }
+      a.kart:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(27, 58, 107, 0.15);
+        border-right-color: var(--tala);
+      }
+      .shomare {
+        flex: 0 0 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: var(--lajevard);
+        color: var(--tala-roshan);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.25rem;
+        border: 2px solid var(--tala);
+      }
+      .kart-matn {
+        display: flex;
+        flex-direction: column;
+      }
+      .kart-matn .barchasb {
+        font-size: 0.85rem;
+        color: var(--firoozei);
+        font-weight: 600;
+      }
+      .kart-matn .nam {
+        font-size: 1.08rem;
+        font-weight: 600;
+      }
+      .kart.bezoodi {
+        opacity: 0.6;
+        border-right-color: var(--khakestari);
+        cursor: default;
+      }
+      .kart.bezoodi .shomare {
+        background: var(--khakestari);
+        border-color: #ccc;
+        color: #fff;
+      }
+      .vaziat {
+        font-size: 0.8rem;
+        color: var(--khakestari);
+      }
+      .khali {
+        text-align: center;
+        color: var(--khakestari);
+        padding: 2rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        color: #fff;
+        background: var(--lajevard-tire);
+        border-top: 4px double var(--tala);
+        font-size: 0.9rem;
+      }
+
+      /* ---------- موبایل ---------- */
+      @media (max-width: 768px) {
+        html {
+          font-size: 17px;
+        }
+        header {
+          padding: 1.6rem 0.8rem 2rem;
+        }
+        header h1 {
+          font-size: 1.45rem;
+        }
+        main {
+          padding: 2rem 0.9rem 2.5rem;
+        }
+        .paye-ha {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0.7rem;
+        }
+        .paye-btn {
+          width: 100%;
+          padding: 0.9rem 1rem;
+        }
+        .kart-ha {
+          grid-template-columns: 1fr;
+        }
+        .kart {
+          min-height: 76px;
+          padding: 0.9rem;
+        }
+      }
+
+      /* ---------- چاپ ---------- */
+      @media print {
+        @page {
+          size: A4;
+          margin: 14mm;
+        }
+        body {
+          background: #fff;
+        }
+        header {
+          background: none;
+          color: var(--lajevard);
+          border-bottom: 3px double var(--tala);
+        }
+        header::after {
+          display: none;
+        }
+        header .zir-onvan {
+          color: var(--firoozei);
+        }
+        .paye-ha,
+        .jostoju {
+          display: none;
+        }
+        .paye {
+          display: block !important;
+          page-break-after: always;
+        }
+        .paye:last-of-type {
+          page-break-after: auto;
+        }
+        .kart-ha {
+          grid-template-columns: 1fr 1fr;
+        }
+        .kart {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+        footer {
+          background: none;
+          color: var(--matn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="neshan">✈</div>
+      <!-- نام هنرستان و درس را اینجا می‌توانید عوض کنید -->
+      <h1>هنرستان هوانوردی مجمع صنعت</h1>
+      <div class="zir-onvan">جزوه‌های درس فارسی و نگارش</div>
+      <div class="sal">استاد کریمیان | سال تحصیلی ۱۴۰۵ ـ ۱۴۰۶</div>
+    </header>
+
+    <main>
+      <div class="paye-ha" id="paye-ha"></div>
+      <input
+        class="jostoju"
+        id="jostoju"
+        type="search"
+        placeholder="جستجوی نام درس..."
+      />
+      <div id="mohtava"></div>
+    </main>
+
+    <footer>
+      برای ورود به هر درس، روی کارت آن بزنید · درس‌های خاکستری به‌زودی آماده
+      می‌شوند
+    </footer>
+
+    <script>
+      /* ============================================================
+   ✏️ فقط همین بخش را ویرایش کنید
+   ------------------------------------------------------------
+   onvan : نام درس (بین دو علامت " ")
+   file  : نام فایل HTML درس (اگر هنوز آماده نیست، خالی بگذارید "")
+   barchasb : (اختیاری) مثلاً "ستایش" یا "فصل اول"
+   ============================================================ */
+      const PAYE_HA = [
+        {
+          nam: "پایهٔ دهم",
+          dars_ha: [
+            { barchasb: "درس پنجم", onvan: "مهر و وفا", file: "" },
+            ,
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+          ],
+        },
+        {
+          nam: "پایهٔ یازدهم",
+          dars_ha: [
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+          ],
+        },
+        {
+          nam: "پایهٔ دوازدهم",
+          dars_ha: [
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+            { onvan: "", file: "" },
+          ],
+        },
+      ];
+      /* ================= پایان بخش ویرایش ================= */
+
+      /* --- از اینجا به بعد نیازی به تغییر نیست --- */
+      const faDigits = (n) => String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+      const tartibi = [
+        "اول",
+        "دوم",
+        "سوم",
+        "چهارم",
+        "پنجم",
+        "ششم",
+        "هفتم",
+        "هشتم",
+        "نهم",
+        "دهم",
+        "یازدهم",
+        "دوازدهم",
+        "سیزدهم",
+        "چهاردهم",
+        "پانزدهم",
+        "شانزدهم",
+        "هفدهم",
+        "هجدهم",
+        "نوزدهم",
+        "بیستم",
+        "بیست و یکم",
+        "بیست و دوم",
+        "بیست و سوم",
+        "بیست و چهارم",
+      ];
+
+      const payeHaDiv = document.getElementById("paye-ha");
+      const mohtava = document.getElementById("mohtava");
+      const jostoju = document.getElementById("jostoju");
+
+      PAYE_HA.forEach((p, i) => {
+        const btn = document.createElement("button");
+        btn.className = "paye-btn";
+        btn.textContent = p.nam;
+        btn.onclick = () => entekhab(i);
+        payeHaDiv.appendChild(btn);
+
+        const sec = document.createElement("section");
+        sec.className = "paye";
+        sec.innerHTML = `<h2 class="paye-onvan">${p.nam}</h2><div class="kart-ha"></div>`;
+        const grid = sec.querySelector(".kart-ha");
+
+        p.dars_ha.forEach((d, j) => {
+          const amade = d.file && d.file.trim() !== "";
+          const kart = document.createElement(amade ? "a" : "div");
+          kart.className = "kart" + (amade ? "" : " bezoodi");
+          if (amade) kart.href = d.file.trim();
+          const barchasb =
+            d.barchasb || "درس " + (tartibi[j] || faDigits(j + 1));
+          const nam = d.onvan && d.onvan.trim() ? d.onvan : "نام درس";
+          kart.dataset.matn = barchasb + " " + nam;
+          kart.innerHTML = `
+      <span class="shomare">${faDigits(j + 1)}</span>
+      <span class="kart-matn">
+        <span class="barchasb">${barchasb}</span>
+        <span class="nam">${nam}</span>
+        ${amade ? "" : '<span class="vaziat">به‌زودی</span>'}
+      </span>`;
+          grid.appendChild(kart);
+        });
+        mohtava.appendChild(sec);
+      });
+
+      function entekhab(i) {
+        document
+          .querySelectorAll(".paye-btn")
+          .forEach((b, k) => b.classList.toggle("faal", k === i));
+        document
+          .querySelectorAll(".paye")
+          .forEach((s, k) => s.classList.toggle("faal", k === i));
+        try {
+          localStorage.setItem("payeAkhar", i);
+        } catch (e) {}
+        location.hash = "paye" + (i + 1);
+        filter();
+      }
+
+      function filter() {
+        const q = jostoju.value.trim();
+        document.querySelectorAll(".paye.faal .kart").forEach((k) => {
+          k.style.display = !q || k.dataset.matn.includes(q) ? "" : "none";
+        });
+      }
+      jostoju.addEventListener("input", filter);
+
+      /* پایهٔ پیش‌فرض: از آدرس (#paye2) یا آخرین انتخاب */
+      let shoroo = 0;
+      const m = location.hash.match(/paye(\d)/);
+      if (m) shoroo = Math.min(PAYE_HA.length, +m[1]) - 1;
+      else {
+        try {
+          shoroo = +(localStorage.getItem("payeAkhar") || 0);
+        } catch (e) {}
+      }
+      entekhab(shoroo);
+    </script>
+  </body>
+</html>
