@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ درس پنجم فارسی دهم: مهر و وفا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --firooze:#0f7c86;
+    --firooze-dark:#0a4f57;
+    --firooze-light:#d8eff0;
+    --zaferan:#e0a526;
+    --anar:#b23a48;
+    --anar-light:#f8e3e5;
+    --zeytuni:#5b7a3a;
+    --zeytuni-light:#e9f1df;
+    --jowhar:#2b2b3a;
+    --kaghaz:#ffffff;
+    --zamineh:#f2efe6;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn","Vazir",Tahoma,sans-serif;
+    color:var(--jowhar);
+    line-height:2;font-size:15px;
+    -webkit-text-size-adjust:100%;
+    background-color:var(--zamineh);
+    background-image:
+      radial-gradient(circle at 25px 25px, rgba(15,124,134,.10) 7px, transparent 8px),
+      radial-gradient(circle at 0 0, rgba(224,165,38,.12) 7px, transparent 8px),
+      radial-gradient(circle at 50px 50px, rgba(224,165,38,.12) 7px, transparent 8px);
+    background-size:50px 50px;
+  }
+  .page{
+    max-width:940px;margin:28px auto;background:var(--kaghaz);
+    padding:0 0 30px;border-radius:22px;overflow:hidden;
+    box-shadow:0 10px 40px rgba(10,79,87,.15);
+  }
+  .page > *:not(header){margin-right:38px;margin-left:38px}
+
+  /* سربرگ: شمسه */
+  header.sar{
+    text-align:center;color:#fff;position:relative;
+    padding:34px 20px 70px;
+    background:
+      repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 12px, transparent 12px 24px),
+      linear-gradient(160deg,var(--firooze-dark),var(--firooze));
+  }
+  header.sar::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:46px;
+    background:var(--kaghaz);
+    clip-path:polygon(0 100%,0 60%,6% 30%,12% 60%,18% 30%,24% 60%,30% 30%,36% 60%,42% 30%,50% 0,58% 30%,64% 60%,70% 30%,76% 60%,82% 30%,88% 60%,94% 30%,100% 60%,100% 100%);
+  }
+  header.sar::before{display:none}
+  header.sar .payeh{
+    display:inline-block;font-size:13px;color:var(--firooze-dark);
+    background:var(--zaferan);padding:2px 16px;border-radius:20px;font-weight:600;
+  }
+  header.sar h1{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:40px;margin:16px auto 6px;font-weight:700;
+    width:fit-content;padding:10px 34px;
+    border:2px solid rgba(224,165,38,.8);border-radius:60px;
+    box-shadow:0 0 0 6px rgba(255,255,255,.08);
+  }
+  header.sar .nevisandeh{font-size:14px;opacity:.95}
+  .toranj{text-align:center;color:var(--zaferan);font-size:20px;margin:6px 0 4px;letter-spacing:10px}
+
+  /* عنوان بخش‌ها */
+  h2.bakhsh{
+    font-size:21px;color:var(--firooze-dark);background:none;
+    margin:40px 38px 16px;padding:0 0 8px;text-align:center;
+    border-bottom:3px solid var(--firooze);position:relative;
+    page-break-after:avoid;
+  }
+  h2.bakhsh::after{
+    content:"◆";position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);
+    background:#fff;color:var(--zaferan);padding:0 10px;font-size:16px;
+  }
+  h2.bakhsh.kargah{color:var(--anar);border-color:var(--anar)}
+  h2.bakhsh.ganj{color:var(--zeytuni);border-color:var(--zeytuni)}
+  h3{
+    color:var(--firooze-dark);font-size:17px;margin:24px 0 8px;
+    padding-right:12px;border-right:5px solid var(--zaferan);
+    page-break-after:avoid;
+  }
+  p{margin:6px 0 10px;text-align:justify}
+  ul,ol{margin:6px 0 10px;padding-right:20px}
+  li{margin:3px 0}
+
+  /* کارت بیت */
+  .kart{
+    border-radius:16px;margin:26px 0;background:#fff;
+    border:1px solid #e5e1d4;box-shadow:0 3px 14px rgba(0,0,0,.05);
+    overflow:hidden;page-break-inside:avoid;
+  }
+  .kart-sar{
+    padding:16px 16px 12px;position:relative;
+    background:linear-gradient(180deg,#fdf8ea,#fff);
+    border-bottom:1px dashed var(--zaferan);
+  }
+  .shomareh{
+    position:absolute;top:14px;right:14px;
+    width:38px;height:38px;line-height:38px;text-align:center;
+    background:var(--zaferan);color:var(--firooze-dark);
+    font-weight:800;font-size:16px;
+    clip-path:polygon(50% 0,61% 15%,79% 10%,80% 29%,98% 35%,88% 50%,98% 65%,80% 71%,79% 90%,61% 85%,50% 100%,39% 85%,21% 90%,20% 71%,2% 65%,12% 50%,2% 35%,20% 29%,21% 10%,39% 15%);
+  }
+  .beyt{
+    display:flex;justify-content:center;gap:56px;flex-wrap:wrap;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:21px;font-weight:600;color:var(--firooze-dark);padding:0 46px;
+  }
+  .beyt span{min-width:240px;text-align:center}
+  .kart-badaneh{padding:14px 16px 16px}
+
+  .qalamro{
+    position:relative;border-radius:12px;padding:20px 14px 8px;margin:14px 0 6px;
+    border:1.5px solid;
+  }
+  .qalamro .barchasb{
+    position:absolute;top:-13px;right:14px;
+    font-size:13px;font-weight:700;color:#fff;padding:1px 14px;border-radius:14px;
+  }
+  .q-zabani{background:var(--firooze-light);border-color:#9fd2d5}
+  .q-zabani .barchasb{background:var(--firooze)}
+  .q-adabi{background:var(--anar-light);border-color:#e7b4ba}
+  .q-adabi .barchasb{background:var(--anar)}
+  .q-fekri{background:var(--zeytuni-light);border-color:#c3d6ab}
+  .q-fekri .barchasb{background:var(--zeytuni)}
+  .do-sotun{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .maani{font-weight:600;color:var(--firooze-dark)}
+  .vazheh-ha b{color:var(--anar)}
+  .dastur{font-size:14px}
+
+  /* جدول‌ها */
+  .jadval-zarf{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px;border-radius:12px}
+  table{
+    width:100%;min-width:480px;border-collapse:collapse;font-size:14px;
+    border-radius:12px;overflow:hidden;
+  }
+  thead th{background:var(--firooze-dark);color:#fff;font-weight:600;padding:9px 12px}
+  tbody td{padding:8px 12px;border-bottom:1px solid #e6efe9;vertical-align:top}
+  tbody tr:nth-child(odd){background:#f6fbfb}
+  tbody tr:nth-child(even){background:#fffaf0}
+  tbody td:first-child{font-weight:800;color:var(--zaferan);text-align:center}
+  tr{page-break-inside:avoid}
+
+  /* جعبه‌ها */
+  .nokteh{
+    background:#fffaf0;border:1.5px dashed var(--zaferan);
+    padding:10px 14px;margin:14px 0;border-radius:12px;page-break-inside:avoid;
+  }
+  .nokteh b.onvan{color:var(--anar)}
+  .shah-jomleh{
+    text-align:center;font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:20px;font-weight:700;color:#fff;
+    background:linear-gradient(135deg,var(--firooze-dark),var(--firooze));
+    padding:14px 16px;margin:18px 0;border-radius:40px;
+    box-shadow:0 0 0 4px #fff,0 0 0 6px var(--zaferan);
+  }
+  .qarabat{
+    border-right:5px solid var(--zeytuni);background:#fbfcf8;
+    border-radius:10px;padding:8px 14px 4px;margin:12px 0;page-break-inside:avoid;
+  }
+  .qarabat .payam{font-size:13.5px;color:var(--zeytuni);font-weight:700}
+  .qarabat .beyt{font-size:17px;font-weight:400;padding:0;color:var(--jowhar)}
+  .shaer{text-align:left;font-size:13px;color:var(--anar);font-weight:600;margin-bottom:6px}
+  .bakhsh-nasr{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;font-size:17px;
+    color:var(--firooze-dark);text-align:justify;padding:2px 54px 0 4px;line-height:2.1;
+  }
+  .nemoodar{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+  .nemoodar .jabeh{border-radius:12px;padding:10px 14px;background:var(--anar-light);border:1.5px solid #e7b4ba}
+  .nemoodar .jabeh b{color:var(--anar);font-size:17px}
+
+  footer{
+    text-align:center;margin-top:34px;font-size:12.5px;color:var(--firooze-dark);
+    padding-top:12px;border-top:2px dotted var(--zaferan);
+  }
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;z-index:10;
+    background:var(--anar);color:#fff;border:none;
+    font-family:inherit;font-size:15px;padding:10px 20px;border-radius:30px;cursor:pointer;
+    box-shadow:0 4px 14px rgba(178,58,72,.35);
+  }
+  .dokmeh-chap:hover{background:var(--firooze-dark)}
+
+  /* موبایل و تبلت */
+  @media (max-width:768px){
+    body{font-size:16px;line-height:2.05}
+    .page{margin:0;border-radius:0}
+    .page > *:not(header){margin-right:12px;margin-left:12px}
+    header.sar{padding:24px 12px 56px}
+    header.sar h1{font-size:27px;padding:8px 20px}
+    h2.bakhsh{font-size:18.5px;margin:34px 12px 14px}
+    h3{font-size:16.5px}
+    .do-sotun,.nemoodar{grid-template-columns:1fr}
+    .beyt{flex-direction:column;align-items:center;gap:2px;font-size:18.5px;padding:40px 4px 0}
+    .beyt span{min-width:0}
+    .shomareh{top:8px;right:50%;transform:translateX(50%);width:34px;height:34px;line-height:34px;font-size:14px}
+    .bakhsh-nasr{padding:40px 2px 0;font-size:16.5px}
+    .kart-badaneh{padding:10px 10px 12px}
+    .qalamro{padding:18px 10px 6px}
+    .shah-jomleh{font-size:17px;border-radius:18px}
+    .dokmeh-chap{left:10px;bottom:10px;font-size:14px;padding:8px 14px}
+    p{text-align:right}
+  }
+
+  @page{size:A4;margin:10mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;box-shadow:none;border-radius:0}
+    .page > *:not(header){margin-right:6mm;margin-left:6mm}
+    .dokmeh-chap{display:none}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .jadval-zarf{overflow:visible}
+    table{min-width:0}
+    .beyt{font-size:17px}
+    .kart{box-shadow:none}
+    .shekast{page-break-before:always}
+  }
+</style>
+
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">چاپ / ذخیره به صورت پی‌دی‌اف</button>
+
+<div class="page">
+
+<header class="sar">
+  <div class="payeh">فارسی و نگارش دهم</div>
+  <h1>درس پنجم: مهر و وفا</h1>
+  <div class="nevisandeh">سرودهٔ حافظ شیرازی · قالب: غزل · همراه با کارگاه درس‌پژوهی و گنج حکمت «حقّهٔ راز»</div>
+</header>
+<div class="toranj">✦ ✦ ✦</div>
+
+<div class="nokteh">
+  <b class="onvan">درس در یک نگاه:</b>
+  حافظ در این غزل از ارزش <b>وفاداری، رازداری و پایبندی به پیمان دوستی</b> سخن می‌گوید. ردیف غزل «نگه دارد» است و شاعر در هر بیت، این دو کلمه را در معنایی تازه به کار برده است: حفظ کردن، رعایت کردن، جا نگه داشتن و به یادگار نگه داشتن.
+</div>
+
+<div class="nokteh">
+  <b class="onvan">شناسنامهٔ قالب:</b>
+  <b>قالب:</b> غزل · <b>ردیف:</b> نگه دارد · <b>قافیه:</b> وفا، بلا، آشنا، دعا، تا، جا، خدا، وفا، صبا · <b>تخلّص:</b> حافظ (در بیت آخر)
+</div>
+
+<h2 class="bakhsh">بخش یکم: غزل «مهر و وفا»؛ بیت‌به‌بیت در سه قلمرو</h2>
+
+<!-- بیت ۱ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۱</span>
+    <div class="beyt"><span>هر آن که جانبِ اهلِ وفا نگه دارد</span><span>خداش در همه حال از بلا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: هر کس از وفاداران حمایت کند و حرمت آنان را نگه دارد، خداوند او را در همه حال از بلا حفظ می‌کند.</p>
+      <p class="vazheh-ha"><b>جانب:</b> طرف، سو؛ «جانب کسی را نگه داشتن» یعنی از او حمایت کردن و رعایتش کردن · <b>اهل وفا:</b> وفاداران</p>
+      <p class="dastur"><b>دستور:</b> «خداش» یعنی خدا او را؛ «ـَش» ضمیر پیوسته و نقش آن <b>مفعول</b> است. «هر آن که» یعنی هر کس.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>جناس تام:</b> «نگه دارد» در مصراع اول به معنی <b>رعایت و حمایت کردن</b> و در مصراع دوم به معنی <b>حفظ کردن</b> است.</li>
+          <li><b>تضاد:</b> وفا و بلا از نظر خوشایندی و ناخوشایندی در برابر هم‌اند.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>هر که یار وفاداران باشد، خدا یار و نگهبان اوست. نیکی کردن، پاداش الهی دارد.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۲ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۲</span>
+    <div class="beyt"><span>حدیثِ دوست نگویم مگر به حضرتِ دوست</span><span>که آشنا سخنِ آشنا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: سخن و راز دوست را جز در پیشگاه خود دوست نمی‌گویم؛ زیرا تنها آشنا و محرم است که سخن آشنا را حفظ می‌کند.</p>
+      <p class="vazheh-ha"><b>حدیث:</b> سخن، گفتار · <b>حضرت:</b> پیشگاه، درگاه، حضور · <b>آشنا:</b> دوست، محرم راز</p>
+      <p class="dastur"><b>دستور:</b> «نگویم» یعنی نمی‌گویم (مضارع اخباری کهن، بدون «می»). «که» در آغاز مصراع دوم یعنی <b>زیرا</b>.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>تکرار:</b> «دوست» و «آشنا»، هر کدام دو بار.</li>
+          <li><b>کنایه:</b> «سخن را نگه داشتن» کنایه از <b>رازداری</b>.</li>
+          <li><b>مراعات‌نظیر:</b> حدیث، سخن، گفتن.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p><b>رازداری:</b> راز را فقط باید به محرم گفت. در نگاه عرفانی، «دوست» می‌تواند خداوند باشد: راز عشق را تنها با خود او باید در میان گذاشت.</p>
+      </div>
+    </div>
+    <div class="shah-jomleh" style="font-size:17px;margin:10px 0 0">★ بیت کلیدی درس: با پرسش ۴ کارگاه و گنج حکمت «حقّهٔ راز» پیوند دارد.</div>
+  </div>
+</div>
+
+<!-- بیت ۳ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۳</span>
+    <div class="beyt"><span>دلا معاش چنان کن که گر بلغزد پای</span><span>فرشته‌ات به دو دستِ دعا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: ای دل، چنان زندگی کن که اگر پایت لغزید و خطایی کردی، فرشته با دو دستِ دعا تو را نگه دارد و از افتادن حفظ کند.</p>
+      <p class="vazheh-ha"><b>معاش:</b> زندگی، زیستن؛ «معاش کردن» یعنی زندگی کردن · <b>پای:</b> پا</p>
+      <p class="dastur"><b>دستور:</b> «دلا» یعنی ای دل («ا» نشانهٔ ندا؛ «دل» منادا است). «گر» یعنی اگر. «فرشته‌ات ... نگه دارد» یعنی فرشته <b>تو را</b> نگه دارد؛ «ـَت» نقش <b>مفعول</b> دارد. «به دو دست» یعنی با دو دست.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>تشخیص:</b> شاعر با «دل» سخن می‌گوید و او را مخاطب قرار داده است.</li>
+          <li><b>کنایه:</b> «لغزیدن پا» کنایه از <b>خطا و گناه کردن</b>.</li>
+          <li><b>مراعات‌نظیر:</b> پای و دست.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>درست و پاک زندگی کن تا در روزِ لغزش و سختی، یاری الهی پشتیبانت باشد. نیکی‌های امروز، پناه فردای انسان است.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۴ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۴</span>
+    <div class="beyt"><span>گرت هواست که معشوق نگسلد پیمان</span><span>نگاه دار سرِ رشته تا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: اگر آرزو داری که معشوق پیمانش را نشکند، تو سرِ رشتهٔ پیمان را نگه دار (به عهد خود وفادار بمان) تا او هم آن را نگه دارد.</p>
+      <p class="vazheh-ha"><b>هوا:</b> آرزو، میل، خواسته · <b>نگسلد:</b> پاره نکند، نشکند (از مصدر «گسستن»)</p>
+      <p class="dastur"><b>دستور:</b> «گرت هواست» یعنی اگر هوای تو است (اگر آرزو داری)؛ «ـَت» ضمیری است که جابه‌جا شده و نقش آن <b>مضاف‌الیه</b> است. «تا» حرف ربط است، به معنی «تا اینکه».</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>کنایه:</b> «سرِ رشته را نگه داشتن» کنایه از <b>وفادار ماندن به عهد</b>؛ «پیمان گسستن» کنایه از <b>عهدشکنی</b>.</li>
+          <li><b>مراعات‌نظیر:</b> رشته، گسستن، سرِ رشته.</li>
+          <li><b>جناس ناهمسان:</b> «نگاه دار» و «نگه دارد».</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p><b>وفا دوسویه است:</b> اگر از دیگری وفاداری می‌خواهی، نخست خودت وفادار باش. رفتار ما، رفتار دیگران را با ما می‌سازد.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۵ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۵</span>
+    <div class="beyt"><span>صبا بر آن سرِ زلف ار دلِ مرا بینی</span><span>ز روی لطف بگویش که جا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: ای باد صبا، اگر دلِ مرا بر سرِ زلف یار دیدی، از روی مهربانی به دلم بگو که جایگاه خود را حفظ کند و آن جای ارزشمند را از دست ندهد.</p>
+      <p class="vazheh-ha"><b>صبا:</b> نسیمی که در بهار از سوی مشرق می‌وزد؛ پیک عاشقان · <b>ار:</b> اگر · <b>لطف:</b> مهربانی</p>
+      <p class="dastur"><b>دستور:</b> «صبا» منادا است (ای صبا). «دلِ مرا» یعنی دلِ من؛ «را» در اینجا <b>فک اضافه</b> است. «بگویش» یعنی به او بگو؛ «ـَش» نقش <b>متمم</b> دارد.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>تشخیص:</b> صبا مخاطب قرار گرفته و از او خواهش شده است؛ دل نیز مانند انسانی است که می‌شود با او سخن گفت.</li>
+          <li><b>مراعات‌نظیر:</b> صبا و زلف (صبا زلف را پریشان می‌کند).</li>
+          <li><b>کنایه:</b> «جا نگه داشتن» کنایه از حفظ جایگاه و پابرجا ماندن.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>دل‌بستگی عاشق به معشوق و آرزوی ماندن در کنار او. صبا در ادبیات فارسی، <b>پیام‌رسان میان عاشق و معشوق</b> است.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۶ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۶</span>
+    <div class="beyt"><span>چو گفتمش که دلم را نگاه دار، چه گفت؟</span><span>ز دستِ بنده چه خیزد؟ خدا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: وقتی به معشوق گفتم دلم را نگه دار، می‌دانی چه جواب داد؟ گفت: «از دست من کاری برنمی‌آید؛ خدا نگهش دارد.»</p>
+      <p class="vazheh-ha"><b>چو:</b> وقتی که · <b>خیزد:</b> برآید، ساخته باشد · <b>بنده:</b> من (معشوق با فروتنی از خود سخن می‌گوید)</p>
+      <p class="dastur"><b>دستور:</b> «گفتمش» یعنی به او گفتم؛ «ـَش» نقش <b>متمم</b> دارد. «دلم» یعنی دلِ من؛ «ـَم» مضاف‌الیه است.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>ایهام:</b> «خدا نگه دارد» ۱. خدا آن را حفظ کند ۲. «خدانگهدار»؛ یعنی خداحافظی و رد کردن مؤدبانهٔ درخواست.</li>
+          <li><b>استفهام انکاری:</b> «ز دست بنده چه خیزد؟» یعنی هیچ کاری از من برنمی‌آید.</li>
+          <li><b>کنایه:</b> «از دست کسی چیزی خیزد» کنایه از <b>توانستن</b>.</li>
+          <li><b>جناس ناهمسان:</b> «نگاه دار» و «نگه دارد».</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>ناز و بی‌اعتنایی معشوق در برابر خواهش عاشق؛ او کار دل عاشق را به خدا وامی‌گذارد.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۷ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۷</span>
+    <div class="beyt"><span>سر و زر و دل و جانم فدای آن یاری</span><span>که حقِّ صحبتِ مهر و وفا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: جان و مال و دل و همهٔ هستی‌ام فدای آن یاری باد که حرمتِ دوستی و مهر و وفا را رعایت می‌کند.</p>
+      <p class="vazheh-ha"><b>زر:</b> طلا؛ در اینجا یعنی مال و دارایی · <b>صحبت:</b> همنشینی، دوستی · <b>حقّ صحبت:</b> حرمت و حقِ دوستی</p>
+      <p class="dastur"><b>دستور:</b> فعل «باد» حذف شده است (فدای آن یاری <b>باد</b>)؛ حذف به قرینهٔ معنوی.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>جناس ناهمسان:</b> «سر» و «زر».</li>
+          <li><b>مراعات‌نظیر:</b> سر، دل، جان؛ و نیز مهر و وفا.</li>
+          <li><b>واج‌آرایی:</b> تکرار صامت «ر» در مصراع اول.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p><b>ارزش یار وفادار:</b> دوستی که حرمت رفاقت را نگه دارد، شایستهٔ فداکاری است. نام درس از همین بیت گرفته شده است.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۸ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۸</span>
+    <div class="beyt"><span>غبارِ راهگذارت کجاست تا حافظ</span><span>به یادگارِ نسیمِ صبا نگه دارد</span></div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: گرد و غبار راهی که تو از آن گذشته‌ای کجاست، تا حافظ آن را به عنوان یادگاری که نسیم صبا آورده است، نگه دارد؟</p>
+      <p class="vazheh-ha"><b>غبار:</b> گرد و خاک · <b>راهگذار:</b> گذرگاه، راهی که از آن می‌گذرند</p>
+      <p class="dastur"><b>دستور:</b> «راهگذارت» یعنی راهگذارِ تو؛ «ـَت» <b>مضاف‌الیه</b> است. «حافظ» نهاد جملهٔ دوم است.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>تخلّص:</b> آوردن نام شاعر (حافظ) در بیت پایانی غزل.</li>
+          <li><b>کنایه:</b> «غبار راه یار» کنایه از <b>کوچک‌ترین نشانه از یار</b>.</li>
+          <li><b>پرسش برای بیان آرزو:</b> «کجاست؟» نشان‌دهندهٔ اشتیاق شاعر است.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>اشتیاق عاشق به کوچک‌ترین نشانه از معشوق؛ برای عاشق، حتی خاک راه یار ارزشمند است.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>مفهوم کلی غزل</h3>
+<p>غزل «مهر و وفا» دربارهٔ <b>وفاداری، رازداری و حرمت دوستی</b> است. حافظ می‌گوید وفاداری پاداش الهی دارد، راز را فقط باید به محرم گفت، وفا دوطرفه است و یار وفادار شایستهٔ فداکاری است.</p>
+
+<div class="shah-jomleh">یک ردیف، هشت معنا: «نگه دارد»</div>
+<div class="jadval-zarf">
+<table>
+  <thead><tr><th style="width:12%">بیت</th><th>معنای «نگه داشتن»</th></tr></thead>
+  <tbody>
+    <tr><td>۱</td><td>رعایت و حمایت کردن (جانب نگه داشتن) / حفظ کردن از بلا</td></tr>
+    <tr><td>۲</td><td>پنهان کردن و حفظ راز</td></tr>
+    <tr><td>۳</td><td>گرفتن و از افتادن بازداشتن</td></tr>
+    <tr><td>۴</td><td>وفادار ماندن به پیمان</td></tr>
+    <tr><td>۵</td><td>حفظ جایگاه (جا نگه داشتن)</td></tr>
+    <tr><td>۶</td><td>مراقبت کردن از دل / خداحافظی (ایهام)</td></tr>
+    <tr><td>۷</td><td>رعایت حقّ دوستی</td></tr>
+    <tr><td>۸</td><td>به یادگار نگه داشتن</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>بیت‌های هم‌مفهوم (قرابت معنایی)</h3>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: رازداری و دریغ کردن راز از نامحرم (بیت ۲)</div>
+  <div class="beyt"><span>با مدّعی مگویید اسرار عشق و مستی</span><span>تا بی‌خبر بمیرد در درد خودپرستی</span></div>
+  <div class="shaer">حافظ</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: هر رفتاری بازتاب خود را دارد (بیت ۴)</div>
+  <div class="beyt"><span>از مکافات عمل غافل مشو</span><span>گندم از گندم بروید، جو ز جو</span></div>
+  <div class="shaer">مولوی</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: نیکی بی‌پاداش نمی‌ماند (بیت‌های ۱ و ۳)</div>
+  <div class="beyt"><span>تو نیکی می‌کن و در دجله انداز</span><span>که ایزد در بیابانت دهد باز</span></div>
+  <div class="shaer">مَثَل مشهور</div>
+</div>
+
+<div class="qarabat">
+  <div class="payam">مفهوم: وفاداری حتی در سختی (بیت ۷)</div>
+  <div class="beyt"><span>وفا کنیم و ملامت کشیم و خوش باشیم</span><span>که در طریقت ما کافری است رنجیدن</span></div>
+  <div class="shaer">حافظ</div>
+</div>
+
+<!-- ===================== کارگاه ===================== -->
+<h2 class="bakhsh kargah shekast">بخش دوم: پاسخ کارگاه درس‌پژوهی</h2>
+
+<h3>پرسش ۱: نمودارها</h3>
+<div class="nemoodar">
+  <div class="jabeh">
+    <b>معاش</b><br>
+    معنا: زندگی، زیستن<br>
+    هم‌خانواده: عیش، معیشت، تعیّش
+  </div>
+  <div class="jabeh">
+    <b>حضرت</b><br>
+    معنا: پیشگاه، درگاه، حضور<br>
+    هم‌خانواده: حضور، حاضر، محضر، احضار
+  </div>
+</div>
+
+<h3>پرسش ۲: نماد «صبا»</h3>
+<p>صبا در ادبیات فارسی نماد <b>پیک و پیام‌رسان</b> میان عاشق و معشوق است؛ پیام عاشق را می‌برد و بوی یار را می‌آورد. در بیت‌های ۵ و ۸ این درس هم همین نقش را دارد.</p>
+
+<h3>پرسش ۳: ایهام</h3>
+<div class="nokteh">
+  <b class="onvan">یادآوری:</b> ایهام یعنی واژه‌ای در بیت دو معنا داشته باشد و هر دو معنا در بیت پذیرفتنی باشند.
+</div>
+<div class="qarabat">
+  <div class="beyt"><span>گفتم که بوی زلفت گمراه عالمم کرد</span><span>گفتا اگر بدانی هم اوت رهبر آید</span></div>
+  <div class="shaer">حافظ</div>
+</div>
+<p>واژهٔ <b>«بو»</b> دو معنا دارد: ۱. <b>رایحه و عطر</b> (بوی زلف) ۲. <b>امید و آرزو</b> (به بوی دیدار زلف). هر دو معنا در بیت درست است؛ پس آرایهٔ ایهام دارد.</p>
+
+<h3>پرسش ۴: ارتباط مفهومی</h3>
+<div class="qarabat">
+  <div class="beyt"><span>تا نگردی آشنا زین پرده رمزی نشنوی</span><span>گوش نامحرم نباشد جای پیغام سروش</span></div>
+  <div class="shaer">حافظ</div>
+</div>
+<p>این بیت با <b>بیت دوم درس</b> («حدیث دوست نگویم مگر به حضرت دوست / که آشنا سخن آشنا نگه دارد») ارتباط دارد. مفهوم مشترک: <b>راز را فقط باید به آشنا و محرم گفت؛ نامحرم شایستهٔ شنیدن راز نیست.</b></p>
+
+<!-- ===================== گنج حکمت ===================== -->
+<h2 class="bakhsh ganj shekast">بخش سوم: گنج حکمت «حقّهٔ راز»؛ بخش‌به‌بخش در سه قلمرو</h2>
+<p style="text-align:center"><b>منبع:</b> اسرارالتوحید، نوشتهٔ محمّد بن منوّر (نوادهٔ شیخ ابوسعید ابوالخیر). «شیخ» در این حکایت، <b>ابوسعید ابوالخیر</b> است.</p>
+
+<!-- نثر ۱ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۱</span>
+    <div class="bakhsh-nasr">روزی یکی نزدیک شیخ آمد و گفت: «ای شیخ آمده‌ام تا از اسرار حق چیزی با من نمایی.» شیخ گفت: «باز گرد تا فردا.» آن مرد بازگشت.</div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: روزی مردی نزد شیخ آمد و گفت: «آمده‌ام تا رازی از رازهای خداوند را به من نشان دهی.» شیخ گفت: «برگرد و فردا بیا.» مرد رفت.</p>
+      <p class="vazheh-ha"><b>اسرار:</b> رازها (جمع سِرّ) · <b>حق:</b> خداوند</p>
+      <p class="dastur"><b>دستور:</b> «با من نمایی» یعنی <b>به</b> من نشان دهی؛ «با» در اینجا به معنی «به» است.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <p>نثر ساده و روان، با گفت‌وگوی کوتاه؛ آغاز یک <b>حکایت تمثیلی</b>.</p>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>مرد بی‌آنکه آمادگی داشته باشد، خواهان دانستن اسرار الهی است.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- نثر ۲ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۲</span>
+    <div class="bakhsh-nasr">شیخ بفرمود تا آن روز، موشی بگرفتند و در حقّه کردند و سر حقّه محکم کردند. دیگر روز آن مرد باز آمد و گفت: «ای شیخ، آنچِ وعده کرده‌ای، بگوی.» شیخ بفرمود تا آن حقّه را به وی دادند و گفت: «زینهار، تا سر این حقّه باز نکنی.»</div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: شیخ دستور داد همان روز موشی گرفتند، در جعبه‌ای کوچک گذاشتند و درش را محکم بستند. روز بعد مرد برگشت و گفت: «ای شیخ، آنچه را وعده داده بودی بگو.» شیخ دستور داد جعبه را به او بدهند و گفت: «مبادا در این جعبه را باز کنی!»</p>
+      <p class="vazheh-ha"><b>حقّه:</b> جعبهٔ کوچک دربسته · <b>زینهار:</b> آگاه باش، مبادا · <b>دیگر روز:</b> روز بعد</p>
+      <p class="dastur"><b>دستور:</b> «در حقّه کردند» یعنی در حقّه گذاشتند. «آنچِ» شکل کهن «آنچه» است. «بگوی» یعنی بگو. «دیگر روز»: صفت پیش از موصوف آمده است (روزِ دیگر). «بفرمود»: «بـ» بر سر فعل ماضی، نشانهٔ تأکید در نثر کهن است.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>نماد:</b> «حقّه» نماد دل و ظرفیت انسان است.</li>
+          <li><b>جناس ناهمسان:</b> «سَرِ حقّه» با «سِرّ» (راز) در ادامهٔ حکایت.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>شیخ پیش از گفتن راز، ظرفیت مرد را با یک آزمون ساده می‌سنجد.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- نثر ۳ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۳</span>
+    <div class="bakhsh-nasr">مرد حقّه را برگرفت و به خانه رفت و سودای آنش بگرفت که آیا در این حقّه، چه سرّ است؟ هر چند صبر کرد، نتوانست. سر حقّه باز کرد و موش بیرون جست و برفت.</div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: مرد جعبه را گرفت و به خانه رفت و این خیال او را فرا گرفت که در این جعبه چه رازی است. هرچه صبر کرد، نتوانست خودداری کند؛ در جعبه را باز کرد و موش بیرون پرید و فرار کرد.</p>
+      <p class="vazheh-ha"><b>سودا:</b> خیال، هوس، وسوسه · <b>سِرّ:</b> راز · <b>جست:</b> پرید</p>
+      <p class="dastur"><b>دستور:</b> «سودای آنش بگرفت» یعنی خیالِ آن، <b>او را</b> فرا گرفت؛ «ـَش» نقش <b>مفعول</b> دارد. «چه سرّ است» یعنی چه رازی است.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>جناس ناهمسان:</b> «سَر» (در) و «سِرّ» (راز).</li>
+          <li><b>کنایه:</b> «سودای چیزی کسی را گرفتن» کنایه از وسوسه شدن و بی‌تاب شدن.</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p>کنجکاوی و بی‌صبری انسان کم‌ظرفیت، او را به شکستن عهد می‌کشاند.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- نثر ۴ -->
+<div class="kart">
+  <div class="kart-sar">
+    <span class="shomareh">۴</span>
+    <div class="bakhsh-nasr">مرد پیش شیخ آمد و گفت: «ای شیخ، من از تو سرّ خدای تعالی طلب کردم، تو موشی به من دادی؟!» شیخ گفت: «ای درویش، ما موشی در حقّه به تو دادیم، تو پنهان نتوانستی داشت؛ سرّ خدای را با تو بگوییم، چگونه نگاه خواهی داشت؟!»</div>
+  </div>
+  <div class="kart-badaneh">
+    <div class="qalamro q-zabani">
+      <span class="barchasb">قلمرو زبانی</span>
+      <p class="maani">معنی: مرد نزد شیخ آمد و گفت: «من از تو راز خداوند را خواستم و تو به من موشی دادی؟!» شیخ گفت: «ای درویش، ما موشی را در جعبه به تو دادیم و تو نتوانستی آن را پنهان نگه داری؛ اگر راز خدا را به تو بگوییم، چگونه آن را نگه خواهی داشت؟!»</p>
+      <p class="vazheh-ha"><b>درویش:</b> فقیر، اهل سلوک · <b>طلب کردن:</b> خواستن · <b>خدای تعالی:</b> خداوند بلندمرتبه</p>
+      <p class="dastur"><b>دستور:</b> «پنهان نتوانستی داشت» یعنی نتوانستی پنهان نگه داری. «با تو بگوییم» یعنی <b>به</b> تو بگوییم.</p>
+    </div>
+    <div class="do-sotun">
+      <div class="qalamro q-adabi">
+        <span class="barchasb">قلمرو ادبی</span>
+        <ul>
+          <li><b>استفهام انکاری:</b> «چگونه نگاه خواهی داشت؟!» یعنی هرگز نمی‌توانی.</li>
+          <li><b>تمثیل:</b> کل حکایت، تمثیلی برای بیان یک اندیشه است.</li>
+          <li><b>تضاد:</b> موش (چیز بی‌ارزش) در برابر سرّ خدا (چیز بسیار ارزشمند).</li>
+        </ul>
+      </div>
+      <div class="qalamro q-fekri">
+        <span class="barchasb">قلمرو فکری</span>
+        <p><b>پیام اصلی حکایت:</b> رازداری ظرفیت می‌خواهد. کسی که راز کوچک را نگه نمی‌دارد، شایستهٔ رازهای بزرگ نیست.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="shah-jomleh">کسی که موشی را در حقّه نگه ندارد، سرّ خدا را چگونه نگه دارد؟</div>
+
+<div class="qarabat">
+  <div class="payam">پیوند گنج حکمت با غزل درس: راز را فقط به اهلش بسپار</div>
+  <div class="beyt"><span>حدیث دوست نگویم مگر به حضرت دوست</span><span>که آشنا سخن آشنا نگه دارد</span></div>
+  <div class="shaer">حافظ</div>
+</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش دهم · درس پنجم: مهر و وفا<br>
+  ❖ با آرزوی موفّقیت ❖
+</footer>
+
+</div>
+</body>
+</html>
