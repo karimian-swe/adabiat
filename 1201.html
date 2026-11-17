@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ درس یکم فارسی دوازدهم: شکر نعمت</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lajvard:#14306b;
+    --lajvard-dark:#0b1d45;
+    --firooze:#0f7c80;
+    --shangarf:#b23a1e;
+    --tala:#c19a3f;
+    --tala-dark:#8a6a1f;
+    --tala-light:#f1e2b8;
+    --kaghaz:#fdf8ec;
+    --matn:#2b2418;
+    --sabz:#2f6b45;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn","Vazir",Tahoma,sans-serif;
+    color:var(--matn);
+    line-height:2;
+    font-size:15.5px;
+    background-color:#0f2552;
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(193,154,63,.22) 0 6px, transparent 7px),
+      radial-gradient(circle at 75% 75%, rgba(193,154,63,.22) 0 6px, transparent 7px),
+      linear-gradient(45deg, rgba(255,255,255,.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.04) 75%),
+      linear-gradient(-45deg, rgba(255,255,255,.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.04) 75%);
+    background-size:48px 48px;
+  }
+  .page{
+    max-width:920px;
+    margin:28px auto;
+    background:radial-gradient(ellipse at top, #fffdf6 0%, var(--kaghaz) 60%, #f6ecd3 100%);
+    padding:44px 46px 30px;
+    border:3px solid var(--tala);
+    box-shadow:0 0 0 8px var(--kaghaz), 0 0 0 10px var(--tala-dark), 0 18px 50px rgba(0,0,0,.45);
+    border-radius:4px;
+    position:relative;
+  }
+  .page::before,.page::after{
+    content:"❁";position:absolute;font-size:30px;color:var(--tala);line-height:1;
+  }
+  .page::before{top:8px;right:12px}
+  .page::after{top:8px;left:12px}
+
+  header.sar{
+    text-align:center;margin:0 auto;max-width:620px;
+    padding:20px 26px 18px;
+    background:var(--lajvard);color:#fff;
+    border:3px solid var(--tala);
+    border-radius:60px 60px 10px 10px;
+    box-shadow:inset 0 0 0 5px var(--lajvard), inset 0 0 0 6px var(--tala-light);
+  }
+  header.sar .payeh{
+    display:inline-block;font-size:13px;color:var(--lajvard-dark);
+    background:var(--tala-light);padding:0 14px;border-radius:12px;font-weight:600;
+  }
+  header.sar h1{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:40px;margin:8px 0 2px;font-weight:700;color:var(--tala-light);
+    text-shadow:0 2px 0 rgba(0,0,0,.35);
+  }
+  header.sar .nevisandeh{font-size:14px;color:#e8eefc}
+  .toranj{text-align:center;color:var(--shangarf);font-size:18px;margin:14px 0 10px;letter-spacing:10px}
+
+  h2.bakhsh{
+    text-align:center;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:22px;color:var(--lajvard);
+    margin:38px 0 16px;
+    display:flex;align-items:center;gap:14px;
+    page-break-after:avoid;break-after:avoid;
+  }
+  h2.bakhsh::before,h2.bakhsh::after{
+    content:"";flex:1;height:2px;
+    background:linear-gradient(90deg,transparent,var(--tala),transparent);
+  }
+  h2.ganj{color:var(--shangarf)}
+  p{margin:4px 0 8px;text-align:justify}
+
+  .nokteh{
+    background:#fffdf7;border:1px solid var(--tala);border-radius:10px;
+    padding:12px 18px;margin:14px 0;page-break-inside:avoid;break-inside:avoid;
+  }
+  .nokteh b.onvan{color:var(--shangarf)}
+
+  .kart{
+    margin:26px 0;border:1px solid var(--tala);border-radius:12px;
+    background:#fffdf8;box-shadow:0 3px 0 var(--tala-light);
+    overflow:hidden;page-break-inside:avoid;break-inside:avoid;
+  }
+  .kart-sar{
+    position:relative;background:var(--lajvard);
+    padding:14px 60px 14px 16px;
+    border-bottom:4px double var(--tala);
+  }
+  .kart.ganj-kart .kart-sar{background:#5a2414}
+  .shomareh{
+    position:absolute;top:50%;right:12px;transform:translateY(-50%);
+    width:36px;height:36px;line-height:36px;text-align:center;
+    background:var(--tala);color:var(--lajvard-dark);
+    font-weight:800;font-size:16px;
+    clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+  }
+  .barchasb{
+    display:inline-block;font-size:12px;font-weight:600;
+    background:rgba(241,226,184,.18);color:var(--tala-light);
+    border:1px solid rgba(241,226,184,.45);
+    padding:0 10px;border-radius:10px;margin-bottom:6px;
+  }
+  .beyt{
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:19px;font-weight:600;
+  }
+  .beyt + .beyt{margin-top:6px}
+  .kart-sar .beyt span{
+    flex:1;min-width:240px;text-align:center;color:#fff;
+    padding:4px 10px;border-bottom:1px solid rgba(241,226,184,.5);
+  }
+  .kart-sar .nasr{
+    color:#fff;margin:0;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:18px;line-height:2.25;text-align:justify;
+  }
+  .arabi{color:var(--tala-light)!important}
+  .kart-tan{
+    padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  }
+  .qalam{
+    padding:10px 14px;border-radius:8px;background:#fff;
+    border:1px solid #e3d6b3;border-top:4px solid;
+  }
+  .qalam.zabani{grid-column:1 / -1;border-top-color:var(--lajvard);background:#f5f7fc}
+  .qalam.adabi{border-top-color:var(--firooze);background:#f2faf9}
+  .qalam.fekri{border-top-color:var(--sabz);background:#f3f9f4}
+  .qalam h4{
+    display:inline-block;margin:0 0 6px;font-size:14px;color:#fff;
+    padding:1px 14px;border-radius:12px;
+  }
+  .qalam.zabani h4{background:var(--lajvard)}
+  .qalam.adabi h4{background:var(--firooze)}
+  .qalam.fekri h4{background:var(--sabz)}
+  .mani{font-weight:600}
+  .dastoor{
+    margin-top:6px;padding:6px 10px;border-radius:6px;
+    background:#fff8ea;border-right:3px solid var(--tala);
+  }
+  ul{margin:4px 0 4px;padding-right:18px}
+  li{margin:2px 0}
+  li::marker{color:var(--tala-dark)}
+
+  .jadval-ghab{
+    width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    margin:14px 0;border:1px solid var(--tala);border-radius:10px;background:#fff;
+  }
+  table{width:100%;border-collapse:collapse;min-width:520px}
+  th,td{padding:8px 12px;border:1px solid #e3d6b3;text-align:right;vertical-align:top}
+  th{background:var(--lajvard);color:#fff;font-weight:600;border-color:var(--lajvard-dark)}
+  tr:nth-child(even) td{background:#fbf5e6}
+  td.mesal{font-family:"Noto Naskh Arabic","Vazirmatn",serif;font-size:16px}
+
+  .porsesh{
+    margin:16px 0;border:1px solid var(--tala);border-radius:12px;
+    background:#fffdf8;overflow:hidden;page-break-inside:avoid;break-inside:avoid;
+  }
+  .porsesh-sar{
+    background:var(--tala-light);color:var(--lajvard-dark);font-weight:600;
+    padding:8px 16px;border-bottom:2px solid var(--tala);
+  }
+  .porsesh-sar .adad{
+    display:inline-block;min-width:28px;height:28px;line-height:28px;text-align:center;
+    background:var(--lajvard);color:#fff;border-radius:50%;margin-left:8px;font-size:14px;
+  }
+  .pasokh{padding:10px 16px}
+  .pasokh .shaer{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;font-size:17px;
+    color:var(--lajvard);font-weight:600;
+  }
+  footer{
+    text-align:center;margin-top:30px;font-size:13px;color:var(--tala-dark);
+    padding-top:12px;border-top:1px solid var(--tala);
+  }
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;z-index:10;
+    background:var(--shangarf);color:#fff;border:2px solid var(--tala-light);
+    font-family:inherit;font-size:15px;padding:10px 20px;border-radius:24px;cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+  }
+  .dokmeh-chap:hover{background:var(--lajvard)}
+
+  @media (max-width:768px){
+    body{font-size:16px;line-height:2.05}
+    p{text-align:right}
+    .page{padding:30px 12px 20px;margin:12px 8px;box-shadow:0 0 0 4px var(--kaghaz), 0 0 0 5px var(--tala-dark)}
+    .page::before,.page::after{font-size:22px}
+    header.sar{padding:16px 12px;border-radius:40px 40px 8px 8px}
+    header.sar h1{font-size:28px}
+    .kart-sar{padding:46px 12px 12px;text-align:center}
+    .shomareh{top:8px;right:50%;transform:translateX(50%)}
+    .beyt{flex-direction:column;gap:4px;font-size:18px}
+    .kart-sar .beyt span{min-width:0;width:100%}
+    .kart-sar .nasr{font-size:17px;text-align:right}
+    .kart-tan{grid-template-columns:1fr;padding:10px}
+    .qalam{padding:10px 12px}
+    h2.bakhsh{font-size:19px}
+    th,td{padding:8px 10px;font-size:15px}
+    .dokmeh-chap{left:10px;bottom:10px;font-size:14px;padding:10px 16px}
+  }
+
+  @page{size:A4;margin:12mm 11mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;padding:8mm 6mm;box-shadow:none;border:2px solid var(--tala);background:#fff}
+    .dokmeh-chap{display:none}
+    .jadval-ghab{overflow:visible}
+    table{min-width:0}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">چاپ / ذخیره به صورت پی‌دی‌اف</button>
+
+<div class="page">
+
+<header class="sar">
+  <div class="payeh">فارسی و نگارش دوازدهم · درس یکم</div>
+  <h1>شکر نعمت</h1>
+  <div class="nevisandeh">از دیباچهٔ گلستان سعدی</div>
+</header>
+<div class="toranj">✦ ✦ ✦</div>
+
+<div class="nokteh">
+  <b class="onvan">دربارهٔ نویسنده:</b>
+  مُشرف‌الدّین مُصلِح بن عبدالله، معروف به <b>سعدی شیرازی</b>، شاعر و نویسندهٔ بزرگ سدهٔ هفتم هجری است. او <b>گلستان</b> را در سال ۶۵۶ هجری قمری نوشت. گلستان کتابی به <b>نثر مسجّع</b> (نثری آهنگین که پاره‌هایش مانند شعر هم‌قافیه‌اند) آمیخته با شعر است و از یک دیباچه و هشت باب تشکیل شده است. این درس بخشی از <b>دیباچه</b> (آغاز) گلستان است.
+</div>
+
+<div class="nokteh">
+  <b class="onvan">درس در یک نگاه:</b>
+  سعدی سخن را با سپاس خدا آغاز می‌کند و می‌گوید انسان از شکر نعمت‌های بی‌شمار او ناتوان است. سپس نعمت‌های بی‌دریغ خدا در طبیعت را وصف می‌کند، پیامبر اسلام (ص) را می‌ستاید، از کرم خداوند در پذیرفتن توبهٔ بندگان سخن می‌گوید و سرانجام نشان می‌دهد که انسان از <b>شکر، عبادت، شناخت و وصف</b> شایستهٔ خداوند ناتوان است.
+</div>
+
+<!-- ================= بخش یکم ================= -->
+<h2 class="bakhsh">بخش یکم: سپاس خدا و ناتوانی از شکر</h2>
+
+<!-- ۱ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">منّتِ خدای را، عَزَّ وَ جَلَّ، که طاعتش موجبِ قربت است و به شکر اندرش مزیدِ نعمت. هر نَفَسی که فرو می‌رود، مُمِدِّ حیات است و چون برمی‌آید، مُفَرِّحِ ذات. پس در هر نَفَسی دو نعمت موجود است و بر هر نعمتی شکری واجب.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: سپاس خدای بزرگ و گرامی را، که فرمانبرداری از او مایهٔ نزدیکی به اوست و شکرگزاری از او مایهٔ افزونی نعمت. هر نفسی که فرو می‌رود، یاری‌کنندهٔ زندگی است و هنگامی که بیرون می‌آید، شادی‌بخش وجود است. پس در هر نفس دو نعمت وجود دارد و برای هر نعمت، شکری واجب است.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> منّت: سپاس، شکر · عَزَّ وَ جَلَّ: گرامی و بزرگ است · طاعت: فرمانبرداری · قُربت: نزدیکی · مزید: افزونی · مُمِدّ: یاری‌رسان · حیات: زندگی · مُفَرِّح: شادی‌بخش · ذات: وجود، هستی</li>
+      </ul>
+      <div class="dastoor">
+        <b>نکتهٔ دستوری:</b>
+        «را» در «خدای را» حرف اضافه به معنی «برای» است. · «به شکر اندرش»: آوردن دو حرف اضافه («به» و «اندر») برای یک متمم، از ویژگی‌های نثر کهن است. · حذف فعل: «منّت خدای را [است]» حذف به قرینهٔ معنوی؛ «مزید نعمت [است]»، «مفرّح ذات [است]» و «شکری واجب [است]» حذف به قرینهٔ لفظی.
+      </div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع:</b> «قربت و نعمت»، «حیات و ذات».</li>
+        <li><b>تضاد:</b> «فرو می‌رود و برمی‌آید».</li>
+        <li><b>تلمیح:</b> «به شکر اندرش مزید نعمت» اشاره دارد به آیهٔ «لَئِن شَکَرتُم لَأَزیدَنَّکُم» (اگر شکر کنید، نعمتتان را می‌افزایم).</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>اطاعت خدا مایهٔ <b>نزدیکی به او</b> و شکرگزاری مایهٔ <b>افزونی نعمت</b> است. حتی در ساده‌ترین کار ما، یعنی نفس کشیدن، دو نعمت نهفته است؛ پس نعمت‌های خدا بی‌شمار و شکر آن‌ها بر ما واجب است.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۲ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۲</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>از دست و زبانِ که برآید</span><span>کز عهدهٔ شکرش به درآید؟</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: از دست و زبان چه کسی ساخته است که بتواند شکر خداوند را آن‌گونه که شایسته است به جا آورد؟ (از هیچ کس)</p>
+      <ul>
+        <li><b>واژه‌ها:</b> برآمدن (از دست کسی): ساخته بودن، توانستن · عُهده: مسئولیت، تعهّد · از عهده به درآمدن: انجام دادن کامل وظیفه</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «که» در مصراع اول ضمیر پرسشی به معنی «چه کسی» است. «کز» یعنی «که از».</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استفهام انکاری:</b> پرسشی که پاسخش منفی است (هیچ کس نمی‌تواند).</li>
+        <li><b>مجاز:</b> «دست» مجاز از عمل و «زبان» مجاز از گفتار.</li>
+        <li><b>مراعات نظیر:</b> «دست و زبان».</li>
+        <li><b>کنایه:</b> «از عهده برآمدن» کنایه از توانستن و انجام دادن کامل کار.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>ناتوانی انسان از شکر شایستهٔ خداوند</b>؛ نه با کردار و نه با گفتار نمی‌توان حقّ شکر او را ادا کرد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۳ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۳</div>
+    <span class="barchasb">آیهٔ قرآن</span>
+    <p class="nasr arabi" style="text-align:center">«اِعمَلوا آلَ داوُدَ شُکراً وَ قَلیلٌ مِن عِبادِیَ الشَّکور»</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: ای خاندان داوود، سپاس‌گزارانه عمل کنید؛ و اندکی از بندگان من سپاس‌گزارند. (سورهٔ سبأ، آیهٔ ۱۳)</p>
+      <ul>
+        <li><b>واژه‌ها:</b> آل: خاندان · قلیل: اندک · عِباد: بندگان · شَکور: بسیار شکرگزار</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تضمین:</b> آوردن آیهٔ قرآن در میان سخن برای استوارتر کردن آن.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>شکر واقعی <b>شکر عملی</b> است، نه فقط زبانی؛ و شکرگزاران راستین <b>اندک‌اند</b>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۴ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۴</div>
+    <span class="barchasb">قطعه · دو بیت</span>
+    <div class="beyt"><span>بنده همان به که ز تقصیرِ خویش</span><span>عذر به درگاهِ خدای آورد</span></div>
+    <div class="beyt"><span>ورنه سزاوارِ خداوندی‌اش</span><span>کس نتواند که به جای آورد</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: برای بنده بهتر آن است که به سبب کوتاهی خود، به پیشگاه خدا عذرخواهی ببرد؛ وگرنه هیچ کس نمی‌تواند شکر و بندگی را آن‌گونه که شایستهٔ خداوندی اوست، به جا آورد.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> به: بهتر · تقصیر: کوتاهی، گناه · درگاه: پیشگاه، آستانه · ورنه: وگرنه · سزاوار: شایسته · به جای آوردن: انجام دادن، ادا کردن</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «به» در «همان به» صفت به معنی «بهتر» است. «ـَش» در «خداوندی‌اش» مضاف‌الیه است.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>موقوف‌المعانی:</b> معنی این دو بیت به هم وابسته است و باید با هم خوانده شوند.</li>
+        <li><b>استعاره:</b> «درگاه خدا»؛ خداوند مانند پادشاهی دانسته شده که درگاه دارد.</li>
+        <li><b>قافیه و ردیف:</b> قافیه «خدای و جای»، ردیف «آورد».</li>
+        <li><b>تضاد:</b> «بنده و خداوند».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>اعتراف به ناتوانی و عذرخواهی</b> بهترین کار بنده است، زیرا هیچ کس نمی‌تواند حقّ بندگی خدا را کامل ادا کند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= بخش دوم ================= -->
+<h2 class="bakhsh">بخش دوم: نعمت‌های بی‌دریغ خداوند</h2>
+
+<!-- ۵ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۵</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">بارانِ رحمتِ بی‌حسابش همه را رسیده و خوانِ نعمتِ بی‌دریغش همه جا کشیده. پردهٔ ناموسِ بندگان به گناهِ فاحش ندرد و وظیفهٔ روزی به خطای مُنکَر نبُرد.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: رحمت بی‌اندازهٔ خداوند مانند باران به همه رسیده و نعمت فراوانش مانند سفره‌ای همه جا گسترده شده است. آبروی بندگان را به سبب گناه آشکار نمی‌برد و روزی مقرّرشان را به سبب خطای زشت قطع نمی‌کند.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> بی‌حساب: بی‌اندازه · خوان: سفره · بی‌دریغ: بی‌مضایقه، فراوان · ناموس: آبرو، شرف · فاحش: آشکار، زشت · وظیفه: مقرّری، روزی معیّن · منکَر: زشت، ناپسند</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> حذف فعل: «رسیده [است]» و «کشیده [است]» حذف به قرینهٔ معنوی. · «را» در «همه را رسیده» حرف اضافه به معنی «به» است (به همه رسیده).</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>اضافهٔ تشبیهی:</b> «باران رحمت»، «خوان نعمت»، «پردهٔ ناموس».</li>
+        <li><b>کنایه:</b> «پرده دریدن» کنایه از آبرو بردن و رسوا کردن.</li>
+        <li><b>سجع:</b> «رسیده و کشیده»، «ندرد و نبرد».</li>
+        <li><b>جناس ناهمسان:</b> «ندرد و نبرد».</li>
+        <li><b>موازنه:</b> دو پارهٔ جملهٔ دوم واژه‌به‌واژه با هم برابرند.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>رحمت فراگیر خداوند</b>: نعمت او به همه می‌رسد، عیب بندگان را می‌پوشاند (ستّارالعیوب است) و حتی روزی گناهکاران را قطع نمی‌کند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۶ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۶</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">فرّاشِ بادِ صبا را گفته تا فرشِ زمرّدین بگسترد و دایهٔ ابرِ بهاری را فرموده تا بناتِ نبات در مهدِ زمین بپرورد. درختان را به خِلعتِ نوروزی قبای سبزِ وَرَق در بر گرفته و اطفالِ شاخ را به قدومِ موسمِ ربیع کلاهِ شکوفه بر سر نهاده. عُصارهٔ تاکی به قدرتِ او شهدِ فایق شده و تخمِ خرمایی به تربیتش نخلِ باسِق گشته.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: خداوند به باد صبا که مانند فرّاش است فرمان داده تا سبزه‌ها را مانند فرشی زمرّدین بگستراند، و به ابر بهاری که مانند دایه است دستور داده تا گیاهان نورسته را در گهوارهٔ زمین پرورش دهد. به مناسبت نوروز، جامه‌ای سبز از برگ بر تن درختان پوشانده و به مناسبت فرا رسیدن بهار، کلاهی از شکوفه بر سر شاخه‌های نورس گذاشته است. شیرهٔ درخت انگوری با قدرت او عسلی برتر شده و هستهٔ خرمایی با پرورش او درخت نخلی بلند شده است.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> فرّاش: گسترانندهٔ فرش، خدمتکار · صبا: نسیمی خوش که از شمال شرق می‌وزد · زمرّدین: سبز، به رنگ زمرّد · دایه: پرستار کودک · بنات: دختران (جمع بنت) · نبات: گیاه · مَهد: گهواره · خِلعت: جامهٔ دوخته‌ای که بزرگی به کسی هدیه کند · وَرَق: برگ · اطفال: کودکان · قُدوم: آمدن، فرا رسیدن · موسم: فصل · ربیع: بهار · عُصاره: شیره · تاک: درخت انگور · شهد: عسل · فایق: برتر · باسِق: بلند، بالیده</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «را» در «فرّاش باد صبا را گفته» و «دایهٔ ابر بهاری را فرموده» حرف اضافه به معنی «به» است. · «را» در «درختان را … قبا در بر گرفته» و «اطفال شاخ را … کلاه بر سر نهاده» فکّ اضافه است (در بَرِ درختان، بر سَرِ اطفال شاخ). · حذف «است» از پایان فعل‌ها: گفته [است]، فرموده [است]، گشته [است].</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>اضافهٔ تشبیهی:</b> «فرّاش باد صبا»، «دایهٔ ابر»، «مهد زمین»، «قبای سبز ورق»، «اطفال شاخ»، «کلاه شکوفه».</li>
+        <li><b>استعاره:</b> «فرش زمرّدین» استعاره از سبزه و گیاهان؛ «بنات نبات» استعاره از گیاهان نورسته.</li>
+        <li><b>تشخیص:</b> باد فرّاش است، ابر دایه است و درختان جامه می‌پوشند.</li>
+        <li><b>سجع:</b> «بگسترد و بپرورد»، «گرفته و نهاده»، «شده و گشته».</li>
+        <li><b>مراعات نظیر:</b> «دایه، مهد، اطفال»؛ «خلعت، قبا، کلاه».</li>
+        <li><b>جناس ناهمسان:</b> «فرّاش و فرش»، «بنات و نبات».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>قدرت و پرورندگی خداوند در طبیعت</b>: رویش گیاهان، شکوفه‌ها و میوه‌ها همه به فرمان و تدبیر اوست و همهٔ عناصر طبیعت، فرمانبر اویند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۷ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۷</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>ابر و باد و مه و خورشید و فلک در کارند</span><span>تا تو نانی به کف آری و به غفلت نخوری</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: ابر و باد و ماه و خورشید و آسمان همه در کار و تلاش‌اند تا تو روزی‌ای به دست آوری و آن را با غفلت و بی‌خبری از بخشندهٔ آن نخوری.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> مه: ماه · فلک: آسمان · کف: کف دست · غفلت: بی‌خبری، فراموشی</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>مراعات نظیر:</b> «ابر، باد، مه، خورشید، فلک».</li>
+        <li><b>تشخیص:</b> عناصر طبیعت مانند انسان «در کار»اند.</li>
+        <li><b>مجاز:</b> «نان» مجاز از روزی.</li>
+        <li><b>کنایه:</b> «به کف آوردن» کنایه از به دست آوردن.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>همهٔ هستی <b>در خدمت انسان</b> است. مفهوم مصراع دوم: روزی را با یاد خدا و شکرگزاری بخور، نه با غفلت.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۸ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۸</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>همه از بهرِ تو سرگشته و فرمان‌بردار</span><span>شرطِ انصاف نباشد که تو فرمان نبری</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: همهٔ آفریدگان برای تو سرگردان و فرمانبردار خدا هستند؛ از انصاف به دور است که تو از فرمان خدا اطاعت نکنی.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> بهر: برای · سرگشته: سرگردان، حیران · انصاف: داد، عدالت</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> در مصراع اول فعل «اند» حذف شده است: «همه … فرمان‌بردار [اند]».</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>ایهام:</b> «سرگشته» دو معنی دارد: ۱. سرگردان و در تلاش ۲. چرخان (اشاره به چرخش ماه و خورشید و آسمان).</li>
+        <li><b>تشخیص:</b> فرمانبرداری عناصر طبیعت.</li>
+        <li><b>تضاد:</b> «فرمان‌بردار» و «فرمان نبردن».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>وقتی همهٔ جهان فرمانبر خداست و در خدمت انسان، <b>نافرمانی انسان دور از انصاف</b> است.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= بخش سوم ================= -->
+<h2 class="bakhsh">بخش سوم: ستایش پیامبر (ص)</h2>
+
+<!-- ۹ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۹</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">در خبر است از سرورِ کاینات و مَفخَرِ موجودات و رحمتِ عالمیان و صَفوَتِ آدمیان و تَتِمّهٔ دَورِ زمان، محمّدِ مصطفی، صَلَّی اللهُ عَلَیهِ وَ آلِهِ وَ سَلَّم،</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: در حدیثی از سرور آفریدگان، مایهٔ افتخار موجودات، رحمت جهانیان، برگزیدهٔ انسان‌ها و کامل‌کنندهٔ گردش روزگار، حضرت محمّد مصطفی (درود خدا بر او و خاندانش باد) آمده است… (ادامهٔ این جمله، پس از بیت‌ها، در بخش چهارم می‌آید.)</p>
+      <ul>
+        <li><b>واژه‌ها:</b> خبر: حدیث · سرور: بزرگ، سردار · کاینات: آفریدگان، موجودات · مَفخَر: مایهٔ افتخار · عالمیان: جهانیان · صَفوَت: برگزیده · تَتِمّه: کامل‌کننده، پایان‌بخش · دَور: گردش</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع:</b> «کاینات و موجودات»، «عالمیان و آدمیان».</li>
+        <li><b>تلمیح:</b> «رحمت عالمیان» اشاره به آیهٔ «وَ ما أرسَلناکَ إلّا رَحمَةً لِلعالَمین».</li>
+        <li><b>تتمّهٔ دور زمان:</b> اشاره به خاتم پیامبران بودن ایشان.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>بیان <b>جایگاه والای پیامبر</b>: سرور آفریدگان، رحمت جهانیان و آخرین پیامبر.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۰ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۰</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>شفیعٌ مُطاعٌ نبیٌّ کریم</span><span>قسیمٌ جسیمٌ نسیمٌ وسیم</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: شفاعت‌کننده‌ای که فرمانش پذیرفته است، پیامبری بزرگوار و بخشنده، زیباروی، خوش‌اندام، خوش‌بو و دارای نشان پیامبری.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> شفیع: شفاعت‌کننده · مُطاع: فرمانروا، کسی که از او اطاعت می‌شود · کریم: بخشنده، بزرگوار · قسیم: صاحب جمال · جسیم: خوش‌اندام · نسیم: خوش‌بو · وسیم: دارای نشان پیامبری</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع و جناس ناهمسان:</b> «قسیم، جسیم، نسیم، وسیم».</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «س» و مصوّت «ی».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>ستایش <b>ویژگی‌های ظاهری و باطنی</b> پیامبر (ص).</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۱ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۱</div>
+    <span class="barchasb">بیت عربی</span>
+    <div class="beyt arabi"><span class="arabi">بَلَغَ العُلی بِکَمالِهِ، کَشَفَ الدُّجی بِجَمالِهِ</span><span class="arabi">حَسُنَت جَمیعُ خِصالِهِ، صَلّوا عَلَیهِ وَ آلِهِ</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: با کمال خود به بلندترین مرتبه‌ها رسید؛ با زیبایی خود تاریکی‌ها را برطرف کرد؛ همهٔ خوی‌های او نیکوست؛ بر او و خاندانش درود بفرستید.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> عُلی: بلندی‌ها · دُجی: تاریکی‌ها · خِصال: خوی‌ها، صفت‌ها</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع:</b> «کماله، جماله، خصاله، آله».</li>
+        <li><b>جناس ناهمسان:</b> «کمال و جمال».</li>
+        <li><b>استعاره:</b> «دُجی» (تاریکی) استعاره از جهل و گمراهی.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>کمال و جمال پیامبر</b> که جهان را از تاریکی نادانی نجات داد؛ و سفارش به فرستادن درود بر او و خاندانش.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۲ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۲</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>چه غم دیوارِ امّت را که دارد چون تو پشتیبان؟</span><span>چه باک از موجِ بحر آن را که باشد نوح کشتیبان؟</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: امّتی که پشتیبانی مانند تو دارد، هیچ غمی ندارد؛ همان‌گونه که کسی که نوح ناخدای کشتی‌اش باشد، از موج دریا هیچ ترسی ندارد.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> باک: ترس · بحر: دریا · کشتیبان: ناخدا، رانندهٔ کشتی · پشتیبان: حامی؛ تیر و ستونی که پشت دیوار می‌گذارند تا نریزد</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>اضافهٔ تشبیهی:</b> «دیوار امّت» (امّت مانند دیوار).</li>
+        <li><b>ایهام:</b> «پشتیبان»: ۱. حامی ۲. ستونِ پشت دیوار.</li>
+        <li><b>تلمیح:</b> به داستان حضرت نوح و کشتی او در توفان.</li>
+        <li><b>استفهام انکاری:</b> در هر دو مصراع (هیچ غمی نیست، هیچ ترسی نیست).</li>
+        <li><b>مراعات نظیر:</b> «موج، بحر، نوح، کشتیبان».</li>
+        <li><b>جناس ناهمسان:</b> «پشتیبان و کشتیبان».</li>
+        <li><b>تشبیه:</b> پیامبر (ص) به نوح و امّت به سرنشینان کشتی مانند شده است.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>امید به شفاعت پیامبر</b>: امّتی که پیامبر حامی آن است، از هیچ خطری نمی‌هراسد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= بخش چهارم ================= -->
+<h2 class="bakhsh">بخش چهارم: کرم خداوند و پذیرش توبه</h2>
+
+<!-- ۱۳ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۳</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">هر گه که یکی از بندگانِ گنهکارِ پریشان‌روزگار، دستِ انابت به امیدِ اجابت به درگاهِ حق، جَلَّ وَ عَلا، بردارد، ایزد، تعالی، در او نظر نکند. بازش بخواند، باز اعراض فرماید. بار دیگرش به تضرّع و زاری بخواند. حق، سُبحانَهُ وَ تَعالی، فرماید: <span class="arabi">«یا مَلائِکَتی قَدِ استَحیَیتُ مِن عَبدی وَ لَیسَ لَهُ غَیری فَقَد غَفَرتُ لَهُ.»</span> دعوتش اجابت کردم و امیدش برآوردم که از بسیاریِ دعا و زاریِ بنده همی شرم دارم.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: هرگاه یکی از بندگان گناهکار و آشفته‌حال، دست توبه را به امید پذیرفته شدن به سوی درگاه خداوند بزرگ و بلندمرتبه بلند کند، خداوند به او توجّه نمی‌کند. بنده دوباره خدا را می‌خواند و خداوند باز روی می‌گرداند. بار دیگر با زاری و التماس او را می‌خواند. خداوند پاک و بلندمرتبه می‌فرماید: «ای فرشتگان من، از بنده‌ام شرم کردم؛ او جز من کسی را ندارد؛ پس او را بخشیدم.» دعایش را پذیرفتم و امیدش را برآورده کردم، زیرا از دعا و زاری فراوان بنده‌ام شرم دارم.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> پریشان‌روزگار: آشفته‌حال، تیره‌بخت · انابت: بازگشت به سوی خدا، توبه · اجابت: پذیرفتن · جَلَّ وَ عَلا: بزرگ و بلندمرتبه است · ایزد: خداوند · اعراض: روی گرداندن · تضرّع: زاری، التماس · همی: پیشوند استمرار (= می)</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «ـَش» در «بازش بخواند» و «بار دیگرش بخواند» نقش مفعولی دارد (او را بخواند)؛ در «دعوتش» و «امیدش» مضاف‌الیه است. · «که» در «که از بسیاری دعا…» به معنی «زیرا» است.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «دست انابت» (انابت مانند انسانی دست دارد).</li>
+        <li><b>سجع و جناس ناهمسان:</b> «انابت و اجابت».</li>
+        <li><b>کنایه:</b> «دست برداشتن» کنایه از دعا کردن.</li>
+        <li><b>تضمین:</b> آوردن حدیث قدسی به زبان عربی.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>کرم و بخشش بی‌پایان خداوند</b> و ارزش <b>توبه و پافشاری در دعا</b>؛ هیچ گناهکاری نباید از رحمت خدا ناامید شود.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۴ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۴</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>کرم بین و لطفِ خداوندگار</span><span>گنه بنده کرده‌ست و او شرمسار</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: بخشندگی و لطف خداوند را ببین؛ گناه را بنده انجام داده، اما خداوند شرمسار است.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> کرم: بخشندگی · خداوندگار: خداوند · شرمسار: شرمنده</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «او شرمسار [است]» حذف فعل به قرینهٔ لفظی.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تضاد:</b> «بنده و خداوندگار».</li>
+        <li><b>مراعات نظیر:</b> «کرم و لطف»؛ «گنه و شرمسار».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>اوج <b>کرم الهی</b>: خداوند چنان بخشنده است که گویی از گناه بنده، خود شرمنده است. (خلاصهٔ حکایت پیشین)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= بخش پنجم ================= -->
+<h2 class="bakhsh">بخش پنجم: ناتوانی از عبادت، شناخت و وصف خدا</h2>
+
+<!-- ۱۵ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۵</div>
+    <span class="barchasb">نثر</span>
+    <p class="nasr">عاکفانِ کعبهٔ جلالش به تقصیرِ عبادت معترف که: <span class="arabi">ما عَبَدناکَ حَقَّ عِبادَتِکَ</span>، و واصفانِ حِلیهٔ جمالش به تحیّر منسوب که: <span class="arabi">ما عَرَفناکَ حَقَّ مَعرِفَتِکَ</span>.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: کسانی که در خانهٔ شکوه و بزرگی خداوند به عبادت نشسته‌اند، به کوتاهی خود در عبادت اعتراف می‌کنند و می‌گویند: «تو را چنان‌که شایستهٔ توست عبادت نکردیم.» و کسانی که زیبایی او را وصف می‌کنند، حیران و سرگشته‌اند و می‌گویند: «تو را چنان‌که شایستهٔ شناخت توست نشناختیم.»</p>
+      <ul>
+        <li><b>واژه‌ها:</b> عاکف: گوشه‌نشین در عبادتگاه برای عبادت · جلال: بزرگی، شکوه · معترف: اعتراف‌کننده · واصف: وصف‌کننده · حِلیه: زیور، زینت · تحیّر: سرگشتگی، حیرانی · منسوب: نسبت‌داده‌شده</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «معترف [اند]» و «منسوب [اند]» حذف فعل به قرینهٔ معنوی.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>اضافهٔ تشبیهی:</b> «کعبهٔ جلال» و «حلیهٔ جمال».</li>
+        <li><b>موازنه:</b> «عاکفان / واصفان»، «کعبه / حلیه»، «جلالش / جمالش»، «تقصیر / تحیّر»، «معترف / منسوب».</li>
+        <li><b>جناس ناهمسان:</b> «جلال و جمال».</li>
+        <li><b>تضمین:</b> آوردن دو حدیث از پیامبر (ص).</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>حتی بزرگ‌ترین عابدان و عارفان به <b>ناتوانی از عبادت شایسته و شناخت کامل</b> خداوند اعتراف می‌کنند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۶ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۶</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>گر کسی وصفِ او ز من پرسد</span><span>بی‌دل از بی‌نشان چه گوید باز؟</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: اگر کسی از من بخواهد خداوند را برایش وصف کنم، عاشق دل‌باخته دربارهٔ خدایی که نشان و نمونه‌ای ندارد، چه می‌تواند بگوید؟</p>
+      <ul>
+        <li><b>واژه‌ها:</b> بی‌دل: عاشق، دلداده · بی‌نشان: آنکه نشان و نمونه‌ای ندارد (خداوند) · باز گفتن: بیان کردن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استفهام انکاری:</b> هیچ چیز نمی‌تواند بگوید.</li>
+        <li><b>کنایه:</b> «بی‌دل» کنایه از عاشق؛ «بی‌نشان» کنایه از خداوند.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>وصف‌ناپذیری خداوند</b>: زبان عاشق از وصف معشوقی که نشان و همانندی ندارد، ناتوان است.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۷ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۷</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>عاشقان کشتگانِ معشوق‌اند</span><span>برنیاید ز کشتگان آواز</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: عاشقان کشته‌شدگان راه معشوق‌اند و از کشته‌شدگان صدایی برنمی‌خیزد.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> کشتگان: کشته‌شدگان · برنیاید: بیرون نمی‌آید</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> عاشقان به کشتگان مانند شده‌اند.</li>
+        <li><b>مراعات نظیر:</b> «عاشق و معشوق».</li>
+        <li><b>تکرار:</b> «کشتگان».</li>
+        <li><b>کنایه:</b> «برنیامدن آواز» کنایه از خاموشی کامل.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>عاشق واقعی در عشق معشوق <b>از خود فانی شده</b> و خاموش است. این بیت دلیل بیت پیشین است: چرا عاشق نمی‌تواند خدا را وصف کند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= بخش ششم ================= -->
+<h2 class="bakhsh">بخش ششم: حکایت صاحب‌دل</h2>
+
+<!-- ۱۸ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۸</div>
+    <span class="barchasb">حکایت · نثر</span>
+    <p class="nasr">یکی از صاحب‌دلان سر به جَیبِ مراقبت فرو برده بود و در بحرِ مکاشفت مستغرق شده؛ آن‌گه که از این معاملت بازآمد، یکی از یاران به طریقِ انبساط گفت: «از این بوستان که بودی، ما را چه تحفه کرامت کردی؟» گفت: «به خاطر داشتم که چون به درختِ گل رسم، دامنی پُر کنم هدیهٔ اصحاب را. چون برسیدم، بوی گُلم چنان مست کرد که دامنم از دست برفت!»</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: یکی از عارفان سر در گریبان فرو برده و در حال تفکّر و توجّه کامل به خدا بود و در دریای کشف و شهود غرق شده بود. هنگامی که از این حال به خود آمد، یکی از دوستان از روی خودمانی بودن گفت: «از این باغ معنوی که در آن بودی، چه هدیه‌ای برای ما آوردی؟» گفت: «در نظر داشتم که وقتی به درخت گل برسم، دامنم را پر از گل کنم تا برای یاران هدیه بیاورم. وقتی رسیدم، بوی گل چنان مستم کرد که دامن از دستم رها شد!»</p>
+      <ul>
+        <li><b>واژه‌ها:</b> صاحب‌دل: عارف، آگاه‌دل · جَیب: گریبان، یقه · مراقبت: در اصطلاح عرفان، توجّه کامل دل به خدا · بحر: دریا · مکاشفت: کشف و شهود حقیقت · مستغرق: غرق‌شده · معاملت: حال و عمل عبادی · انبساط: خودمانی بودن، گشاده‌رویی · تحفه: هدیه · کرامت کردن: بخشیدن · اصحاب: یاران</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «بوی گُلم چنان مست کرد»: «ـَم» نقش <b>مفعولی</b> دارد (مرا مست کرد). · «دامنم از دست برفت»: «ـَم» نقش <b>مضاف‌الیه</b> دارد (دامنِ من). · «را» در «ما را چه تحفه…» و «هدیهٔ اصحاب را» حرف اضافه به معنی «برای» است. · «مستغرق شده [بود]» حذف به قرینهٔ لفظی.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>کنایه:</b> «سر به جیب فرو بردن» کنایه از تفکّر و فرو رفتن در خود؛ «دامن از دست رفتن» کنایه از بی‌خود شدن.</li>
+        <li><b>اضافهٔ تشبیهی:</b> «جیب مراقبت»، «بحر مکاشفت».</li>
+        <li><b>استعاره:</b> «بوستان» استعاره از عالم معنا و حضور؛ «گل» استعاره از جلوه‌های حقیقت.</li>
+        <li><b>سجع:</b> «مراقبت و مکاشفت».</li>
+        <li><b>مراعات نظیر:</b> «بوستان، درخت، گل، بو».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>تجربهٔ <b>شهود عرفانی وصف‌ناپذیر</b> است؛ عارفی که به حقیقت می‌رسد از خود بی‌خود می‌شود و نمی‌تواند از آن برای دیگران چیزی بیاورد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۱۹ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱۹</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>ای مرغِ سحر! عشق ز پروانه بیاموز</span><span>کان سوخته را جان شد و آواز نیامد</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: ای بلبلِ سحرخیز! عاشقی را از پروانه یاد بگیر؛ زیرا آن پروانهٔ سوخته جانش را از دست داد و صدایی از او برنیامد.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> مرغ سحر: بلبل · شد: رفت · کان: که آن</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «را» در «کان سوخته را جان شد» فکّ اضافه است (جانِ آن سوخته رفت). · «که» به معنی «زیرا». · «سوخته» صفتِ جانشینِ اسم (پروانهٔ سوخته).</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>نماد:</b> «مرغ سحر» نماد عاشقِ مدّعیِ پرحرف؛ «پروانه» نماد عاشقِ راستینِ خاموش و جان‌باز.</li>
+        <li><b>تشخیص:</b> خطاب کردن مرغ سحر.</li>
+        <li><b>کنایه:</b> «جان شدن» کنایه از مردن.</li>
+        <li><b>مراعات نظیر:</b> «پروانه و سوختن».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>عاشق واقعی <b>خاموش و فداکار</b> است؛ ادّعای عشق بدون فداکاری ارزشی ندارد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ۲۰ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۲۰</div>
+    <span class="barchasb">بیت</span>
+    <div class="beyt"><span>این مدّعیان در طلبش بی‌خبران‌اند</span><span>کان را که خبر شد، خبری باز نیامد</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: این کسانی که ادّعای جست‌وجوی خدا را دارند، در حقیقت از او بی‌خبرند؛ زیرا کسی که از حقیقت آگاه شد، دیگر هیچ خبری از او بازنگشت (از خود بی‌خود و خاموش شد).</p>
+      <ul>
+        <li><b>واژه‌ها:</b> مدّعی: ادّعاکننده · طلب: جست‌وجو · خبر شدن: آگاه شدن</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «را» در «آن را که خبر شد» حرف اضافه به معنی «برای» است. «ـَش» در «طلبش» مضاف‌الیه است.</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تکرار:</b> «خبر» (در «بی‌خبران»، «خبر شد»، «خبری»).</li>
+        <li><b>تضاد:</b> «بی‌خبر» و «خبر شدن».</li>
+        <li><b>متناقض‌نما:</b> مدّعیانِ پرحرف بی‌خبرند و آگاهان بی‌صدا.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>کسانی که از خدا بسیار دم می‌زنند، از او بی‌خبرند؛ <b>آگاهِ واقعی خاموش است</b>. (هم‌مفهوم با بیت «عاشقان کشتگان معشوق‌اند»)</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= چکیده ================= -->
+<h2 class="bakhsh">چکیدهٔ نکته‌های دستوری درس</h2>
+
+<div class="jadval-ghab">
+  <table>
+    <thead>
+      <tr><th>نقش «را»</th><th>نمونه از درس</th><th>توضیح</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>حرف اضافه (برای)</td><td class="mesal">منّت خدای را / ما را چه تحفه</td><td>منّت برای خدا / برای ما</td></tr>
+      <tr><td>حرف اضافه (به)</td><td class="mesal">همه را رسیده / فرّاش باد صبا را گفته</td><td>به همه رسیده / به فرّاش گفته</td></tr>
+      <tr><td>فکّ اضافه</td><td class="mesal">کان سوخته را جان شد</td><td>جانِ آن سوخته رفت</td></tr>
+      <tr><td>فکّ اضافه</td><td class="mesal">اطفال شاخ را کلاه بر سر نهاده</td><td>بر سرِ اطفال شاخ</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="jadval-ghab">
+  <table>
+    <thead>
+      <tr><th>نوع حذف</th><th>نمونه از درس</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>حذف فعل به قرینهٔ لفظی</td><td class="mesal">به شکر اندرش مزید نعمت [است] / بر هر نعمتی شکری واجب [است] / او شرمسار [است]</td></tr>
+      <tr><td>حذف فعل به قرینهٔ معنوی</td><td class="mesal">منّت خدای را [است] / همه را رسیده [است] / به تقصیر عبادت معترف [اند]</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="nokteh">
+  <b class="onvan">سه ناتوانی انسان در این درس:</b>
+  ۱. ناتوانی از <b>شکر</b> (از دست و زبان که برآید…) · ۲. ناتوانی از <b>عبادت و شناخت</b> (ما عبدناک… ما عرفناک…) · ۳. ناتوانی از <b>وصف</b> (بی‌دل از بی‌نشان چه گوید باز؟). راه چاره: <b>اعتراف به کوتاهی و امید به کرم خدا</b>.
+</div>
+
+<!-- ================= کارگاه درس‌پژوهی ================= -->
+<h2 class="bakhsh">کارگاه درس‌پژوهی (پاسخ پرسش‌ها)</h2>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۱</span>جدول زیر را به کمک متن درس کامل کنید.</div>
+  <div class="pasokh">
+    <div class="jadval-ghab">
+      <table>
+        <thead><tr><th>معنا</th><th>واژهٔ معادل</th></tr></thead>
+        <tbody>
+          <tr><td>دارای نشان پیامبری</td><td class="mesal">وسیم</td></tr>
+          <tr><td>شادی‌بخش</td><td class="mesal">مُفَرِّح</td></tr>
+          <tr><td>به خدای تعالی بازگشتن</td><td class="mesal">انابت</td></tr>
+          <tr><td>قطع کردن مقرّری</td><td class="mesal">وظیفه بُریدن</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۲</span>از متن درس برای کاربرد هر یک از حروف زیر، سه واژهٔ مهمّ املایی بیابید.</div>
+  <div class="pasokh">
+    <ul>
+      <li><b>ح:</b> مُمِدِّ حیات · حِلیه · تحیّر</li>
+      <li><b>ق:</b> قُربت · شهد فایق · نخل باسِق</li>
+      <li><b>ع:</b> عُصاره · اعراض · تضرّع</li>
+    </ul>
+    <p>(پاسخ‌های درست دیگر: حق، تحفه، تقصیر، قُدوم، مستغرق، قسیم، عاکفان، معترف، عزّ و جلّ)</p>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۳</span>در عبارت زیر نقش دستوری ضمایر متّصل را مشخّص کنید.</div>
+  <div class="pasokh">
+    <p class="shaer">«بوی گُلم چنان مست کرد که دامنم از دست برفت.»</p>
+    <ul>
+      <li><b>گُلم:</b> «ـَم» نقش <b>مفعول</b> دارد (بوی گل مرا مست کرد).</li>
+      <li><b>دامنم:</b> «ـَم» نقش <b>مضاف‌الیه</b> دارد (دامنِ من).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۴</span>در متن درس، نمونه‌ای برای کاربرد هر یک از انواع حذف بیابید.</div>
+  <div class="pasokh">
+    <ul>
+      <li><b>حذف به قرینهٔ لفظی:</b> «طاعتش موجب قربت است و به شکر اندرش مزید نعمت [است].» (فعل «است» پیش‌تر در جمله آمده است.)</li>
+      <li><b>حذف به قرینهٔ معنوی:</b> «منّت خدای را [است].» (فعل در جمله نیامده و از معنی فهمیده می‌شود.)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۵</span>واژه‌های مشخّص‌شده نماد چه مفاهیمی هستند؟</div>
+  <div class="pasokh">
+    <p class="shaer">ای مرغ سحر! عشق ز پروانه بیاموز / کان سوخته را جان شد و آواز نیامد</p>
+    <ul>
+      <li><b>مرغ سحر:</b> نماد عاشقِ مدّعی و پرحرف که از عشق فقط سخن می‌گوید.</li>
+      <li><b>عشق:</b> عشق حقیقی به خداوند.</li>
+      <li><b>پروانه:</b> نماد عاشقِ راستین که خاموش است و جان خود را فدای معشوق می‌کند.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۶</span>با توجّه به عبارت‌های «باران رحمت…» و «فرّاش باد صبا…» به پرسش‌ها پاسخ دهید.</div>
+  <div class="pasokh">
+    <ul>
+      <li><b>الف) آرایه‌های مشترک:</b>
+        <ul>
+          <li><b>تشبیه</b> از نوع اضافهٔ تشبیهی: «باران رحمت»، «خوان نعمت» در عبارت اول و «فرّاش باد صبا»، «دایهٔ ابر»، «مهد زمین» در عبارت دوم.</li>
+          <li><b>سجع:</b> «رسیده و کشیده» در عبارت اول و «بگسترد و بپرورد» در عبارت دوم.</li>
+        </ul>
+      </li>
+      <li><b>ب) قسمت مشخّص‌شده:</b> <b>استعاره</b> است؛ «فرش زمرّدین» استعاره از سبزه و گیاهان، و «بنات نبات» استعاره از گیاهان نورسته.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۷</span>معنی و مفهوم عبارت‌های زیر را به نثر روان بنویسید.</div>
+  <div class="pasokh">
+    <p class="shaer">«عاکفان کعبهٔ جلالش به تقصیر عبادت معترف که: ما عَبَدناکَ حَقَّ عِبادَتِکَ.»</p>
+    <p><b>معنی:</b> کسانی که در پیشگاه شکوه و بزرگی خداوند به عبادت نشسته‌اند، به کوتاهی خود در عبادت اعتراف می‌کنند و می‌گویند: «تو را آن‌گونه که شایستهٔ توست عبادت نکردیم.»<br>
+    <b>مفهوم:</b> ناتوانی انسان از عبادت شایستهٔ خداوند.</p>
+    <p class="shaer">«یکی از صاحب‌دلان سر به جیب مراقبت فرو برده بود و در بحر مکاشفت مستغرق شده.»</p>
+    <p><b>معنی:</b> یکی از عارفان سر در گریبان فرو برده و با تمام دل به خدا توجّه کرده بود و در دریای کشف و شهود حقیقت غرق شده بود.<br>
+    <b>مفهوم:</b> فرو رفتن عارف در تفکّر و حال عرفانی.</p>
+  </div>
+</div>
+
+<div class="porsesh">
+  <div class="porsesh-sar"><span class="adad">۸</span>مفهوم کلّی مصراع‌های مشخّص‌شده را بنویسید.</div>
+  <div class="pasokh">
+    <ul>
+      <li><span class="shaer">«تا تو نانی به کف آری و به غفلت نخوری»</span>: همهٔ هستی در خدمت انسان است تا روزی به دست آورد؛ پس باید روزی را با یاد خدا و شکرگزاری بخورد، نه با غفلت.</li>
+      <li><span class="shaer">«چه غم دیوار امّت را که دارد چون تو پشتیبان»</span>: امّتی که پیامبر (ص) حامی و شفیع آن است، از هیچ خطری نمی‌هراسد.</li>
+      <li><span class="shaer">«بی‌دل از بی‌نشان چه گوید باز؟»</span>: عاشق از وصف خداوندی که نشان و همانندی ندارد ناتوان است؛ خداوند وصف‌ناپذیر است.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= گنج حکمت ================= -->
+<h2 class="bakhsh ganj">گنج حکمت: گمان</h2>
+
+<div class="kart ganj-kart">
+  <div class="kart-sar">
+    <div class="shomareh">✦</div>
+    <span class="barchasb">حکایت · کلیله و دمنه، ترجمهٔ نصرالله منشی</span>
+    <p class="nasr">گویند که بطّی در آب روشناییِ ستاره می‌دید. پنداشت که ماهی است؛ قصدی می‌کرد تا بگیرد و هیچ نمی‌یافت. چون بارها بیازمود و حاصلی ندید، فروگذاشت. دیگر روز هرگاه که ماهی بدیدی، گمان بردی که همان روشنایی است؛ قصدی نپیوستی و ثمرتِ این تجربت آن بود که همه روز گرسنه بماند.</p>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: می‌گویند مرغابی‌ای نور ستاره را در آب می‌دید و گمان کرد ماهی است. برای گرفتنش تلاش می‌کرد و چیزی به دست نمی‌آورد. وقتی بارها آزمود و نتیجه‌ای نگرفت، آن کار را رها کرد. روز بعد هر گاه ماهی می‌دید، گمان می‌کرد همان نور ستاره است و برای گرفتنش اقدامی نمی‌کرد؛ و نتیجهٔ این تجربه آن شد که تمام روز گرسنه ماند.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> بط: مرغابی · پنداشتن: گمان کردن · قصد: آهنگ، تصمیم · آزمودن: امتحان کردن · حاصل: نتیجه · فروگذاشتن: رها کردن · قصد پیوستن: اقدام کردن · ثمرت: ثمره، نتیجه · تجربت: تجربه</li>
+      </ul>
+      <div class="dastoor"><b>نکتهٔ دستوری:</b> «بدیدی»، «گمان بردی» و «نپیوستی»: در نثر کهن، «ی» در پایان فعل ماضی معنای استمراری می‌دهد (= می‌دید، گمان می‌برد، نمی‌پیوست).</div>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>حکایت تمثیلی:</b> داستانی از زبان جانوران برای بیان یک پند.</li>
+        <li><b>تضاد:</b> «روشنایی ستاره» (خیال) و «ماهی» (واقعیت).</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>بدگمانی</b> ناشی از چند تجربهٔ ناموفق، انسان را از فرصت‌های واقعی محروم می‌کند؛ نباید یک تجربهٔ تلخ را به همه چیز تعمیم داد.</p>
+      <p>هم‌مفهوم با مَثَل «مارگزیده از ریسمان سیاه و سفید می‌ترسد».</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش دوازدهم · درس یکم: شکر نعمت<br>
+  ❖ با آرزوی موفّقیت ❖
+</footer>
+
+</div>
+</body>
+</html>
