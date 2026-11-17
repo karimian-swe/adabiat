@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ ستایش فارسی دوازدهم: ملکا، ذکر تو گویم</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lajvard:#14306b;
+    --lajvard-dark:#0b1d45;
+    --firooze:#0f7c80;
+    --shangarf:#b23a1e;
+    --tala:#c19a3f;
+    --tala-dark:#8a6a1f;
+    --tala-light:#f1e2b8;
+    --kaghaz:#fdf8ec;
+    --matn:#2b2418;
+    --sabz:#2f6b45;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn","Vazir",Tahoma,sans-serif;
+    color:var(--matn);
+    line-height:2;
+    font-size:15.5px;
+    background-color:#0f2552;
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(193,154,63,.22) 0 6px, transparent 7px),
+      radial-gradient(circle at 75% 75%, rgba(193,154,63,.22) 0 6px, transparent 7px),
+      linear-gradient(45deg, rgba(255,255,255,.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.04) 75%),
+      linear-gradient(-45deg, rgba(255,255,255,.04) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.04) 75%);
+    background-size:48px 48px;
+  }
+  .page{
+    max-width:920px;
+    margin:28px auto;
+    background:
+      radial-gradient(ellipse at top, #fffdf6 0%, var(--kaghaz) 60%, #f6ecd3 100%);
+    padding:44px 46px 30px;
+    border:3px solid var(--tala);
+    box-shadow:0 0 0 8px var(--kaghaz), 0 0 0 10px var(--tala-dark), 0 18px 50px rgba(0,0,0,.45);
+    border-radius:4px;
+    position:relative;
+  }
+  /* گوشه‌های تذهیب */
+  .page::before,.page::after{
+    content:"❁";
+    position:absolute;
+    font-size:30px;color:var(--tala);
+    line-height:1;
+  }
+  .page::before{top:8px;right:12px}
+  .page::after{top:8px;left:12px}
+
+  /* سربرگ کتیبه‌ای */
+  header.sar{
+    text-align:center;
+    margin:0 auto;
+    max-width:620px;
+    padding:20px 26px 18px;
+    background:var(--lajvard);
+    color:#fff;
+    border:3px solid var(--tala);
+    border-radius:60px 60px 10px 10px;
+    box-shadow:inset 0 0 0 5px var(--lajvard), inset 0 0 0 6px var(--tala-light);
+    position:relative;
+  }
+  header.sar .payeh{
+    display:inline-block;font-size:13px;color:var(--lajvard-dark);
+    background:var(--tala-light);padding:0 14px;border-radius:12px;font-weight:600;
+  }
+  header.sar h1{
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:40px;margin:8px 0 2px;font-weight:700;color:var(--tala-light);
+    text-shadow:0 2px 0 rgba(0,0,0,.35);
+  }
+  header.sar .nevisandeh{font-size:14px;color:#e8eefc}
+  .toranj{
+    text-align:center;color:var(--shangarf);font-size:18px;margin:14px 0 10px;letter-spacing:10px;
+  }
+
+  h2.bakhsh{
+    text-align:center;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:22px;color:var(--lajvard);
+    margin:34px 0 16px;
+    display:flex;align-items:center;gap:14px;
+    page-break-after:avoid;
+  }
+  h2.bakhsh::before,h2.bakhsh::after{
+    content:"";flex:1;height:2px;
+    background:linear-gradient(90deg,transparent,var(--tala),transparent);
+  }
+  p{margin:4px 0 8px;text-align:justify}
+
+  .nokteh{
+    background:#fffdf7;
+    border:1px solid var(--tala);
+    border-radius:10px;
+    padding:12px 18px;margin:14px 0;
+    position:relative;
+    page-break-inside:avoid;
+  }
+  .nokteh b.onvan{
+    color:var(--shangarf);
+  }
+
+  /* کارت هر بیت */
+  .kart{
+    margin:26px 0;
+    border:1px solid var(--tala);
+    border-radius:12px;
+    background:#fffdf8;
+    box-shadow:0 3px 0 var(--tala-light);
+    overflow:hidden;
+    page-break-inside:avoid;
+  }
+  .kart-sar{
+    position:relative;
+    background:var(--lajvard);
+    padding:14px 60px 14px 16px;
+    border-bottom:4px double var(--tala);
+  }
+  .shomareh{
+    position:absolute;top:50%;right:12px;transform:translateY(-50%);
+    width:36px;height:36px;line-height:36px;text-align:center;
+    background:var(--tala);color:var(--lajvard-dark);
+    font-weight:800;font-size:16px;
+    clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);
+  }
+  .beyt{
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-family:"Noto Naskh Arabic","Vazirmatn",serif;
+    font-size:19px;font-weight:600;
+  }
+  .kart-sar .beyt span{
+    flex:1;min-width:240px;text-align:center;color:#fff;
+    padding:4px 10px;
+    border-bottom:1px solid rgba(241,226,184,.5);
+  }
+  .kart-tan{
+    padding:14px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .qalam{
+    padding:10px 14px;border-radius:8px;
+    background:#fff;
+    border:1px solid #e3d6b3;
+    border-top:4px solid;
+  }
+  .qalam.zabani{grid-column:1 / -1;border-top-color:var(--lajvard);background:#f5f7fc}
+  .qalam.adabi{border-top-color:var(--firooze);background:#f2faf9}
+  .qalam.fekri{border-top-color:var(--sabz);background:#f3f9f4}
+  .qalam h4{
+    display:inline-block;margin:0 0 6px;font-size:14px;color:#fff;
+    padding:1px 14px;border-radius:12px;
+  }
+  .qalam.zabani h4{background:var(--lajvard)}
+  .qalam.adabi h4{background:var(--firooze)}
+  .qalam.fekri h4{background:var(--sabz)}
+  .mani{font-weight:600}
+  ul{margin:4px 0 4px;padding-right:18px}
+  li{margin:2px 0}
+  li::marker{color:var(--tala-dark)}
+  b{color:inherit}
+
+  footer{
+    text-align:center;margin-top:30px;font-size:13px;color:var(--tala-dark);
+    padding-top:12px;
+    border-top:1px solid var(--tala);
+  }
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;z-index:10;
+    background:var(--shangarf);color:#fff;border:2px solid var(--tala-light);
+    font-family:inherit;font-size:15px;padding:10px 20px;border-radius:24px;cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.35);
+  }
+  .dokmeh-chap:hover{background:var(--lajvard)}
+
+  @media (max-width:768px){
+    body{font-size:16px;line-height:2.05}
+    p{text-align:right}
+    .page{padding:30px 12px 20px;margin:12px 8px;box-shadow:0 0 0 4px var(--kaghaz), 0 0 0 5px var(--tala-dark)}
+    .page::before,.page::after{font-size:22px}
+    header.sar{padding:16px 12px;border-radius:40px 40px 8px 8px}
+    header.sar h1{font-size:28px}
+    .kart-sar{padding:46px 10px 12px}
+    .shomareh{top:8px;right:50%;transform:translateX(50%)}
+    .beyt{flex-direction:column;gap:4px;font-size:18px}
+    .kart-sar .beyt span{min-width:0;width:100%}
+    .kart-tan{grid-template-columns:1fr;padding:10px}
+    .qalam{padding:10px 12px}
+    h2.bakhsh{font-size:19px}
+    .dokmeh-chap{left:10px;bottom:10px;font-size:14px;padding:10px 16px}
+  }
+
+  @page{size:A4;margin:12mm 11mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;padding:8mm 6mm;box-shadow:none;border:2px solid var(--tala);background:#fff}
+    .dokmeh-chap{display:none}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">چاپ / ذخیره به صورت پی‌دی‌اف</button>
+
+<div class="page">
+
+<header class="sar">
+  <div class="payeh">فارسی و نگارش دوازدهم · ستایش (آغاز کتاب)</div>
+  <h1>ملکا، ذکر تو گویم</h1>
+  <div class="nevisandeh">سرودهٔ حکیم سنایی غزنوی</div>
+</header>
+<div class="toranj">✦ ✦ ✦</div>
+
+<div class="nokteh">
+  <b class="onvan">دربارهٔ شاعر:</b>
+  ابوالمجد مجدود بن آدم، معروف به <b>حکیم سنایی غزنوی</b>، شاعر سدهٔ ششم هجری است. او در آغاز شاعر دربار بود، اما بعدها راه زندگی‌اش را عوض کرد و از <b>پیشگامان شعر عرفانی</b> فارسی شد. مشهورترین اثرش <b>حدیقة‌الحقیقه</b> است.
+</div>
+
+<div class="nokteh">
+  <b class="onvan">شعر در یک نگاه:</b>
+  شاعر خداوند را «پادشاه» خطاب می‌کند، او را پاک و یگانه و دارای همهٔ صفت‌های نیک می‌داند، اعتراف می‌کند که عقل و زبان انسان از وصف او ناتوان است، و در پایان امیدوار است که همین یکتاپرستی، او را از آتش دوزخ نجات دهد.
+</div>
+
+<h2 class="bakhsh">بررسی بیت‌به‌بیت در سه قلمرو</h2>
+
+<!-- بیت ۱ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۱</div>
+    <div class="beyt"><span>ملکا، ذکر تو گویم که تو پاکی و خدایی</span><span>نروم جز به همان ره که توام راه نمایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: ای خداوندی که پادشاه هستی، تنها یاد و نام تو را بر زبان می‌آورم، زیرا تو پاک و بی‌عیب هستی و خدای همه‌ای. جز در همان راهی که تو به من نشان می‌دهی، گام برنمی‌دارم.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> مَلِک: پادشاه · ذکر: یاد کردن، نام بردن · ره: راه</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>راه نمودن:</b> کنایه از هدایت کردن و راهنمایی.</li>
+        <li><b>تکرار:</b> «ره» و «راه» (یک واژه در دو شکل).</li>
+        <li><b>قافیه:</b> «خدایی» و «نمایی»؛ هر دو مصراع بیت اول هم‌قافیه‌اند.</li>
+        <li>خطاب کردن خدا با عنوان «پادشاه»: خداوند در بزرگی و فرمانروایی، پادشاه جهان دانسته شده است.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>فقط خداوند شایستهٔ یاد کردن است و <b>هدایت واقعی تنها از سوی او</b> است.</p>
+      <p>هم‌مفهوم با آیهٔ «اِهدِنَا الصِّراطَ المُستَقیم» (ما را به راه راست هدایت کن).</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۲ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۲</div>
+    <div class="beyt"><span>همه درگاه تو جویم، همه از فضل تو پویم</span><span>همه توحید تو گویم که به توحید سزایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: همیشه پیشگاه تو را می‌جویم و هر تلاشی می‌کنم به لطف و بخشش توست. همواره از یگانگی تو سخن می‌گویم، چون تو شایستهٔ یگانه دانسته شدن هستی.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> درگاه: آستانه، پیشگاه · فضل: بخشش، لطف · پوییدن (پویم): رفتن، تلاش کردن · توحید: یگانه دانستن خدا · سزا: شایسته</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع:</b> «جویم، پویم، گویم» که آهنگ درونی بیت را ساخته‌اند.</li>
+        <li><b>تکرار:</b> «همه» (سه بار) و «توحید» (دو بار).</li>
+        <li><b>درگاه تو:</b> خداوند مانند پادشاهی دانسته شده که درگاه دارد (استعاره).</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «ت» و مصوّت «و».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>توحید و توکّل:</b> انسان در همهٔ کارها به خدا روی می‌آورد و هر توان و تلاشی که دارد، از لطف اوست.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۳ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۳</div>
+    <div class="beyt"><span>تو حکیمی، تو عظیمی، تو کریمی، تو رحیمی</span><span>تو نمایندهٔ فضلی، تو سزاوار ثنایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: تو دانا، بزرگ، بخشنده و مهربان هستی. تو آشکارکنندهٔ لطف و بخشش هستی و شایستهٔ ستایش.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> حکیم: دانا، فرزانه · عظیم: بزرگ · کریم: بخشنده · رحیم: مهربان · نماینده: نشان‌دهنده، آشکارکننده · ثنا: ستایش</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>سجع:</b> «حکیمی، عظیمی، کریمی، رحیمی».</li>
+        <li><b>تکرار:</b> «تو» (شش بار) که بر خطاب به خدا تأکید می‌کند.</li>
+        <li><b>واج‌آرایی:</b> تکرار مصوّت «ی» و صامت «م».</li>
+        <li><b>تلمیح:</b> حکیم، عظیم، کریم و رحیم از نام‌های خداوند در قرآن هستند.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>خداوند دارای همهٔ <b>صفت‌های کمال</b> است و تنها او شایستهٔ ستایش است.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۴ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۴</div>
+    <div class="beyt"><span>نتوان وصف تو گفتن که تو در فهم نگنجی</span><span>نتوان شِبه تو گفتن که تو در وهم نیایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: نمی‌توان تو را توصیف کرد، زیرا در فهم و درک انسان نمی‌گنجی. نمی‌توان برای تو مانندی آورد، زیرا در خیال و گمان هم نمی‌آیی.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> وصف: توصیف، بیان ویژگی · شِبه: مانند، همانند · وَهم: خیال، گمان · فهم: درک</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>موازنه:</b> دو مصراع از نظر ساختار، واژه‌به‌واژه با هم برابرند (نتوان وصف / نتوان شبه، فهم / وهم، نگنجی / نیایی).</li>
+        <li><b>جناس ناهمسان:</b> «فهم» و «وهم».</li>
+        <li><b>تکرار:</b> «نتوان»، «گفتن»، «تو».</li>
+        <li><b>در فهم نگنجیدن:</b> کنایه از بی‌کرانگی و فراتر بودن از درک انسان.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>ناتوانی عقل و زبان انسان از شناخت ذات خداوند</b> و بی‌همتایی او. (مهم‌ترین بیت درس)</p>
+      <p>هم‌مفهوم با آیهٔ «لَیسَ کَمِثلِهِ شَیءٌ» (هیچ چیز مانند او نیست).</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۵ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۵</div>
+    <div class="beyt"><span>همه عِزّی و جلالی، همه علمی و یقینی</span><span>همه نوری و سروری، همه جودی و جزایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: تو سراسر ارجمندی و شکوه هستی، سراسر دانش و یقین هستی. تو سراسر نور و شادی هستی، سراسر بخشش و پاداش هستی.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> عِزّ: ارجمندی، عزّت · جلال: بزرگی، شکوه · سُرور: شادی · جود: بخشندگی · جزا: پاداش</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تکرار:</b> «همه» (چهار بار).</li>
+        <li><b>سجع و موازنه:</b> «نوری و سروری»، «علمی و یقینی»، «جودی و جزایی».</li>
+        <li><b>مراعات نظیر:</b> «عزّ و جلال».</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «ج» در «جلالی، جودی، جزایی».</li>
+        <li><b>تلمیح:</b> «همه نوری» اشاره به آیهٔ «اللهُ نورُ السَّماواتِ وَ الأرض» دارد.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p>خداوند <b>سرچشمهٔ همهٔ خوبی‌ها و کمال‌ها</b> است؛ عزّت، دانش، روشنی، شادی و بخشش همه از اوست.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۶ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۶</div>
+    <div class="beyt"><span>همه غیبی تو بدانی، همه عیبی تو بپوشی</span><span>همه بیشی تو بکاهی، همه کمّی تو فزایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: تو همهٔ رازهای پنهان را می‌دانی و همهٔ عیب‌ها را می‌پوشانی. تو هر زیادی را کم می‌کنی و هر کمبودی را زیاد می‌کنی.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> غیب: پنهان، نهان · بیشی: زیادی · کمّی: کمی، کمبود · کاستن (بکاهی): کم کردن · فزودن (فزایی): زیاد کردن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>جناس ناهمسان:</b> «غیب» و «عیب».</li>
+        <li><b>تضاد:</b> «بیشی و کمّی»، «بکاهی و فزایی».</li>
+        <li><b>موازنه:</b> چهار پارهٔ بیت ساختار یکسان دارند.</li>
+        <li><b>تلمیح:</b> به صفت‌های خدا «عالِم‌الغیب» (دانای پنهان) و «ستّارالعیوب» (پوشانندهٔ عیب‌ها).</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>علم و قدرت مطلق خداوند:</b> او از همه‌چیز آگاه است، عیب‌های بندگان را می‌پوشاند و کم و زیاد شدن همه‌چیز به خواست اوست.</p>
+      <p>هم‌مفهوم با آیهٔ «تُعِزُّ مَن تَشاءُ وَ تُذِلُّ مَن تَشاء» (هر که را بخواهی عزّت می‌دهی و هر که را بخواهی خوار می‌کنی).</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۷ -->
+<div class="kart">
+  <div class="kart-sar">
+    <div class="shomareh">۷</div>
+    <div class="beyt"><span>لب و دندان سنایی همه توحید تو گوید</span><span>مگر از آتش دوزخ بُوَدَش روی رهایی</span></div>
+  </div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4>قلمرو زبانی</h4>
+      <p class="mani">معنی: تمام وجود سنایی پیوسته از یگانگی تو سخن می‌گوید، به این امید که شاید راهی برای رهایی از آتش دوزخ داشته باشد.</p>
+      <ul>
+        <li><b>واژه‌ها:</b> مگر: شاید، به امید آنکه · روی: راه، امکان، چاره · رهایی: نجات</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تخلّص:</b> شاعر نام شعری خود (سنایی) را در بیت آخر آورده است.</li>
+        <li><b>مراعات نظیر:</b> «لب و دندان».</li>
+        <li><b>مجاز:</b> «لب و دندان» مجاز از زبان و تمام وجود شاعر.</li>
+        <li><b>تکرار:</b> واژهٔ «توحید» که در بیت دوم هم آمده بود.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4>قلمرو فکری</h4>
+      <p><b>امید به نجات</b> از راه یکتاپرستی؛ شاعر توحید را مایهٔ رهایی از عذاب می‌داند.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش دوازدهم · ستایش: ملکا، ذکر تو گویم<br>
+  ❖ با آرزوی موفّقیت ❖
+</footer>
+
+</div>
+</body>
+</html>
