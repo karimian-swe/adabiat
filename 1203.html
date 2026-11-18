@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ درس سوم فارسی دوازدهم | دماوندیه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lajvard:#14306b;
+    --lajvard-2:#1f4a9a;
+    --lajvard-tire:#0c1f47;
+    --firouzeh:#13858a;
+    --tala:#c19a3e;
+    --tala-roshan:#e8cf8a;
+    --tala-kamrang:#f8efd8;
+    --kaghaz:#fffcf5;
+    --matn:#1d2230;
+    --zaban:#1f4a9a;
+    --adab:#9b2f55;
+    --fekr:#2b7a50;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    color:var(--matn);
+    line-height:2;
+    font-size:16px;
+    background-color:#ece3cf;
+    background-image:
+      radial-gradient(circle at 25% 25%, rgba(193,154,62,.18) 2px, transparent 3px),
+      radial-gradient(circle at 75% 75%, rgba(20,48,107,.12) 2px, transparent 3px);
+    background-size:28px 28px;
+  }
+  .sahfe{
+    position:relative;
+    max-width:920px;
+    margin:28px auto;
+    background:var(--kaghaz);
+    padding:46px 50px;
+    border:2px solid var(--tala);
+    box-shadow:
+      0 0 0 7px var(--lajvard),
+      0 0 0 9px var(--tala),
+      0 14px 40px rgba(12,31,71,.25);
+    border-radius:4px;
+  }
+
+  /* سرلوح */
+  header.sar{
+    background:
+      radial-gradient(circle at center, rgba(232,207,138,.18), transparent 70%),
+      linear-gradient(135deg,var(--lajvard-tire),var(--lajvard) 50%,var(--lajvard-tire));
+    border:3px double var(--tala);
+    border-radius:18px 18px 60px 60px;
+    padding:8px;
+    margin-bottom:30px;
+    text-align:center;
+  }
+  .sar-dakhel{
+    border:1px solid rgba(232,207,138,.6);
+    border-radius:12px 12px 52px 52px;
+    padding:20px 16px 26px;
+  }
+  .sar .paye{
+    display:inline-block;
+    background:var(--tala);
+    color:var(--lajvard-tire);
+    padding:2px 20px;
+    border-radius:20px;
+    font-size:.9rem;
+    font-weight:700;
+  }
+  .sar h1{
+    margin:6px 0 0;
+    font-family:"Noto Nastaliq Urdu","Vazirmatn",serif;
+    color:var(--tala-roshan);
+    font-size:2.9rem;
+    font-weight:700;
+    line-height:2.1;
+    text-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .sar .shaer{color:#fff;font-weight:500;opacity:.92}
+  .setareh-radif{
+    color:var(--tala);
+    letter-spacing:10px;
+    font-size:1rem;
+  }
+
+  /* کتیبهٔ سرفصل */
+  h2.bakhsh{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:42px 0 18px;
+    font-size:1.15rem;
+    break-after:avoid;
+    page-break-after:avoid;
+  }
+  h2.bakhsh::before,h2.bakhsh::after{
+    content:"";
+    flex:1;
+    height:3px;
+    border-top:1px solid var(--tala);
+    border-bottom:1px solid var(--tala);
+  }
+  h2.bakhsh span{
+    background:linear-gradient(180deg,var(--lajvard-2),var(--lajvard));
+    color:#fff;
+    padding:7px 24px;
+    border-radius:30px;
+    border:2px solid var(--tala);
+    box-shadow:0 0 0 3px var(--tala-kamrang);
+    text-align:center;
+  }
+
+  .moarefi{
+    background:linear-gradient(180deg,var(--tala-kamrang),#fffaf0);
+    border:1px solid var(--tala);
+    border-right:6px solid var(--lajvard);
+    border-radius:12px;
+    padding:16px 20px;
+  }
+  .moarefi p{margin:5px 0}
+
+  /* کارت بیت */
+  .beyt{
+    background:#fff;
+    border:1px solid #dcc995;
+    border-radius:16px;
+    margin:26px 0;
+    overflow:hidden;
+    box-shadow:0 3px 12px rgba(20,48,107,.08);
+    break-inside:avoid;
+    page-break-inside:avoid;
+  }
+  .beyt-sar{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:14px 18px;
+    background:
+      linear-gradient(135deg,var(--lajvard-tire),var(--lajvard) 60%,var(--lajvard-2));
+    border-bottom:3px solid var(--tala);
+  }
+  .shomare{
+    position:relative;
+    flex:0 0 44px;
+    width:44px;
+    height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .shomare::before,.shomare::after{
+    content:"";
+    position:absolute;
+    inset:4px;
+    background:linear-gradient(135deg,var(--tala-roshan),var(--tala));
+    border-radius:3px;
+  }
+  .shomare::after{transform:rotate(45deg)}
+  .shomare span{
+    position:relative;
+    z-index:1;
+    color:var(--lajvard-tire);
+    font-weight:800;
+    font-size:.95rem;
+  }
+  .sher{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    gap:10px;
+    font-family:"Noto Nastaliq Urdu","Vazirmatn",serif;
+    font-size:1.25rem;
+    line-height:2.4;
+    color:#fff;
+  }
+  .mesra{text-align:center;flex:1}
+  .joda{color:var(--tala);font-family:"Vazirmatn",sans-serif;font-size:.9rem}
+
+  .ghalamro{display:flex}
+  .ghalam{
+    flex:1;
+    padding:14px 16px 12px;
+    border-top:4px solid;
+  }
+  .ghalam + .ghalam{border-right:1px solid #eee3c6}
+  .zaban{border-top-color:var(--zaban);background:linear-gradient(180deg,#f2f6fd,#fff 40%)}
+  .adab{border-top-color:var(--adab);background:linear-gradient(180deg,#fcf1f5,#fff 40%)}
+  .fekr{border-top-color:var(--fekr);background:linear-gradient(180deg,#eff8f2,#fff 40%)}
+  .ghalam h4{
+    margin:0 0 8px;
+    font-size:.92rem;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:1px 14px;
+    border-radius:16px;
+    color:#fff;
+  }
+  .ghalam h4::before{content:"◆";font-size:.65rem;color:var(--tala-roshan)}
+  .zaban h4{background:var(--zaban)}
+  .adab h4{background:var(--adab)}
+  .fekr h4{background:var(--fekr)}
+  .ghalam p{margin:4px 0}
+  .ghalam ul{margin:4px 0;padding-right:18px}
+  .ghalam li{margin:3px 0}
+  .ghalam li::marker{color:var(--tala)}
+  .bar{font-weight:700}
+  .zaban .bar{color:var(--zaban)}
+  .adab .bar,.adab b{color:var(--adab)}
+  .fekr .bar{color:var(--fekr)}
+  .vazheha{
+    background:var(--tala-kamrang);
+    border:1px dashed var(--tala);
+    border-radius:8px;
+    padding:4px 10px;
+    margin:8px 0 !important;
+    font-size:.93rem;
+  }
+  .emla{color:#b42318;font-weight:800}
+
+  .sayeh{
+    text-align:center;
+    background:linear-gradient(135deg,var(--lajvard-tire),var(--lajvard));
+    color:#fff;
+    border:2px solid var(--tala);
+    border-radius:14px;
+    padding:16px 20px;
+    margin:26px 0;
+  }
+  .sayeh b{color:var(--tala-roshan)}
+
+  .pasokh ol{
+    background:#fff;
+    border:1px solid #dcc995;
+    border-radius:14px;
+    padding:14px 40px 14px 18px;
+  }
+  .pasokh li{margin:10px 0}
+  .pasokh li::marker{color:var(--lajvard);font-weight:800}
+  .pasokh b{color:var(--lajvard)}
+  .manba{margin-top:0;text-align:center;color:#7a6a45}
+
+  footer{
+    text-align:center;
+    margin-top:34px;
+    padding-top:14px;
+    border-top:3px double var(--tala);
+    color:#7a6a45;
+    font-size:.85rem;
+  }
+
+  /* گوشی و تبلت */
+  @media (max-width:768px){
+    body{font-size:17px;line-height:2.05}
+    .sahfe{
+      margin:10px;
+      padding:22px 14px;
+      box-shadow:0 0 0 4px var(--lajvard),0 0 0 6px var(--tala);
+    }
+    .sar h1{font-size:2.2rem}
+    h2.bakhsh{font-size:1.02rem;gap:8px}
+    h2.bakhsh span{padding:6px 14px}
+    .beyt-sar{flex-direction:column;gap:6px;padding:14px 12px}
+    .sher{flex-direction:column;gap:0;font-size:1.2rem}
+    .joda{display:none}
+    .ghalamro{flex-direction:column}
+    .ghalam + .ghalam{border-right:none}
+    .ghalam{padding:14px 14px 12px}
+    .pasokh ol{padding:12px 30px 12px 12px}
+  }
+
+  /* چاپ */
+  @page{size:A4;margin:12mm}
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body{background:#fff;font-size:12pt;line-height:1.85}
+    .sahfe{margin:0;max-width:none;box-shadow:none;border:none;padding:0}
+    .beyt{box-shadow:none}
+  }
+
+</style>
+</head>
+<body>
+<main class="sahfe">
+
+<header class="sar">
+  <div class="sar-dakhel">
+    <span class="paye">فارسی و نگارش دوازدهم · درس سوم</span>
+    <div class="setareh-radif">✦ ❖ ✦</div>
+    <h1>دماوندیه</h1>
+    <div class="shaer">سرودهٔ محمدتقی بهار (ملک‌الشعرا)</div>
+    <div class="setareh-radif">✦ ❖ ✦</div>
+  </div>
+</header>
+
+<h2 class="bakhsh"><span>درآمد: آشنایی با شعر</span></h2>
+<div class="moarefi">
+  <p><span class="bar">شاعر:</span> محمدتقی بهار، ملقب به ملک‌الشعرا؛ شاعر، روزنامه‌نگار و نمایندهٔ مجلس در دورهٔ مشروطه.</p>
+  <p><span class="bar">زمان سرودن:</span> سال ۱۳۰۱ خورشیدی؛ روزگار دخالت بیگانگان، هرج‌ومرج، سانسور مطبوعات و ناتوانی دولت مرکزی.</p>
+  <p><span class="bar">قالب:</span> قصیده</p>
+  <p><span class="bar">کلید درس:</span> دماوند در این شعر نماد <b>مردم ستم‌دیدهٔ ایران</b> است که خشمی بزرگ در دل دارند ولی ساکت مانده‌اند. چهرهٔ دماوند در شعر چهار بار عوض می‌شود: <b>دیو سپید ← مشت زمین ← قلب فسردهٔ زمین ← مادر سرسپید</b>.</p>
+</div>
+
+<h2 class="bakhsh"><span>بخش یکم: دماوند، دیو سپید دربند (بیت ۱ تا ۵)</span></h2>
+
+<!-- بیت ۱ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱</span></div>
+    <div class="sher"><span class="mesra">ای دیو سپید پای در بند</span><span class="joda">✻</span><span class="mesra">ای گنبد گیتی ای دماوند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> ای دماوند که مانند دیو سپیدی هستی که پایش در بند است و ای کوهی که همچون گنبد جهانی.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> گیتی: جهان</p>
+      <ul><li>«ای» حرف ندا و «دماوند» منادا است.</li><li>«پای در بند» یعنی گرفتار و اسیر.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> دماوند به دیو سپید و به گنبد گیتی تشبیه شده است.</li>
+        <li><b>تشخیص:</b> شاعر با کوه سخن می‌گوید.</li>
+        <li><b>تلمیح:</b> اشاره به دیو سپید در داستان‌های شاهنامه.</li>
+        <li><b>کنایه:</b> «پای در بند» کنایه از اسیر بودن و ناتوانی در حرکت.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دماوند نیرویی بزرگ و پرشکوه است که در بند مانده؛ همانند ملتی توانا که گرفتار شده است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۲ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۲</span></div>
+    <div class="sher"><span class="mesra">از سیم به سر یکی کُلَه‌خود</span><span class="joda">✻</span><span class="mesra">ز آهن به میان یکی کمربند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> کلاه‌خودی از نقره بر سر و کمربندی از آهن بر کمر بسته‌ای.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> کُلَه‌خود: کلاه فلزی جنگجویان · سیم: نقره · میان: کمر</p>
+      <ul><li>«یکی» به معنی «یک» است.</li><li>«میان» یعنی کمر.</li><li>فعل «داری» به قرینهٔ معنایی حذف شده است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> کلاه‌خود سیمین استعاره از برف قلهٔ دماوند؛ کمربند آهنین استعاره از ابرهای تیره یا صخره‌های کمر کوه.</li>
+        <li><b>تشخیص:</b> کوه مانند پهلوانی کلاه‌خود و کمربند دارد.</li>
+        <li><b>تناسب:</b> سر و میان؛ سیم و آهن؛ کلاه‌خود و کمربند.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>توصیف شکوه پهلوانانهٔ دماوند که گویی آمادهٔ نبرد است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۳ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۳</span></div>
+    <div class="sher"><span class="mesra">تا چشم بشر نبیندت روی</span><span class="joda">✻</span><span class="mesra">بنهفته به ابر، چهر دلبند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> برای اینکه چشم انسان چهره‌ات را نبیند، صورت زیبایت را در ابر پنهان کرده‌ای.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> دلبند: دلپذیر، محبوب · بنهفته: پنهان کرده</p>
+      <ul>
+        <li>«نبیندت روی» یعنی روی تو را نبیند؛ ضمیر «ـَت» جابه‌جا شده و نقش مضاف‌الیه دارد.</li>
+        <li>«بنهفته» یعنی پنهان کرده‌ای؛ فعل کمکی حذف شده است.</li>
+        <li>«چهر» کوتاه‌شدهٔ «چهره» است.</li>
+      </ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>حُسن تعلیل:</b> شاعر دلیل ابری بودن قله را پنهان شدن از چشم مردم می‌داند، نه دلیل طبیعی.</li>
+        <li><b>تشخیص:</b> کوه چهره دارد و آن را پنهان می‌کند.</li>
+        <li><b>تناسب:</b> چشم، روی، چهر.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دماوند از دیدن مردم ناشایست بیزار است و خود را از آنان پنهان می‌کند.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۴ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۴</span></div>
+    <div class="sher"><span class="mesra">تا وارهی از دم ستوران</span><span class="joda">✻</span><span class="mesra">وین مردم نحس دیومانند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> و نیز برای اینکه از نفس چهارپایان و این مردم شوم دیوصفت رهایی یابی.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> وارَهی: رها شوی · دَم: نَفَس · ستوران: چهارپایان · <span class="emla">نَحس</span>: شوم، بدیُمن</p>
+      <ul><li>«دم» به معنی نَفَس است.</li><li>«مردم نحس» ترکیب وصفی و مهم از نظر املایی است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>حُسن تعلیل:</b> ادامهٔ دلیل خیالی بیت پیش برای پنهان شدن قله در ابر.</li>
+        <li><b>استعاره:</b> «ستوران» استعاره از انسان‌های نادان و پست.</li>
+        <li><b>تشبیه:</b> مردم به دیو تشبیه شده‌اند (دیومانند).</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>نفرت شاعر از ستمگران و مردمان پست و نادان روزگار خود.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۵ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۵</span></div>
+    <div class="sher"><span class="mesra">با شیر سپهر بسته پیمان</span><span class="joda">✻</span><span class="mesra">با اختر سعد کرده پیوند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> با صورت فلکی شیر در آسمان پیمان بسته‌ای و با ستارهٔ خوش‌یُمن همراه شده‌ای.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> سِپِهر: آسمان · <span class="emla">اختر سَعد</span>: ستارهٔ خوش‌یُمن</p>
+      <ul><li>فعل‌های کمکی «بسته‌ای» و «کرده‌ای» حذف شده‌اند.</li><li>«اختر سعد» ترکیب وصفی و مهم از نظر املایی است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>اغراق:</b> دماوند آن‌قدر بلند است که با ستارگان هم‌نشین شده.</li>
+        <li><b>تشخیص:</b> کوه پیمان می‌بندد.</li>
+        <li><b>تناسب:</b> شیر، سپهر، اختر.</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «پ» در پیمان و پیوند.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>بلندی و عظمت دماوند که گویی به آسمان پیوسته است.</p>
+    </div>
+  </div>
+</article>
+
+<h2 class="bakhsh"><span>بخش دوم: دماوند، مشت زمین و قلب دردمند آن (بیت ۶ تا ۱۲)</span></h2>
+
+<!-- بیت ۶ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۶</span></div>
+    <div class="sher"><span class="mesra">چون گشت زمین ز جور گردون</span><span class="joda">✻</span><span class="mesra">سرد و سیه و خموش و آوند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> هنگامی که زمین از ستم آسمان، سرد و تیره و خاموش و آویخته و درمانده شد.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> جور: ستم · گَردون: آسمان، روزگار · خموش: خاموش · آوَند: آویخته، معلق</p>
+      <ul><li>«گشت» فعل اسنادی به معنی «شد» است.</li><li>این بیت با بیت بعد پیوند معنایی دارد و معنی آن در بیت ۷ کامل می‌شود.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشخیص:</b> گردون ستم می‌کند و زمین آسیب می‌بیند.</li>
+        <li><b>تضاد:</b> زمین و گردون.</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «س» در سرد و سیه.</li>
+        <li><b>نماد:</b> گردون نماد قدرت‌های ستمگر و زمین نماد مردم است.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>شکایت از ستم روزگار و حاکمان که مردم را افسرده و خاموش کرده است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۷ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۷</span></div>
+    <div class="sher"><span class="mesra">بنواخت ز خشم بر فلک مشت</span><span class="joda">✻</span><span class="mesra">آن مشت تویی تو ای دماوند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> زمین از روی خشم مشتی بر آسمان کوبید؛ ای دماوند، آن مشت تو هستی.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> بِنَواخت: کوبید · فلک: آسمان</p>
+      <ul><li>«بنواخت» یعنی کوبید؛ «بـ» در آغاز آن برای تأکید است.</li><li>نهاد جملهٔ مصراع اول «زمین» است که از بیت پیش می‌آید.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> دماوند به مشت تشبیه شده است.</li>
+        <li><b>تشخیص:</b> زمین خشمگین می‌شود و مشت می‌زند.</li>
+        <li><b>کنایه:</b> «مشت بر فلک کوبیدن» کنایه از اعتراض و مبارزه.</li>
+        <li><b>تکرار:</b> واژه‌های «مشت» و «تو».</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دماوند نماد اعتراض و خشم مردم در برابر ستم است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۸ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۸</span></div>
+    <div class="sher"><span class="mesra">تو مشت درشت روزگاری</span><span class="joda">✻</span><span class="mesra">از گردش قرن‌ها پس‌افکند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> تو مشت بزرگ و محکم روزگاری که در گذر قرن‌ها به جا مانده است.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> درشت: بزرگ و محکم · پس‌افکَند: بازمانده، میراث</p>
+      <ul><li><b>ترکیب‌های اضافی:</b> مشتِ روزگار، گردشِ قرن‌ها.</li><li><b>ترکیب وصفی:</b> مشتِ درشت.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> دماوند به مشت روزگار تشبیه شده است.</li>
+        <li><b>تشخیص:</b> روزگار مشت دارد.</li>
+        <li><b>کنایه:</b> «گردش قرن‌ها» کنایه از گذشت زمانی بسیار طولانی.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دماوند یادگار اعتراض‌های کهن و پایدار در طول تاریخ است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۹ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۹</span></div>
+    <div class="sher"><span class="mesra">ای مشت زمین بر آسمان شو</span><span class="joda">✻</span><span class="mesra">بر وی بنواز ضربتی چند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> ای مشت زمین، به سوی آسمان برو و چند ضربه بر آن بزن.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> شو: برو · ضربت: ضربه</p>
+      <ul><li>«شو» یعنی برو.</li><li>«وی» ضمیری است که به آسمان برمی‌گردد.</li><li>«ضربتی چند» یعنی چند ضربه.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «مشت زمین» استعاره از دماوند است.</li>
+        <li><b>تشخیص:</b> خطاب به مشت و ضربه زدن به آسمان.</li>
+        <li><b>تضاد:</b> زمین و آسمان.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دعوت به مبارزه و ضربه زدن بر پیکرهٔ ستم.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۰ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۰</span></div>
+    <div class="sher"><span class="mesra">نی نی، تو نه مشت روزگاری</span><span class="joda">✻</span><span class="mesra">ای کوه، نی‌ام ز گفته خرسند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> نه نه، تو مشت روزگار نیستی؛ ای کوه، از سخنی که گفتم خشنود نیستم.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> نی‌ام: نیستم · خرسند: خشنود</p>
+      <ul><li>«نی‌ام» یعنی نیستم.</li><li>«گفته» یعنی سخن (پیشین شاعر).</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تکرار:</b> «نی» برای تأکید.</li>
+        <li><b>تشخیص:</b> سخن گفتن با کوه.</li>
+        <li>شاعر از تشبیه پیشین خود برمی‌گردد تا تصویری تازه‌تر بسازد.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>شاعر می‌خواهد حال دماوند را دقیق‌تر بیان کند: دماوند هنوز مشت نشده، بلکه دلی دردمند است.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۱ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۱</span></div>
+    <div class="sher"><span class="mesra">تو قلب فسردهٔ زمینی</span><span class="joda">✻</span><span class="mesra">از درد، ورم نموده یک چند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> تو قلب افسردهٔ زمین هستی که مدتی است از شدت درد ورم کرده است.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> فسرده: افسرده، یخ‌زده · یک چند: مدتی</p>
+      <ul><li>«یک چند» یعنی مدتی.</li><li>«قلب فسرده» ترکیب وصفی است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> دماوند به قلب افسردهٔ زمین تشبیه شده است.</li>
+        <li><b>حُسن تعلیل:</b> برآمدگی کوه را نتیجهٔ ورم کردن قلب زمین از درد می‌داند.</li>
+        <li><b>تشخیص:</b> زمین قلب دارد و درد می‌کشد.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دماوند نماد دل دردمند مردم ایران است که رنج بسیار کشیده‌اند ولی ساکت مانده‌اند.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۲ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۲</span></div>
+    <div class="sher"><span class="mesra">تا درد و ورم فرونشیند</span><span class="joda">✻</span><span class="mesra">کافور بر آن ضماد کردند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> برای اینکه درد و ورم آن آرام شود، روی آن کافور را مانند مرهم گذاشتند.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> کافور: مادهٔ سفید، خوشبو و خنک‌کننده · <span class="emla">ضِماد</span>: مرهم</p>
+      <ul><li>«فرونشیند» یعنی آرام شود، کاهش یابد.</li><li>«ضماد کردن» یعنی مرهم نهادن.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «کافور» استعاره از برف قلهٔ دماوند.</li>
+        <li><b>حُسن تعلیل:</b> علت برف قله را مرهم نهادن بر ورم می‌داند.</li>
+        <li><b>تناسب:</b> درد، ورم، کافور، ضماد.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>درد مردم را درمان نکرده‌اند، بلکه با سرکوب ساکتش کرده‌اند.</p>
+    </div>
+  </div>
+</article>
+
+<h2 class="bakhsh"><span>بخش سوم: دعوت به انفجار و پند شاعر (بیت ۱۳ تا ۱۶)</span></h2>
+
+<!-- بیت ۱۳ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۳</span></div>
+    <div class="sher"><span class="mesra">شو منفجر ای دل زمانه</span><span class="joda">✻</span><span class="mesra">وان آتش خود نهفته مپسند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> ای دل روزگار، منفجر شو و پنهان ماندن آتش درونت را نپسند.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> نهفته: پنهان</p>
+      <ul><li>«شو منفجر» یعنی منفجر شو.</li><li>«مپسند» فعل نهی است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «دل زمانه» استعاره از دماوند؛ «آتش» استعاره از خشم و گدازهٔ درون کوه.</li>
+        <li><b>تشخیص:</b> زمانه دل دارد.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دعوت به قیام و آشکار کردن خشم و اعتراض.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۴ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۴</span></div>
+    <div class="sher"><span class="mesra">خامش منشین، سخن همی گوی</span><span class="joda">✻</span><span class="mesra">افسرده مباش، خوش همی خند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> خاموش ننشین و پیوسته سخن بگو؛ افسرده نباش و شادمانه بخند.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> خامُش: خاموش</p>
+      <ul><li>«همی» پیش از فعل، نشانهٔ استمرار است.</li><li>«منشین» و «مباش» فعل نهی هستند.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تضاد:</b> خاموش ماندن و سخن گفتن؛ افسرده بودن و خندیدن.</li>
+        <li><b>استعاره:</b> سخن گفتن و خندیدن کوه، استعاره از فوران آتشفشان.</li>
+        <li><b>تشخیص:</b> کوه سخن می‌گوید و می‌خندد.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>سکوت در برابر ستم نارواست؛ باید سخن گفت و فریاد زد.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۵ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۵</span></div>
+    <div class="sher"><span class="mesra">پنهان مکن آتش درون را</span><span class="joda">✻</span><span class="mesra">زین سوخته‌جان، شنو یکی پند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> آتش درونت را پنهان نکن و از من که جانم سوخته است، پندی بشنو.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> سوخته‌جان: رنج‌دیده</p>
+      <ul><li>«مکن» فعل نهی است.</li><li>«شنو» یعنی بشنو.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «آتش درون» استعاره از خشم و اعتراض پنهان.</li>
+        <li><b>کنایه:</b> «سوخته‌جان» کنایه از رنج‌دیده و دردمند؛ منظور خود شاعر است.</li>
+        <li><b>تناسب:</b> آتش و سوخته.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>شاعر رنج‌دیده، دماوند را به آشکار کردن خشمش پند می‌دهد.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۶ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۶</span></div>
+    <div class="sher"><span class="mesra">گر آتش دل نهفته داری</span><span class="joda">✻</span><span class="mesra">سوزد جانت، به جانت سوگند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> به جانت سوگند، اگر آتش دلت را پنهان نگه داری، جانت را می‌سوزاند.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> گر: اگر · سوگند: قسم</p>
+      <ul><li>«گر» کوتاه‌شدهٔ «اگر» است.</li><li>«سوزد» یعنی می‌سوزد.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «آتش دل» استعاره از خشم و درد درونی.</li>
+        <li><b>تکرار:</b> واژهٔ «جانت».</li>
+        <li><b>تناسب:</b> آتش و سوختن.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>پنهان کردن خشم و درد، پیش از همه به خود انسان آسیب می‌زند.</p>
+    </div>
+  </div>
+</article>
+
+<h2 class="bakhsh"><span>بخش چهارم: دماوند، مادر سرسپید و برکندن بنای ظلم (بیت ۱۷ تا ۲۲)</span></h2>
+
+<!-- بیت ۱۷ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۷</span></div>
+    <div class="sher"><span class="mesra">ای مادر سرسپید، بشنو</span><span class="joda">✻</span><span class="mesra">این پند سیاه‌بخت فرزند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> ای مادر سپیدموی، پند این فرزند بدبختت را بشنو.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> سیاه‌بخت: بدبخت</p>
+      <ul><li>«سیاه‌بخت فرزند» ترکیب وصفی است که صفتش پیش از موصوف آمده است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «مادر سرسپید» استعاره از دماوند؛ سپیدی سر، همان برف قله است.</li>
+        <li><b>تضاد:</b> سپید و سیاه.</li>
+        <li><b>کنایه:</b> «سیاه‌بخت» کنایه از بدبخت.</li>
+        <li><b>تناسب:</b> مادر و فرزند.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>پیوند عاطفی شاعر با وطن؛ ایران مادر است و شاعر فرزند رنج‌کشیدهٔ او.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۸ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۸</span></div>
+    <div class="sher"><span class="mesra">برکش ز سر این سپید معجر</span><span class="joda">✻</span><span class="mesra">بنشین به یکی کبود اورند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> این روسری سفید را از سرت بردار و بر تختی کبودرنگ بنشین.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> <span class="emla">مِعجَر</span>: روسری · اورَند: تخت، اورنگ (هم‌معنی سریر) · کبود: آبی تیره</p>
+      <ul><li>«سپید معجر» و «کبود اورند» ترکیب وصفی هستند که صفتشان پیش از موصوف آمده است.</li><li>«برکش» یعنی بیرون بکش، بردار.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>استعاره:</b> «سپید معجر» استعاره از برف قله؛ «کبود اورند» استعاره از دود و خاکستر تیرهٔ آتشفشان.</li>
+        <li><b>تضاد:</b> سپید و کبود.</li>
+        <li><b>تشخیص:</b> کوه روسری دارد و بر تخت می‌نشیند.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دعوت به کنار گذاشتن آرامش ظاهری و آشکار کردن خشم.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۱۹ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱۹</span></div>
+    <div class="sher"><span class="mesra">بگرای چو اژدهای گرزه</span><span class="joda">✻</span><span class="mesra">بخروش چو شرزه شیر ارغند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> مانند اژدهای خطرناک حمله کن و مانند شیر خشمگین و قهرآلود بغُرّ.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> بِگرای: حمله کن · گَرزه: نوعی مار سمی · شَرزه: خشمگین · <span class="emla">اَرغَند</span>: خشمگین، قهرآلود</p>
+      <ul><li>«شرزه شیر ارغند» یک صفت پیش از موصوف و یک صفت پس از آن دارد.</li><li>«چو» یعنی مانند.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> دماوند به اژدها و شیر تشبیه شده است.</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «ر» و «ش».</li>
+        <li><b>تناسب:</b> اژدها و شیر.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>دعوت به خروش و قیامی پرقدرت در برابر ستم.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۲۰ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۲۰</span></div>
+    <div class="sher"><span class="mesra">بفکن ز پی این اساس تزویر</span><span class="joda">✻</span><span class="mesra">بگسل ز هم این نژاد و پیوند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> این بنیاد فریب و نیرنگ را از پایه ویران کن و این نسل و خاندان ستمگر را از هم جدا کن.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> پی: پایه · <span class="emla">تَزویر</span>: فریب · بِگُسَل: پاره کن</p>
+      <ul><li>«پی» یعنی پایه و بنیاد.</li><li>«اساس تزویر» ترکیب اضافی و مهم از نظر املایی است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> «اساس تزویر» اضافهٔ تشبیهی است؛ تزویر به بنایی تشبیه شده است.</li>
+        <li><b>کنایه:</b> «از پی افکندن» کنایه از نابود کردن کامل.</li>
+        <li><b>تناسب:</b> نژاد و پیوند.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>درخواست نابودی کامل حکومت فریبکار و ستمگر.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۲۱ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۲۱</span></div>
+    <div class="sher"><span class="mesra">برکن ز بن این بنا که باید</span><span class="joda">✻</span><span class="mesra">از ریشه بنای ظلم برکند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> این بنا را از بنیاد ویران کن، زیرا بنای ستم را باید از ریشه کند.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> بن: ریشه، بنیاد</p>
+      <ul><li>«بن» یعنی ریشه و بنیاد.</li><li>«که» در اینجا به معنی «زیرا» است.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تشبیه:</b> «بنای ظلم» اضافهٔ تشبیهی است.</li>
+        <li><b>کنایه:</b> «از بن برکندن» و «از ریشه برکندن» کنایه از نابودی کامل.</li>
+        <li><b>تکرار:</b> «بنا» و «برکن / برکند».</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>ستم را نباید سطحی درمان کرد؛ باید آن را از ریشه نابود کرد.</p>
+    </div>
+  </div>
+</article>
+
+<!-- بیت ۲۲ -->
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۲۲</span></div>
+    <div class="sher"><span class="mesra">زین بی‌خردان سفله بستان</span><span class="joda">✻</span><span class="mesra">داد دل مردم خردمند</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">معنی:</span> حق مردم دانا و خردمند را از این نادانان پست بگیر.</p>
+      <p class="vazheha"><span class="bar">واژه‌ها:</span> <span class="emla">سِفله</span>: پست، فرومایه · بِستان: بگیر · داد: حق، عدل</p>
+      <ul><li><b>ترکیب‌های اضافی:</b> دادِ دل، دلِ مردم.</li><li><b>ترکیب‌های وصفی:</b> بی‌خردان سفله، مردم خردمند.</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>تضاد:</b> بی‌خرد و خردمند.</li>
+        <li><b>کنایه:</b> «داد ستاندن» کنایه از گرفتن حق و انتقام.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>عدالت‌خواهی و آرزوی گرفتن حق مردم دانا از حاکمان نادان و پست.</p>
+    </div>
+  </div>
+</article>
+
+<div class="sayeh">
+  <b>پیام کلی درس:</b> ستایش وطن، اعتراض به ستم و بیداد، دعوت مردم به بیداری و پرهیز از سکوت در برابر ظلم، و عدالت‌خواهی.
+</div>
+
+<h2 class="bakhsh"><span>پاسخ کارگاه درس‌پژوهی</span></h2>
+<div class="pasokh">
+<ol>
+  <li><b>معادل معنایی:</b> سریر = اورند؛ فرومایه = سفله.</li>
+  <li><b>ترکیب‌های وصفی مهم املایی:</b> مردم نحس، اختر سعد، شیر ارغند، سپید معجر (و نیز قلب فسرده، کبود اورند).</li>
+  <li><b>ترکیب‌های اضافی:</b>
+    الف) مشتِ روزگار، گردشِ قرن‌ها
+    ب) دادِ دل، دلِ مردم</li>
+  <li><b>حُسن تعلیل:</b> بیت‌های ۳ و ۴ (پنهان شدن قله در ابر برای دیده نشدن)، بیت ۱۱ (برآمدگی کوه به سبب ورم قلب زمین) و بیت ۱۲ (برف قله، کافوری برای آرام کردن ورم).</li>
+  <li><b>استعاره‌ها:</b>
+    بیت اول: کلاه‌خود سیمین استعاره از برف قله؛ کمربند آهنین استعاره از ابرهای تیره یا صخره‌های کمر کوه.
+    بیت دوم: آتش درون استعاره از خشم و اعتراض پنهان.</li>
+  <li><b>الف)</b> دماوند نماد مردم ستم‌دیدهٔ ایران است؛ سوخته‌جان خود شاعر است.
+    <b>ب)</b> چون مردم از ستم و نابسامانی‌ها دردمند و خشمگین‌اند، اما دردشان را با سرکوب ساکت کرده‌اند و خشمشان را پنهان می‌کنند.</li>
+  <li><b>معنی بیت:</b> این بنیاد فریب و نیرنگ را از پایه ویران کن و نسل و خاندان ستمگران را از هم بگسل.</li>
+  <li><b>مفهوم مشترک:</b> دعوت به نهفته نگذاشتن خشم و درد درونی، سکوت نکردن و اعتراض آشکار.</li>
+</ol>
+</div>
+
+<h2 class="bakhsh"><span>گنج حکمت: خاکریز</span></h2>
+<p class="manba">روایت سنگرسازان ۲، عیسی سلمانی لطف‌آبادی</p>
+
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۱</span></div>
+    <div class="sher"><span class="mesra">بخش یکم: تسلط دشمن و تصمیم شهید ساجدی</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">ساده‌شده:</span> در آغاز عملیات، پشت سر رزمندگان بلندی‌های «کلّه‌قندی» بود که دشمن با سلاح‌های بسیار بر آن مسلط بود. شهید ساجدی روحیه‌اش را نباخت و ساختن خاکریزی دوجداره را تنها راه نجات دانست.</p>
+      <ul><li><b>موسوم:</b> نامیده‌شده</li><li><b>استقرار:</b> جای گرفتن</li><li><b>احداث:</b> ساختن، پدید آوردن</li><li><b>قاطعیت:</b> اطمینان و استواری در تصمیم</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>کنایه:</b> «روحیه را نباختن» کنایه از ناامید نشدن.</li>
+        <li><b>کنایه:</b> «خطوط دشمن شکسته شد» کنایه از عقب راندن دشمن.</li>
+        <li><b>تشبیه:</b> نام «کلّه‌قندی» به سبب شباهت شکل ارتفاعات به کلّهٔ قند است.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>ایمان و اراده، کار ناممکن را ممکن می‌کند. جملهٔ «خاکریز را صبح تحویل می‌دهیم» نشانهٔ همین ایمان است.</p>
+    </div>
+  </div>
+</article>
+
+<article class="beyt">
+  <div class="beyt-sar"><div class="shomare"><span>۲</span></div>
+    <div class="sher"><span class="mesra">بخش دوم: ساختن خاکریز و پیروزی</span></div></div>
+  <div class="ghalamro">
+    <div class="ghalam zaban"><h4>قلمرو زبانی</h4>
+      <p><span class="bar">ساده‌شده:</span> برادران جهاد تمام شب بی‌وقفه کار کردند و خاکریز هشت‌کیلومتری تا صبح ساخته شد. شهید ساجدی چون آتش دشمن را پیش‌بینی می‌کرد، خاکریز دوم را هم پشت خاکریز اول ساخت و به همین تدبیر، رزمندگان پیروز شدند.</p>
+      <ul><li><b>تدبیر:</b> چاره‌اندیشی</li><li><b>تسلط:</b> چیرگی</li><li><b>رزمنده:</b> جنگجو</li></ul>
+    </div>
+    <div class="ghalam adab"><h4>قلمرو ادبی</h4>
+      <ul>
+        <li><b>کنایه:</b> «آرام و قرار نداشتند» کنایه از تلاش پیوسته و بی‌وقفه.</li>
+        <li><b>کنایه:</b> «زیر آتش گرفتن» کنایه از هدف تیراندازی قرار دادن.</li>
+      </ul>
+    </div>
+    <div class="ghalam fekr"><h4>قلمرو فکری</h4>
+      <p>آینده‌نگری و تدبیر درست، کلید پیروزی است؛ و همان روحیهٔ ایستادگی در برابر دشمن که در دماوندیه آرزو شده بود، در عمل رزمندگان دیده می‌شود.</p>
+    </div>
+  </div>
+</article>
+
+<footer>
+  جزوهٔ کلاسی فارسی دوازدهم · درس سوم: دماوندیه
+  <div class="setareh-radif">✦ ❖ ✦</div>
+</footer>
+
+</main>
+</body>
+</html>
