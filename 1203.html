@@ -258,7 +258,7 @@
   }
 
   /* گوشی و تبلت */
-  @media (max-width:768px){
+  @media screen and (max-width:768px){
     body{font-size:17px;line-height:2.05}
     .sahfe{
       margin:10px;
@@ -281,16 +281,57 @@
   @page{size:A4;margin:12mm}
   @media print{
     *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    body{background:#fff;font-size:12pt;line-height:1.85}
+    body{background:#fff;font-size:11pt;line-height:1.8}
     .sahfe{margin:0;max-width:none;box-shadow:none;border:none;padding:0}
-    .beyt{box-shadow:none}
+    .beyt{box-shadow:none;margin:14px 0}
+    .ghalam{padding:10px 12px 8px}
+    .sher{font-size:1.15rem;line-height:2.1}
+    h2.bakhsh{margin:24px 0 12px}
+  }
+
+  /* دکمهٔ چاپ */
+  .dokme-chap{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    z-index:50;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    font-size:1rem;
+    font-weight:700;
+    color:var(--lajvard-tire);
+    background:linear-gradient(135deg,var(--tala-roshan),var(--tala));
+    border:2px solid var(--lajvard);
+    border-radius:30px;
+    padding:10px 22px;
+    min-height:48px;
+    cursor:pointer;
+    white-space:nowrap;
+    box-shadow:0 6px 18px rgba(12,31,71,.3);
+  }
+  .dokme-chap:hover{filter:brightness(1.07)}
+  .rahnama-chap{
+    text-align:center;
+    font-size:.88rem;
+    color:#7a6a45;
+    margin:-14px 0 20px;
+  }
+  @media screen and (max-width:768px){
+    .dokme-chap{bottom:14px;left:50%;transform:translateX(-50%);font-size:.98rem}
+    footer{padding-bottom:70px}
+  }
+  @media print{
+    .dokme-chap,.rahnama-chap{display:none !important}
+    footer{padding-bottom:0}
   }
 
 </style>
 </head>
 <body>
-  <a href="index.html#paye1" style="display:inline-block;margin:12px;padding:8px 18px;background:#1b3a6b;color:#fff;border-radius:999px;text-decoration:none;font-family:Tahoma">→ بازگشت به فهرست درس‌ها</a>
-  <button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">چاپ / ذخیره به صورت پی‌دی‌اف</button>
+<a href="index.html#paye1" style="display:inline-block;margin:12px;padding:8px 18px;background:#1b3a6b;color:#fff;border-radius:999px;text-decoration:none;font-family:Tahoma">→ بازگشت به فهرست درس‌ها</a>
+<button class="dokme-chap" type="button" onclick="window.print()">🖨️ چاپ و ذخیره به‌صورت پی‌دی‌اف</button>
 <main class="sahfe">
 
 <header class="sar">
@@ -302,6 +343,7 @@
     <div class="setareh-radif">✦ ❖ ✦</div>
   </div>
 </header>
+<p class="rahnama-chap">برای ذخیرهٔ پی‌دی‌اف، دکمهٔ طلایی را بزنید و در پنجرهٔ چاپ، مقصد را «ذخیره به‌صورت پی‌دی‌اف» بگذارید.</p>
 
 <h2 class="bakhsh"><span>درآمد: آشنایی با شعر</span></h2>
 <div class="moarefi">
