@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ درس یکم فارسی یازدهم: نیکی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&family=Noto+Naskh+Arabic:wght@500;700&family=Lalezar&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --firooze:#0e6e73;
+    --firooze-dark:#073c40;
+    --firooze-light:#e3f2f1;
+    --zaferan:#d99a2b;
+    --zaferan-light:#fbeccb;
+    --anar:#9e2b3a;
+    --anar-light:#fbe9eb;
+    --nil:#1f3f8a;
+    --nil-light:#e8edf9;
+    --kaghaz:#fbf6ea;
+    --matn:#2a2620;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    color:var(--matn);font-size:15.5px;line-height:2.05;
+    background-color:#f3ead4;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d99a2b' stroke-opacity='.28' stroke-width='1.2'%3E%3Cpath d='M40 14 L47 33 L66 40 L47 47 L40 66 L33 47 L14 40 L33 33 Z'/%3E%3Crect x='28' y='28' width='24' height='24' transform='rotate(45 40 40)'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='80' cy='0' r='8'/%3E%3Ccircle cx='0' cy='80' r='8'/%3E%3Ccircle cx='80' cy='80' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .page{
+    max-width:940px;margin:30px auto;background:var(--kaghaz);
+    border-radius:22px;overflow:hidden;
+    box-shadow:0 20px 60px rgba(7,60,64,.25), 0 0 0 1px rgba(217,154,43,.5);
+  }
+
+  .navar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 22px;background:var(--firooze-dark)}
+  .bazgasht{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    color:var(--firooze-dark);background:var(--zaferan-light);
+    padding:7px 18px;border-radius:30px;font-weight:700;font-size:14.5px;
+    transition:transform .2s, background .2s;
+  }
+  .bazgasht:hover{background:#fff;transform:translateX(3px)}
+  .navar .barchasb{color:var(--zaferan-light);font-size:13.5px;opacity:.9}
+
+  header.sar{
+    position:relative;text-align:center;padding:44px 20px 70px;
+    background:
+      radial-gradient(circle at 50% 120%, rgba(217,154,43,.35), transparent 60%),
+      linear-gradient(160deg, var(--firooze) 0%, var(--firooze-dark) 100%);
+    color:#fff;
+  }
+  header.sar::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--kaghaz);
+    clip-path:polygon(0 100%,0 40%,5% 70%,10% 40%,15% 70%,20% 40%,25% 70%,30% 40%,35% 70%,40% 40%,45% 70%,50% 40%,55% 70%,60% 40%,65% 70%,70% 40%,75% 70%,80% 40%,85% 70%,90% 40%,95% 70%,100% 40%,100% 100%);
+  }
+  .shamseh{
+    width:118px;height:118px;margin:0 auto 14px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;
+    background:radial-gradient(circle, var(--zaferan) 0 54%, var(--zaferan-light) 55% 58%, var(--zaferan) 59% 100%);
+    box-shadow:0 0 0 6px rgba(251,236,203,.25), 0 0 0 12px rgba(251,236,203,.1);
+    font-family:"Lalezar",sans-serif;font-size:27px;color:var(--firooze-dark);
+  }
+  header.sar h1{font-family:"Lalezar",sans-serif;font-weight:400;font-size:46px;margin:0;color:#fff;letter-spacing:1px;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+  header.sar .zir{margin-top:6px;font-size:15px;color:var(--zaferan-light)}
+  header.sar .zir b{color:#fff}
+
+  .mohtava{padding:10px 40px 30px}
+
+  .moarefi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 10px}
+  .moarefi .item{
+    background:#fff;border-radius:14px;padding:14px 16px;border:1px solid #eadfc4;
+    border-top:5px solid var(--zaferan);box-shadow:0 4px 14px rgba(0,0,0,.05);
+  }
+  .moarefi .item:nth-child(2){border-top-color:var(--firooze)}
+  .moarefi .item:nth-child(3){border-top-color:var(--anar)}
+  .moarefi h3{margin:0 0 4px;font-size:16px;color:var(--firooze-dark)}
+  .moarefi p{margin:0;font-size:14.5px;line-height:1.95;text-align:justify}
+
+  h2.bakhsh{font-family:"Lalezar",sans-serif;font-weight:400;text-align:center;font-size:27px;color:var(--firooze-dark);margin:40px 0 6px}
+  .naghsh{text-align:center;color:var(--zaferan);letter-spacing:8px;margin-bottom:8px}
+
+  /* کارت بخش */
+  .kart{
+    position:relative;margin:36px 0;background:#fff;border-radius:18px;
+    border:1px solid #eadfc4;box-shadow:0 8px 24px rgba(7,60,64,.08);
+  }
+  .setareh{
+    position:absolute;top:-22px;right:50%;transform:translateX(50%);
+    width:46px;height:46px;z-index:2;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:17px;color:var(--firooze-dark);
+  }
+  .setareh::before,.setareh::after{
+    content:"";position:absolute;inset:6px;background:var(--zaferan);
+    border:2px solid #fff;border-radius:4px;z-index:-1;
+  }
+  .setareh::after{transform:rotate(45deg)}
+
+  .bakhsh-sar{
+    padding:32px 22px 16px;text-align:center;
+    background:linear-gradient(180deg, var(--firooze-light), #fff);
+    border-radius:18px 18px 0 0;border-bottom:2px dashed rgba(217,154,43,.55);
+  }
+  .bakhsh-sar .safheh{
+    display:inline-block;background:var(--firooze-dark);color:var(--zaferan-light);
+    font-size:12.5px;font-weight:700;padding:0 12px;border-radius:12px;
+  }
+  .bakhsh-sar h3{
+    font-family:"Noto Naskh Arabic",serif;font-weight:700;font-size:21px;
+    color:var(--firooze-dark);margin:6px 0 2px;
+  }
+  .bakhsh-sar .bazeh{font-size:14px;color:#5b5446}
+  .bakhsh-sar .bazeh q{color:var(--anar);font-weight:600}
+
+  .kart-tan{padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qalam{position:relative;border-radius:12px;padding:12px 16px 12px 14px;border-right:5px solid}
+  .qalam.zabani{grid-column:1 / -1;background:var(--nil-light);border-color:var(--nil)}
+  .qalam.adabi{background:var(--anar-light);border-color:var(--anar)}
+  .qalam.fekri{background:var(--firooze-light);border-color:var(--firooze)}
+  .qalam h4{margin:0 0 6px;font-size:15px;font-weight:800;display:inline-flex;align-items:center;gap:6px}
+  .qalam h4 i{
+    font-style:normal;width:26px;height:26px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:13px;
+  }
+  .qalam.zabani h4{color:var(--nil)} .qalam.zabani h4 i{background:var(--nil)}
+  .qalam.adabi h4{color:var(--anar)} .qalam.adabi h4 i{background:var(--anar)}
+  .qalam.fekri h4{color:var(--firooze)} .qalam.fekri h4 i{background:var(--firooze)}
+
+  p{margin:4px 0 8px;text-align:justify}
+  .mani{font-weight:500;background:#fff;border-radius:10px;padding:8px 12px;border:1px solid rgba(31,63,138,.15)}
+  .mani b{color:var(--nil)}
+  .jomleh{margin:8px 0;padding:0;list-style:none}
+  .jomleh li{background:#fff;border-radius:10px;padding:6px 12px;margin:6px 0;border:1px solid rgba(31,63,138,.12)}
+  .jomleh li q{color:var(--nil);font-weight:700}
+  .jomleh li q::before{content:"«"} .jomleh li q::after{content:"»"}
+  .vajeh{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px;padding:0;list-style:none}
+  .vajeh li{background:#fff;border:1px solid rgba(31,63,138,.2);border-radius:20px;padding:2px 12px;font-size:14px}
+  .vajeh li b{color:var(--nil)}
+  ul.arayeh{margin:4px 0;padding-right:18px}
+  ul.arayeh li{margin:3px 0}
+  ul.arayeh li::marker{content:"◆  ";color:var(--anar);font-size:11px}
+  .hammafhoom{margin-top:6px;padding:6px 12px;background:#fff;border-radius:10px;border:1px dashed var(--firooze);font-size:14.5px}
+  .hammafhoom::before{content:"✦ هم‌مفهوم: ";color:var(--firooze);font-weight:700}
+  .mohem{display:inline-block;background:var(--zaferan);color:var(--firooze-dark);font-size:12px;font-weight:800;padding:0 10px;border-radius:10px;margin-right:4px}
+
+  /* کارگاه */
+  .kargah-sar{
+    margin:46px 0 10px;padding:16px 20px;border-radius:16px;text-align:center;
+    background:linear-gradient(135deg,var(--anar),#6e1d29);color:#fff;
+  }
+  .kargah-sar h2{font-family:"Lalezar",sans-serif;font-weight:400;font-size:28px;margin:0}
+  .kargah-sar p{text-align:center;margin:0;font-size:14px;color:var(--zaferan-light)}
+  .soal{
+    background:#fff;border-radius:16px;border:1px solid #eadfc4;margin:16px 0;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);overflow:hidden;
+  }
+  .soal-matn{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--zaferan-light)}
+  .soal-shomareh{
+    flex:none;width:34px;height:34px;border-radius:10px;background:var(--anar);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+  }
+  .soal-matn p{margin:2px 0;font-weight:700;color:var(--firooze-dark);text-align:right}
+  .pasokh{padding:12px 18px 14px;border-top:2px dashed rgba(217,154,43,.5)}
+  .pasokh::before{
+    content:"پاسخ";display:inline-block;background:var(--firooze);color:#fff;
+    font-size:12.5px;font-weight:800;padding:0 12px;border-radius:10px;margin-bottom:4px;
+  }
+  .pasokh ul{margin:4px 0;padding-right:20px}
+  .pasokh li{margin:4px 0}
+  .pasokh li::marker{color:var(--zaferan)}
+  .pasokh .nemooneh{color:var(--anar);font-weight:700}
+
+  .jadval-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:8px 0;border-radius:12px;border:1px solid #eadfc4}
+  table{width:100%;min-width:520px;border-collapse:collapse;background:#fff}
+  th{background:var(--firooze);color:#fff;padding:9px 12px;font-weight:700}
+  td{padding:9px 12px;border-top:1px solid #eadfc4;vertical-align:top}
+  td:first-child{background:var(--zaferan-light);font-weight:800;color:var(--anar);white-space:nowrap;width:110px;text-align:center}
+  td:last-child{font-size:14.5px}
+
+  footer{text-align:center;padding:20px;font-size:13.5px;background:var(--firooze-dark);color:var(--zaferan-light)}
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;z-index:10;background:var(--anar);color:#fff;border:none;
+    font-family:inherit;font-size:15px;font-weight:700;padding:12px 22px;border-radius:30px;cursor:pointer;
+    box-shadow:0 6px 18px rgba(158,43,58,.4);
+  }
+  .dokmeh-chap:hover{background:var(--firooze-dark)}
+
+  @media (max-width:768px){
+    body{font-size:16px;line-height:2.1}
+    p{text-align:right}
+    .page{margin:0;border-radius:0;box-shadow:none}
+    .navar{padding:10px 12px}
+    .navar .barchasb{display:none}
+    .bazgasht{font-size:15px;padding:9px 18px}
+    header.sar{padding:30px 14px 58px}
+    .shamseh{width:96px;height:96px;font-size:22px}
+    header.sar h1{font-size:36px}
+    .mohtava{padding:6px 12px 24px}
+    .moarefi{grid-template-columns:1fr}
+    .moarefi p{text-align:right}
+    h2.bakhsh{font-size:23px}
+    .bakhsh-sar{padding:30px 12px 12px}
+    .bakhsh-sar h3{font-size:19px}
+    .kart-tan{grid-template-columns:1fr;padding:12px}
+    .qalam{padding:10px 12px}
+    .kargah-sar h2{font-size:24px}
+    .soal-matn{padding:12px}
+    .pasokh{padding:10px 14px 12px}
+    .dokmeh-chap{left:10px;bottom:10px;font-size:14px;padding:11px 18px}
+  }
+
+  @page{size:A4;margin:10mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;box-shadow:none;border-radius:0}
+    .navar,.dokmeh-chap{display:none}
+    .mohtava{padding:0 4mm}
+    header.sar{padding:22px 10px 46px}
+    .kart{box-shadow:none;margin:28px 0}
+    .qalam,.soal{page-break-inside:avoid}
+    .jadval-wrap{overflow:visible}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+
+  /* شعر */
+  .beyt{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;
+    padding:34px 22px 18px;background:linear-gradient(180deg, var(--firooze-light), #fff);
+    border-radius:18px 18px 0 0;border-bottom:2px dashed rgba(217,154,43,.55);
+  }
+  .mesra{font-family:"Noto Naskh Arabic",serif;font-weight:700;font-size:20px;color:var(--firooze-dark);text-align:center;line-height:1.9}
+  .gol{color:var(--anar);font-size:18px}
+  .marhaleh{
+    margin:38px auto 4px;max-width:520px;text-align:center;font-weight:800;font-size:15px;
+    color:var(--anar);background:#fff;border:2px solid var(--zaferan);border-radius:30px;padding:6px 16px;
+  }
+  @media (max-width:768px){
+    .beyt{grid-template-columns:1fr;gap:2px;padding:32px 12px 14px}
+    .gol{display:none}
+    .mesra{font-size:19px}
+    .marhaleh{font-size:14.5px}
+  }
+  @media print{.kart{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">⎙ چاپ / پی‌دی‌اف</button>
+
+<div class="page">
+
+<div class="navar">
+  <a class="bazgasht" href="index.html#paye2">→ بازگشت به فهرست درس‌ها</a>
+  <span class="barchasb">فارسی و نگارش یازدهم</span>
+</div>
+
+<header class="sar">
+  <div class="shamseh">درس<br>یکم</div>
+  <h1>نیکی</h1>
+  <div class="zir">از کتاب «بوستان» · سرودهٔ <b>سعدی شیرازی</b></div>
+</header>
+
+<div class="mohtava">
+
+<div class="moarefi">
+  <div class="item">
+    <h3>❁ دربارهٔ شاعر</h3>
+    <p>مُشرف‌الدین مصلح بن عبدالله، معروف به <b>سعدی شیرازی</b>، شاعر و نویسندهٔ بزرگ سدهٔ هفتم هجری است. به او «استاد سخن» می‌گویند. دو اثر مشهورش <b>بوستان</b> (منظوم) و <b>گلستان</b> (نثر آمیخته به نظم) است.</p>
+  </div>
+  <div class="item">
+    <h3>❁ دربارهٔ اثر</h3>
+    <p><b>بوستان</b> (سعدی‌نامه) کتابی اخلاقی و تعلیمی در <b>ده باب</b> است که در قالب <b>مثنوی</b> سروده شده. این حکایت از <b>باب دوم: در احسان</b> است.</p>
+  </div>
+  <div class="item">
+    <h3>❁ حکایت در یک نگاه</h3>
+    <p>درویشی روباهی بی‌دست‌وپا را می‌بیند که از پس‌ماندهٔ شکار شیر سیر می‌شود. گمان می‌کند توکل یعنی دست از کار کشیدن و گوشه می‌نشیند تا روزی‌اش برسد. نزدیک است از گرسنگی بمیرد که ندایی می‌شنود: مثل شیر تلاش کن و به دیگران ببخش، نه اینکه مثل روباه از پس‌ماندهٔ دیگران سیر شوی.</p>
+  </div>
+</div>
+
+<h2 class="bakhsh">بررسی بیت‌به‌بیت در سه قلمرو</h2>
+<div class="naghsh">✦ ❖ ✦</div>
+
+<div class="marhaleh">بخش نخست: شگفتی درویش (بیت ۱ تا ۴)</div>
+
+<!-- بیت ۱ -->
+<div class="kart">
+  <div class="setareh">۱</div>
+  <div class="beyt"><div class="mesra">یکی روبهی دید بی‌دست و پای</div><span class="gol">❀</span><div class="mesra">فروماند در لطف و صنع خدای</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">شخصی روباهی را دید که دست و پا نداشت؛ از لطف و آفرینش خداوند شگفت‌زده و حیران ماند.</p>
+      <ul class="vajeh">
+        <li><b>روبه:</b> روباه</li>
+        <li><b>فروماندن:</b> حیران و درمانده شدن</li>
+        <li><b>صُنع:</b> آفرینش، ساختن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>مراعات نظیر:</b> «دست و پای».</li>
+        <li><b>کنایه:</b> «فروماندن» کنایه از شگفت‌زده و حیران شدن.</li>
+        <li><b>قافیه:</b> «پای» و «خدای»؛ «ی» پایانی رویِ قافیه است.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>آغاز حکایت؛ <b>شگفتی از لطف و قدرت خداوند</b> در روزی دادن به آفریدگان ناتوان.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۲ -->
+<div class="kart">
+  <div class="setareh">۲</div>
+  <div class="beyt"><div class="mesra">که چون زندگانی به سر می‌برد؟</div><span class="gol">❀</span><div class="mesra">بدین دست و پای از کجا می‌خورد؟</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">(با خود گفت:) این روباه چگونه زندگی می‌کند؟ با این دست و پای ناقص، از کجا غذا به دست می‌آورد؟</p>
+      <ul class="vajeh">
+        <li><b>چون:</b> چگونه</li>
+        <li><b>به سر بردن:</b> گذراندن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>مراعات نظیر:</b> «دست و پای».</li>
+        <li><b>کنایه:</b> «زندگانی به سر بردن» کنایه از زندگی کردن.</li>
+        <li><b>پرسش:</b> هر دو مصراع پرسشی‌اند و شگفتی درویش را نشان می‌دهند.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>کنجکاوی درویش دربارهٔ <b>راز روزی رسیدن</b> به موجود ناتوان.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۳ -->
+<div class="kart">
+  <div class="setareh">۳</div>
+  <div class="beyt"><div class="mesra">در این بود درویش شوریده‌رنگ</div><span class="gol">❀</span><div class="mesra">که شیری برآمد، شغالی به چنگ</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">درویشِ آشفته‌حال در همین فکر بود که شیری پیدا شد و شغالی را در چنگال داشت.</p>
+      <ul class="vajeh">
+        <li><b>درویش:</b> تهیدست، فقیر؛ صوفی</li>
+        <li><b>شوریده‌رنگ:</b> آشفته‌حال، پریشان</li>
+        <li><b>برآمد:</b> پیدا شد، ظاهر شد</li>
+        <li><b>چنگ:</b> چنگال، پنجه</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>مراعات نظیر:</b> «شیر، شغال، روبه» (جانوران حکایت) و «چنگ».</li>
+        <li><b>کنایه:</b> «در این بودن» کنایه از در این اندیشه بودن.</li>
+        <li><b>قافیه:</b> «رنگ» و «چنگ».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>آغاز پاسخ به پرسش درویش: <b>روزی روباه از راه شکار شیر</b> می‌رسد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۴ -->
+<div class="kart">
+  <div class="setareh">۴</div>
+  <div class="beyt"><div class="mesra">شغال نگون‌بخت را شیر خورد</div><span class="gol">❀</span><div class="mesra">بماند آنچه روباه از آن سیر خورد</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">شیر، شغالِ بدبخت را خورد و آنچه باقی ماند، روباه از آن خورد و سیر شد.</p>
+      <ul class="vajeh">
+        <li><b>نگون‌بخت:</b> بدبخت، تیره‌روز</li>
+        <li><b>سیر خوردن:</b> تا سیر شدن خوردن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>کنایه:</b> «نگون‌بخت» کنایه از بدبخت.</li>
+        <li><b>مراعات نظیر:</b> «شغال، شیر، روباه».</li>
+        <li><b>ردیف و قافیه:</b> «خورد» ردیف است؛ «شیر» و «سیر» قافیه‌اند.</li>
+        <li><b>جناس ناهمسان:</b> «شیر» و «سیر».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>خداوند <b>روزی هر موجودی را از راهی می‌رساند</b>؛ روباه ناتوان از پس‌ماندهٔ شکار شیر سیر می‌شود.</p>
+    </div>
+  </div>
+</div>
+
+<div class="marhaleh">بخش دوم: برداشت نادرست درویش (بیت ۵ تا ۹)</div>
+
+<!-- بیت ۵ -->
+<div class="kart">
+  <div class="setareh">۵</div>
+  <div class="beyt"><div class="mesra">دگر روز باز اتفاق اوفتاد</div><span class="gol">❀</span><div class="mesra">که روزی‌رسان قوت روزش بداد</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">روز بعد هم دوباره همین ماجرا پیش آمد و خداوندِ روزی‌دهنده، غذای آن روزِ روباه را رساند.</p>
+      <ul class="vajeh">
+        <li><b>دگر روز:</b> روز بعد</li>
+        <li><b>اوفتاد:</b> افتاد، پیش آمد</li>
+        <li><b>روزی‌رسان:</b> روزی‌دهنده، خداوند</li>
+        <li><b>قوت:</b> خوراک، غذا</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>جناس ناقص و اشتقاق:</b> «روز» و «روزی» (و «روزی‌رسان»).</li>
+        <li><b>تکرار:</b> «روز».</li>
+        <li><b>کنایه:</b> «روزی‌رسان» کنایه از خداوند.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>رزّاق بودن خداوند</b>؛ روزی هر روز موجودات را خدا می‌رساند.</p>
+      <div class="hammafhoom">آیهٔ «إنَّ اللهَ هُوَ الرَّزّاق» (همانا خداوند روزی‌دهنده است).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۶ -->
+<div class="kart">
+  <div class="setareh">۶</div>
+  <div class="beyt"><div class="mesra">یقین، مرد را دیده، بیننده کرد</div><span class="gol">❀</span><div class="mesra">شد و تکیه بر آفریننده کرد</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">یقین (به روزی‌رسانیِ خدا)، چشم دل آن مرد را بینا کرد؛ پس رفت و به آفریدگار توکل کرد.</p>
+      <ul class="vajeh">
+        <li><b>یقین:</b> باور قطعی، اطمینان</li>
+        <li><b>دیده:</b> چشم</li>
+        <li><b>بیننده:</b> بینا</li>
+        <li><b>شد:</b> رفت</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشخیص:</b> «یقین» مانند انسانی چشم مرد را بینا می‌کند.</li>
+        <li><b>کنایه:</b> «دیده را بیننده کردن» کنایه از آگاه کردن؛ «تکیه بر آفریننده کردن» کنایه از توکل.</li>
+        <li><b>جناس ناهمسان:</b> «بیننده» و «آفریننده» (قافیه).</li>
+        <li><b>اشتقاق:</b> «دیده» و «بیننده» (هم‌معنا و از یک خانوادهٔ معنایی).</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>درویش به روزی‌رسانی خدا <b>یقین پیدا کرد</b>، اما از آن <b>برداشتی نادرست</b> داشت: توکل را به معنای دست کشیدن از کار گرفت.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۷ -->
+<div class="kart">
+  <div class="setareh">۷</div>
+  <div class="beyt"><div class="mesra">کزین پس به کنجی نشینم چو مور</div><span class="gol">❀</span><div class="mesra">که روزی نخوردند پیلان به زور</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">(با خود گفت:) از این به بعد مانند مورچه در گوشه‌ای می‌نشینم؛ زیرا فیل‌ها هم با زور و قدرتشان روزی به دست نیاوردند (روزی را خدا می‌دهد).</p>
+      <ul class="vajeh">
+        <li><b>کزین پس:</b> که از این پس، از این به بعد</li>
+        <li><b>کنج:</b> گوشه</li>
+        <li><b>مور:</b> مورچه</li>
+        <li><b>پیل:</b> فیل</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشبیه:</b> «نشینم چو مور»؛ درویش خود را در ناتوانی به مورچه مانند کرده.</li>
+        <li><b>تضاد:</b> «مور» و «پیل» (کوچک‌ترین و بزرگ‌ترین).</li>
+        <li><b>کنایه:</b> «به کنجی نشستن» کنایه از گوشه‌نشینی و دست کشیدن از کار.</li>
+        <li><b>مراعات نظیر:</b> «مور» و «پیل».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>توکل نادرست:</b> درویش گمان می‌کند چون روزی به زور به دست نمی‌آید، پس تلاش بیهوده است.</p>
+      <div class="hammafhoom">«به زور و زر و زاری نیست روزی» (اندیشهٔ درویش).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۸ -->
+<div class="kart">
+  <div class="setareh">۸</div>
+  <div class="beyt"><div class="mesra">زنخدان فرو برد چندی به جیب</div><span class="gol">❀</span><div class="mesra">که بخشنده، روزی فرستد ز غیب</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">مدتی سر در گریبان فرو برد و گوشه گرفت، به این امید که خداوند بخشنده از عالم غیب روزی‌اش را بفرستد.</p>
+      <ul class="vajeh">
+        <li><b>زنخدان:</b> چانه</li>
+        <li><b>چندی:</b> مدتی</li>
+        <li><b>جیب:</b> گریبان، یقه</li>
+        <li><b>غیب:</b> جهان پنهان، عالم نادیدنی</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>کنایه:</b> «زنخدان به جیب فرو بردن» کنایه از گوشه‌نشینی، خاموشی و در خود فرو رفتن. <span class="mohem">مهم</span></li>
+        <li><b>کنایه:</b> «بخشنده» کنایه از خداوند.</li>
+        <li><b>مراعات نظیر:</b> «زنخدان» و «جیب».</li>
+        <li><b>قافیه:</b> «جیب» و «غیب».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>انتظار بیهودهٔ روزی بدون تلاش</b>؛ گوشه‌نشینی به گمان توکل.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۹ -->
+<div class="kart">
+  <div class="setareh">۹</div>
+  <div class="beyt"><div class="mesra">نه بیگانه تیمار خوردش نه دوست</div><span class="gol">❀</span><div class="mesra">چو چنگش، رگ و استخوان ماند و پوست</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">نه غریبه به او توجه و رسیدگی کرد و نه دوست؛ تا جایی که مانند ساز چنگ، فقط رگ و استخوان و پوستی از او باقی ماند (بسیار لاغر شد).</p>
+      <ul class="vajeh">
+        <li><b>تیمار خوردن:</b> غمخواری کردن، پرستاری و رسیدگی کردن</li>
+        <li><b>چنگ:</b> نوعی ساز زهی خمیده</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشبیه:</b> «چو چنگش رگ و استخوان ماند»؛ درویشِ لاغر و خمیده به ساز چنگ مانند شده (رگ‌ها مانند تارهای ساز).</li>
+        <li><b>کنایه:</b> «رگ و استخوان و پوست ماندن» کنایه از بسیار لاغر و ناتوان شدن.</li>
+        <li><b>تضاد:</b> «بیگانه» و «دوست».</li>
+        <li><b>مراعات نظیر:</b> «رگ، استخوان، پوست».</li>
+        <li><b>جناس تام (ایهام):</b> «چنگ» در اینجا ساز است؛ در بیت ۳ به معنای پنجه بود.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>نتیجهٔ تنبلی و توکل نادرست</b>: ناتوانی و درماندگی؛ کسی به یاری انسانِ بیکار نمی‌آید.</p>
+    </div>
+  </div>
+</div>
+
+<div class="marhaleh">بخش سوم: ندای غیبی (بیت ۱۰ تا ۱۴)</div>
+
+<!-- بیت ۱۰ -->
+<div class="kart">
+  <div class="setareh">۱۰</div>
+  <div class="beyt"><div class="mesra">چو صبرش نماند از ضعیفی و هوش</div><span class="gol">❀</span><div class="mesra">ز دیوار محرابش آمد به گوش:</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">وقتی از شدت ناتوانی، صبر و هوش و توانش از دست رفت، از دیوار محرابش (ندایی غیبی) به گوشش رسید:</p>
+      <ul class="vajeh">
+        <li><b>ضعیفی:</b> ناتوانی، ضعف</li>
+        <li><b>هوش:</b> آگاهی، توان</li>
+        <li><b>محراب:</b> جای ایستادن امام جماعت در مسجد؛ جای عبادت</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشخیص (یا مجاز):</b> سخن گفتن از «دیوار محراب»؛ منظور ندای غیبی (هاتف) است.</li>
+        <li><b>کنایه:</b> «به گوش آمدن» کنایه از شنیده شدن.</li>
+        <li><b>مراعات نظیر:</b> «هوش» و «گوش»؛ «صبر» و «ضعیفی».</li>
+        <li><b>جناس ناهمسان:</b> «هوش» و «گوش».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>در لحظهٔ درماندگی، <b>هدایت الهی</b> به سراغ درویش می‌آید تا اشتباهش را نشانش دهد.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۱ -->
+<div class="kart">
+  <div class="setareh">۱۱</div>
+  <div class="beyt"><div class="mesra">برو شیر درّنده باش، ای دغل</div><span class="gol">❀</span><div class="mesra">مینداز خود را چو روباه شل</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">ای فریبکار، برو و مانند شیرِ شکارگر، تلاشگر و توانا باش؛ خودت را مانند روباهِ فلج، ناتوان و درمانده نشان نده.</p>
+      <ul class="vajeh">
+        <li><b>دَغَل:</b> فریبکار، ناراست، حیله‌گر</li>
+        <li><b>شَل:</b> فلج، ناتوان در راه رفتن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشبیه:</b> «شیر درنده باش» (تو مانند شیر باش) و «چو روباه شل».</li>
+        <li><b>تضاد:</b> «شیر درنده» و «روباه شل» (توانایی و ناتوانی).</li>
+        <li><b>کنایه:</b> «خود را انداختن» کنایه از خود را ناتوان نشان دادن و تنبلی.</li>
+        <li><b>قافیه:</b> «دغل» و «شل».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>دعوت به تلاش و کوشش</b> و نکوهش تنبلی؛ تکیه بر دیگران به بهانهٔ توکل نوعی فریبکاری است.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۲ -->
+<div class="kart">
+  <div class="setareh">۱۲</div>
+  <div class="beyt"><div class="mesra">چنان سعی کن کز تو ماند چو شیر</div><span class="gol">❀</span><div class="mesra">چه باشی چو روبه به وامانده، سیر؟</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">آن‌قدر تلاش کن که مانند شیر، از دسترنج تو چیزی برای دیگران باقی بماند. چرا مانند روباه با پس‌ماندهٔ دیگران سیر می‌شوی؟</p>
+      <ul class="vajeh">
+        <li><b>سعی:</b> تلاش، کوشش</li>
+        <li><b>کز:</b> که از</li>
+        <li><b>وامانده:</b> باقی‌مانده، پس‌مانده</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشبیه:</b> «کز تو ماند چو شیر» و «چو روبه به وامانده سیر». <span class="mohem">مهم</span></li>
+        <li><b>تضاد:</b> «شیر» و «روبه».</li>
+        <li><b>جناس ناهمسان:</b> «شیر» و «سیر».</li>
+        <li><b>استفهام انکاری:</b> «چه باشی...؟» یعنی نباید این‌گونه باشی.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>انسان باید <b>اهل تلاش و بخشش</b> باشد، نه سربار دیگران. دست دهنده بهتر از دست گیرنده است.</p>
+      <div class="hammafhoom">سخن پیامبر (ص): «الیَدُ العُلیا خَیرٌ مِنَ الیَدِ السُّفلیٰ» (دست بالا [بخشنده] بهتر از دست پایین [گیرنده] است).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۳ -->
+<div class="kart">
+  <div class="setareh">۱۳</div>
+  <div class="beyt"><div class="mesra">بخور تا توانی به بازوی خویش</div><span class="gol">❀</span><div class="mesra">که سعیت بود در ترازوی خویش</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">تا جایی که می‌توانی، از دسترنج و تلاش خودت روزی بخور؛ زیرا تلاش تو در ترازوی اعمال خودت سنجیده و حساب می‌شود.</p>
+      <ul class="vajeh">
+        <li><b>تا توانی:</b> تا جایی که می‌توانی</li>
+        <li><b>بازو:</b> نیرو، توان</li>
+        <li><b>ترازو:</b> وسیلهٔ سنجش؛ ترازوی اعمال</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>مجاز:</b> «بازو» مجاز از تلاش و توانایی (دسترنج).</li>
+        <li><b>استعاره / تلمیح:</b> «ترازو» اشاره به میزان و ترازوی اعمال در روز قیامت.</li>
+        <li><b>جناس ناهمسان:</b> «بازو» و «ترازو».</li>
+        <li><b>ردیف:</b> «خویش».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>ارزش کار و روزی حلال از دسترنج خود</b>؛ هر کس نتیجهٔ تلاش خودش را می‌بیند.</p>
+      <div class="hammafhoom">آیهٔ «وَ أن لَیسَ لِلإنسانِ إلّا ما سَعیٰ» (برای انسان جز حاصل تلاشش نیست).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۴ -->
+<div class="kart">
+  <div class="setareh">۱۴</div>
+  <div class="beyt"><div class="mesra">بگیر ای جوان، دست درویش پیر</div><span class="gol">❀</span><div class="mesra">نه خود را بیفکن که دستم بگیر</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">ای جوان، به درویشِ پیر و ناتوان کمک کن؛ نه اینکه خودت را ناتوان نشان دهی و بگویی: «به من کمک کن».</p>
+      <ul class="vajeh">
+        <li><b>دست کسی را گرفتن:</b> یاری کردن</li>
+        <li><b>بیفکن:</b> بینداز</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>کنایه:</b> «دست کسی را گرفتن» کنایه از کمک کردن. <span class="mohem">مهم</span></li>
+        <li><b>کنایه:</b> «خود را افکندن» کنایه از خود را ناتوان نشان دادن.</li>
+        <li><b>تضاد:</b> «جوان» و «پیر».</li>
+        <li><b>تکرار و ردیف:</b> «دست» و «بگیر».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>یاری رساندن به ناتوانان</b> و پرهیز از سربار بودن؛ کسی که توان دارد، باید دستگیر دیگران باشد.</p>
+    </div>
+  </div>
+</div>
+
+<div class="marhaleh">بخش چهارم: نتیجهٔ حکایت (بیت ۱۵ تا ۱۷)</div>
+
+<!-- بیت ۱۵ -->
+<div class="kart">
+  <div class="setareh">۱۵</div>
+  <div class="beyt"><div class="mesra">خدا را بر آن بنده بخشایش است</div><span class="gol">❀</span><div class="mesra">که خلق از وجودش در آسایش است</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">خداوند به بنده‌ای رحمت و بخشش دارد که مردم از وجود او در آرامش و آسایش باشند.</p>
+      <ul class="vajeh">
+        <li><b>بخشایش:</b> رحمت، بخشش</li>
+        <li><b>خلق:</b> مردم، آفریدگان</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>ردیف و قافیه:</b> «است» ردیف؛ «بخشایش» و «آسایش» قافیه.</li>
+        <li><b>مراعات نظیر:</b> «خدا، بنده، خلق».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>خدمت به مردم، مایهٔ رحمت خداوند</b> است. (از مهم‌ترین بیت‌های درس)</p>
+      <div class="hammafhoom">«عبادت به جز خدمت خلق نیست / به تسبیح و سجاده و دلق نیست» (سعدی).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۶ -->
+<div class="kart">
+  <div class="setareh">۱۶</div>
+  <div class="beyt"><div class="mesra">کرم ورزد آن سر که مغزی در اوست</div><span class="gol">❀</span><div class="mesra">که دون‌همتانند بی‌مغز و پوست</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">کسی که خرد و اندیشه دارد، بخشندگی و جوانمردی می‌کند؛ زیرا فرومایگان مانند پوستی بی‌مغز، توخالی و بی‌ارزش‌اند.</p>
+      <ul class="vajeh">
+        <li><b>کرم ورزیدن:</b> بخشندگی کردن</li>
+        <li><b>مغز:</b> خرد، عقل؛ هستهٔ درون میوه</li>
+        <li><b>دون‌همت:</b> فرومایه، کوته‌همت</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>مجاز:</b> «سر» مجاز از انسان.</li>
+        <li><b>ایهام تناسب:</b> «مغز» به معنای «خرد» است، اما معنای دیگرش (مغزِ میوه) با «پوست» تناسب دارد.</li>
+        <li><b>تشبیه:</b> «دون‌همتان، بی‌مغز و پوست‌اند»؛ فرومایگان به پوستِ بی‌مغز مانند شده‌اند.</li>
+        <li><b>مراعات نظیر:</b> «سر، مغز، پوست».</li>
+        <li><b>تکرار:</b> «مغز».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>بخشندگی نشانهٔ خردمندی</b> است و انسان‌های فرومایه، ظاهری بی‌محتوا دارند.</p>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۱۷ -->
+<div class="kart">
+  <div class="setareh">۱۷</div>
+  <div class="beyt"><div class="mesra">کسی نیک بیند به هر دو سرای</div><span class="gol">❀</span><div class="mesra">که نیکی رساند به خلق خدای</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">کسی در دنیا و آخرت خوبی و خوشبختی می‌بیند که به مردم نیکی کند.</p>
+      <ul class="vajeh">
+        <li><b>نیک دیدن:</b> خوبی دیدن، پاداش نیک گرفتن</li>
+        <li><b>هر دو سرای:</b> دنیا و آخرت</li>
+        <li><b>خلق خدای:</b> آفریدگان خدا، مردم</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>استعاره / کنایه:</b> «هر دو سرای» استعاره از دنیا و آخرت (هر کدام به خانه‌ای مانند شده).</li>
+        <li><b>اشتقاق (هم‌خانواده):</b> «نیک» و «نیکی».</li>
+        <li><b>قافیه:</b> «سرای» و «خدای».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>نیکی به دیگران، پاداش دنیا و آخرت</b> را در پی دارد؛ پیام اصلی درس که نام «نیکی» را بر آن نهاده‌اند.</p>
+      <div class="hammafhoom">آیهٔ «هَل جَزاءُ الإحسانِ إلَّا الإحسان» و «تو نیکی می‌کن و در دجله انداز / که ایزد در بیابانت دهد باز».</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== کارگاه درس‌پژوهی ===== -->
+<div class="kargah-sar">
+  <h2>کارگاه درس‌پژوهی</h2>
+  <p>پاسخ پرسش‌های صفحهٔ ۱۲ و ۱۳ کتاب</p>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۱</span><p>معنای واژه‌های مشخص‌شده را بنویسید.</p></div>
+  <div class="pasokh">
+    <div class="jadval-wrap">
+      <table>
+        <thead><tr><th>واژه</th><th>بیت</th><th>معنا</th></tr></thead>
+        <tbody>
+          <tr><td>دغل</td><td>معیار دوستانِ دغل روز حاجت است (صائب)</td><td>ناراست، فریبکار، حیله‌گر</td></tr>
+          <tr><td>جیب</td><td>ز آینهٔ دل تافت بر موسی ز جیب (مولوی)</td><td>گریبان، یقه</td></tr>
+          <tr><td>دون‌همتی</td><td>فخری که از وسیلت دون‌همتی رسد (اوحدی)</td><td>فرومایگی، پستی همت</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۲</span><p>برای دریافت معانی واژه‌های «دست» و «سیر» با استفاده از دو روش «قرار گرفتن واژه در جمله» و «توجه به رابطه‌های معنایی»، نمونه‌های مناسب بنویسید.</p></div>
+  <div class="pasokh">
+    <div class="jadval-wrap">
+      <table>
+        <thead><tr><th>واژه</th><th>الف) قرار گرفتن در جمله</th><th>ب) رابطه‌های معنایی</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>دست</td>
+            <td>
+              دستم را شستم. (عضو بدن)<br>
+              یک دست لباس نو خرید. (مجموعه، دَست)<br>
+              در بازی، دو دست پشت سر هم برنده شد. (نوبت)
+            </td>
+            <td>
+              <b>تناسب:</b> دست و پا، دست و بازو<br>
+              <b>ترادف:</b> دست = ید
+            </td>
+          </tr>
+          <tr>
+            <td>سیر</td>
+            <td>
+              غذا خوردم و سیر شدم. (مقابل گرسنه)<br>
+              در خورش کمی سیر ریخت. (گیاه خوراکی)<br>
+              سیر ستارگان در آسمان شگفت‌انگیز است. (گردش، حرکت)<br>
+              لباس آبی سیر پوشید. (پررنگ)
+            </td>
+            <td>
+              <b>تضاد:</b> سیر ≠ گرسنه؛ سیر ≠ روشن (رنگ)<br>
+              <b>تناسب:</b> سیر و پیاز<br>
+              <b>ترادف:</b> سیر = گردش، سفر (سیر و سفر)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۳</span><p>از متن درس، دو کنایه بیابید و مفهوم آنها را بنویسید.</p></div>
+  <div class="pasokh">
+    <ul>
+      <li><b>«زنخدان فرو برد چندی به جیب»</b> (بیت ۸): کنایه از گوشه‌نشینی، خاموشی و در خود فرو رفتن.</li>
+      <li><b>«بگیر ای جوان، دست درویش پیر»</b> (بیت ۱۴): «دست کسی را گرفتن» کنایه از یاری کردن.</li>
+    </ul>
+    <p>نمونه‌های دیگر: «تکیه بر آفریننده کرد» (توکل کردن)، «به کنجی نشستن» (گوشه‌گیری)، «رگ و استخوان ماند و پوست» (بسیار لاغر شدن)، «خود را بیفکن» (خود را ناتوان نشان دادن).</p>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۴</span><p>ارکان تشبیه را در مصراع دوم بیت دوازدهم مشخص کنید. («چه باشی چو روبه به وامانده، سیر؟»)</p></div>
+  <div class="pasokh">
+    <div class="jadval-wrap">
+      <table>
+        <thead><tr><th>مشبّه</th><th>ادات تشبیه</th><th>مشبّه‌به</th><th>وجه شبه</th></tr></thead>
+        <tbody>
+          <tr><td>تو (ضمیر پنهان در «باشی»)</td><td>چو</td><td>روبه</td><td>با پس‌مانده (وامانده) سیر شدن</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۵</span><p>معنی و مفهوم بیت سیزدهم را به نثر روان بنویسید. («بخور تا توانی به بازوی خویش / که سعیت بود در ترازوی خویش»)</p></div>
+  <div class="pasokh">
+    <p><b>معنی:</b> تا جایی که می‌توانی، با نیرو و دسترنج خودت روزی به دست آور و بخور؛ زیرا تلاش و کوشش تو در ترازوی اعمال خودت به حساب می‌آید.</p>
+    <p><b>مفهوم:</b> ارزش کار و تلاش و تکیه بر دسترنج خود؛ هر کس نتیجهٔ تلاش خودش را می‌بیند.</p>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۶</span><p>درک و دریافت خود را از بیت زیر بنویسید.<br>«یقین، مرد را دیده، بیننده کرد / شد و تکیه بر آفریننده کرد»</p></div>
+  <div class="pasokh">
+    <p>درویش با دیدن روزی رسیدنِ روباه، یقین پیدا کرد که روزی‌رسان، خداست؛ این یقین درست بود. اما او از این ماجرا <b>برداشت نادرستی</b> کرد و <b>توکل را با تنبلی و دست کشیدن از کار یکی دانست</b>. او فقط روباه را دید و از شیر که با تلاش شکار می‌کرد و به دیگران هم می‌رساند، درس نگرفت. توکلِ درست یعنی <b>تلاش کردن و نتیجه را به خدا سپردن</b>.</p>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۷</span><p>برای مفهوم هر یک از سروده‌های زیر، بیتی مناسب از متن درس بیابید.</p></div>
+  <div class="pasokh">
+    <ul>
+      <li><b>«سحر دیدم درخت ارغوانی / کشیده سر به بام خسته‌جانی؛ به گوش ارغوان آهسته گفتم: / بهارت خوش که فکر دیگرانی» (مشیری):</b><br>
+      «خدا را بر آن بنده بخشایش است / که خلق از وجودش در آسایش است» (بیت ۱۵). هر دو دربارهٔ <b>اندیشیدن به دیگران و خدمت به مردم</b> است.</li>
+      <li><b>«هر که نان از عمل خویش خورد / منّت حاتم طایی نبرد» (سعدی):</b><br>
+      «بخور تا توانی به بازوی خویش / که سعیت بود در ترازوی خویش» (بیت ۱۳). هر دو دربارهٔ <b>روزی خوردن از دسترنج خود</b> است.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۸</span><p>دربارهٔ ارتباط معنایی متن درس و مَثَل «از تو حرکت، از خدا برکت» توضیح دهید.</p></div>
+  <div class="pasokh">
+    <p>این مثل می‌گوید انسان باید <b>تلاش کند</b> و آن‌گاه خداوند به تلاش او <b>برکت</b> می‌دهد. پیام درس هم همین است: درویش که گوشه‌نشینی کرد و دست از کار کشید، روزی‌ای به دستش نرسید و نزدیک بود از گرسنگی بمیرد. ندای غیبی به او گفت مانند شیر تلاش کن («چنان سعی کن کز تو ماند چو شیر»). پس <b>توکل واقعی همراه با تلاش است</b>، نه به جای آن.</p>
+  </div>
+</div>
+
+<div class="soal">
+  <div class="soal-matn"><span class="soal-shomareh">۹</span><p>(پرسش آزاد: دانش‌آموز خودش پرسشی از درس طرح می‌کند و پاسخ می‌دهد.) نمونهٔ پیشنهادی: در این حکایت، «شیر» و «روباه» نماد چه کسانی‌اند؟</p></div>
+  <div class="pasokh">
+    <p><b>شیر</b> نماد انسانِ <b>تلاشگر و بخشنده</b> است که با کوشش خود روزی به دست می‌آورد و از دسترنجش به دیگران هم می‌رسد. <b>روباه</b> نماد انسانِ <b>تنبل و سربار</b> است که از پس‌ماندهٔ تلاش دیگران زندگی می‌کند. سعدی ما را به شیر بودن فرا می‌خواند.</p>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش یازدهم · درس یکم: نیکی &nbsp;❖&nbsp; با آرزوی موفّقیت
+</footer>
+
+</div>
+</body>
+</html>

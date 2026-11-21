@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جزوهٔ ستایش فارسی یازدهم: لطف خدا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&family=Noto+Naskh+Arabic:wght@500;700&family=Lalezar&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --firooze:#0e6e73;
+    --firooze-dark:#073c40;
+    --firooze-light:#e3f2f1;
+    --zaferan:#d99a2b;
+    --zaferan-light:#fbeccb;
+    --anar:#9e2b3a;
+    --anar-light:#fbe9eb;
+    --nil:#1f3f8a;
+    --nil-light:#e8edf9;
+    --kaghaz:#fbf6ea;
+    --matn:#2a2620;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    color:var(--matn);
+    font-size:15.5px;
+    line-height:2.05;
+    background-color:#f3ead4;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23d99a2b' stroke-opacity='.28' stroke-width='1.2'%3E%3Cpath d='M40 14 L47 33 L66 40 L47 47 L40 66 L33 47 L14 40 L33 33 Z'/%3E%3Crect x='28' y='28' width='24' height='24' transform='rotate(45 40 40)'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='80' cy='0' r='8'/%3E%3Ccircle cx='0' cy='80' r='8'/%3E%3Ccircle cx='80' cy='80' r='8'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .page{
+    max-width:940px;margin:30px auto;
+    background:var(--kaghaz);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(7,60,64,.25), 0 0 0 1px rgba(217,154,43,.5);
+  }
+
+  /* ===== نوار بالا ===== */
+  .navar{
+    display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:12px 22px;background:var(--firooze-dark);
+  }
+  .bazgasht{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    color:var(--firooze-dark);background:var(--zaferan-light);
+    padding:7px 18px;border-radius:30px;font-weight:700;font-size:14.5px;
+    transition:transform .2s, background .2s;
+  }
+  .bazgasht:hover{background:#fff;transform:translateX(3px)}
+  .navar .barchasb{color:var(--zaferan-light);font-size:13.5px;opacity:.9}
+
+  /* ===== سربرگ ===== */
+  header.sar{
+    position:relative;text-align:center;
+    padding:44px 20px 70px;
+    background:
+      radial-gradient(circle at 50% 120%, rgba(217,154,43,.35), transparent 60%),
+      linear-gradient(160deg, var(--firooze) 0%, var(--firooze-dark) 100%);
+    color:#fff;
+  }
+  header.sar::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;
+    background:var(--kaghaz);
+    clip-path:polygon(0 100%,0 40%,5% 70%,10% 40%,15% 70%,20% 40%,25% 70%,30% 40%,35% 70%,40% 40%,45% 70%,50% 40%,55% 70%,60% 40%,65% 70%,70% 40%,75% 70%,80% 40%,85% 70%,90% 40%,95% 70%,100% 40%,100% 100%);
+  }
+  .shamseh{
+    width:118px;height:118px;margin:0 auto 14px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle, var(--zaferan) 0 54%, var(--zaferan-light) 55% 58%, var(--zaferan) 59% 100%);
+    box-shadow:0 0 0 6px rgba(251,236,203,.25), 0 0 0 12px rgba(251,236,203,.1);
+    font-family:"Lalezar",sans-serif;font-size:30px;color:var(--firooze-dark);
+  }
+  header.sar h1{
+    font-family:"Lalezar",sans-serif;font-weight:400;
+    font-size:46px;margin:0;color:#fff;letter-spacing:1px;
+    text-shadow:0 3px 0 rgba(0,0,0,.25);
+  }
+  header.sar .zir{
+    margin-top:6px;font-size:15px;color:var(--zaferan-light);
+  }
+  header.sar .zir b{color:#fff}
+
+  .mohtava{padding:10px 40px 30px}
+
+  /* ===== کارت‌های معرفی ===== */
+  .moarefi{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 10px;
+  }
+  .moarefi .item{
+    background:#fff;border-radius:14px;padding:14px 16px;
+    border:1px solid #eadfc4;border-top:5px solid var(--zaferan);
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+  }
+  .moarefi .item:nth-child(2){border-top-color:var(--firooze)}
+  .moarefi .item:nth-child(3){border-top-color:var(--anar)}
+  .moarefi h3{
+    margin:0 0 4px;font-size:16px;color:var(--firooze-dark);
+    display:flex;align-items:center;gap:6px;
+  }
+  .moarefi p{margin:0;font-size:14.5px;line-height:1.95;text-align:justify}
+
+  h2.bakhsh{
+    font-family:"Lalezar",sans-serif;font-weight:400;
+    text-align:center;font-size:27px;color:var(--firooze-dark);
+    margin:36px 0 6px;
+  }
+  .naghsh{text-align:center;color:var(--zaferan);letter-spacing:8px;margin-bottom:8px}
+
+  /* ===== کارت بیت ===== */
+  .kart{
+    position:relative;margin:34px 0;
+    background:#fff;border-radius:18px;
+    border:1px solid #eadfc4;
+    box-shadow:0 8px 24px rgba(7,60,64,.08);
+    page-break-inside:avoid;
+  }
+  .setareh{
+    position:absolute;top:-22px;right:50%;transform:translateX(50%);
+    width:46px;height:46px;z-index:2;
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:17px;color:var(--firooze-dark);
+  }
+  .setareh::before,.setareh::after{
+    content:"";position:absolute;inset:6px;background:var(--zaferan);
+    border:2px solid #fff;border-radius:4px;z-index:-1;
+  }
+  .setareh::after{transform:rotate(45deg)}
+
+  .beyt{
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;
+    padding:34px 22px 18px;
+    background:linear-gradient(180deg, var(--firooze-light), #fff);
+    border-radius:18px 18px 0 0;
+    border-bottom:2px dashed rgba(217,154,43,.55);
+  }
+  .mesra{
+    font-family:"Noto Naskh Arabic",serif;font-weight:700;
+    font-size:20px;color:var(--firooze-dark);text-align:center;line-height:1.9;
+  }
+  .gol{color:var(--anar);font-size:18px}
+
+  .kart-tan{
+    padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  .qalam{
+    position:relative;border-radius:12px;padding:12px 16px 12px 14px;
+    border-right:5px solid;
+  }
+  .qalam.zabani{grid-column:1 / -1;background:var(--nil-light);border-color:var(--nil)}
+  .qalam.adabi{background:var(--anar-light);border-color:var(--anar)}
+  .qalam.fekri{background:var(--firooze-light);border-color:var(--firooze)}
+  .qalam h4{
+    margin:0 0 6px;font-size:15px;font-weight:800;
+    display:inline-flex;align-items:center;gap:6px;
+  }
+  .qalam h4 i{
+    font-style:normal;width:26px;height:26px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;
+    color:#fff;font-size:13px;
+  }
+  .qalam.zabani h4{color:var(--nil)} .qalam.zabani h4 i{background:var(--nil)}
+  .qalam.adabi h4{color:var(--anar)} .qalam.adabi h4 i{background:var(--anar)}
+  .qalam.fekri h4{color:var(--firooze)} .qalam.fekri h4 i{background:var(--firooze)}
+
+  p{margin:4px 0 8px;text-align:justify}
+  .mani{
+    font-weight:600;background:#fff;border-radius:10px;padding:8px 12px;
+    border:1px solid rgba(31,63,138,.15);
+  }
+  .vajeh{
+    display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px;padding:0;list-style:none;
+  }
+  .vajeh li{
+    background:#fff;border:1px solid rgba(31,63,138,.2);border-radius:20px;
+    padding:2px 12px;font-size:14px;
+  }
+  .vajeh li b{color:var(--nil)}
+  ul.arayeh{margin:4px 0;padding-right:18px}
+  ul.arayeh li{margin:3px 0}
+  ul.arayeh li::marker{content:"◆  ";color:var(--anar);font-size:11px}
+  .hammafhoom{
+    margin-top:6px;padding:6px 12px;background:#fff;border-radius:10px;
+    border:1px dashed var(--firooze);font-size:14.5px;
+  }
+  .hammafhoom::before{content:"✦ هم‌مفهوم: ";color:var(--firooze);font-weight:700}
+  .mohem{
+    display:inline-block;background:var(--zaferan);color:var(--firooze-dark);
+    font-size:12px;font-weight:800;padding:0 10px;border-radius:10px;margin-right:4px;
+  }
+
+  /* جدول‌ها (در صورت نیاز) */
+  .jadval-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  footer{
+    text-align:center;padding:20px;font-size:13.5px;
+    background:var(--firooze-dark);color:var(--zaferan-light);
+  }
+
+  .dokmeh-chap{
+    position:fixed;left:18px;bottom:18px;z-index:10;
+    background:var(--anar);color:#fff;border:none;
+    font-family:inherit;font-size:15px;font-weight:700;
+    padding:12px 22px;border-radius:30px;cursor:pointer;
+    box-shadow:0 6px 18px rgba(158,43,58,.4);
+  }
+  .dokmeh-chap:hover{background:var(--firooze-dark)}
+
+  /* ===== موبایل ===== */
+  @media (max-width:768px){
+    body{font-size:16px;line-height:2.1}
+    p{text-align:right}
+    .page{margin:0;border-radius:0;box-shadow:none}
+    .navar{padding:10px 12px}
+    .navar .barchasb{display:none}
+    .bazgasht{font-size:15px;padding:9px 18px}
+    header.sar{padding:30px 14px 58px}
+    .shamseh{width:92px;height:92px;font-size:24px}
+    header.sar h1{font-size:36px}
+    .mohtava{padding:6px 12px 24px}
+    .moarefi{grid-template-columns:1fr}
+    .moarefi p{text-align:right}
+    h2.bakhsh{font-size:23px}
+    .beyt{grid-template-columns:1fr;gap:2px;padding:32px 12px 14px}
+    .gol{display:none}
+    .mesra{font-size:19px}
+    .kart-tan{grid-template-columns:1fr;padding:12px}
+    .qalam{padding:10px 12px}
+    .dokmeh-chap{left:10px;bottom:10px;font-size:14px;padding:11px 18px}
+  }
+
+  /* ===== چاپ ===== */
+  @page{size:A4;margin:10mm}
+  @media print{
+    body{background:#fff;font-size:12.5px;line-height:1.85}
+    .page{margin:0;max-width:none;box-shadow:none;border-radius:0}
+    .navar,.dokmeh-chap{display:none}
+    .mohtava{padding:0 4mm}
+    header.sar{padding:22px 10px 46px}
+    .kart{box-shadow:none;margin:26px 0}
+    .jadval-wrap{overflow:visible}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<button class="dokmeh-chap" onclick="try{window.print()}catch(e){}">⎙ چاپ / پی‌دی‌اف</button>
+
+<div class="page">
+
+<div class="navar">
+  <a class="bazgasht" href="index.html#paye2">→ بازگشت به فهرست درس‌ها</a>
+  <span class="barchasb">فارسی و نگارش یازدهم</span>
+</div>
+
+<header class="sar">
+  <div class="shamseh">ستایش</div>
+  <h1>لطف خدا</h1>
+  <div class="zir">از منظومهٔ «فرهاد و شیرین» · سرودهٔ <b>وحشی بافقی</b></div>
+</header>
+
+<div class="mohtava">
+
+<div class="moarefi">
+  <div class="item">
+    <h3>❁ دربارهٔ شاعر</h3>
+    <p>کمال‌الدین <b>وحشی بافقی</b>، شاعر سدهٔ دهم هجری و دورهٔ صفوی، اهل بافق یزد است و از شاعران نامدار <b>مکتب وقوع</b> به شمار می‌آید؛ شعرش ساده، صمیمی و نزدیک به حال واقعی عاشق است.</p>
+  </div>
+  <div class="item">
+    <h3>❁ دربارهٔ اثر</h3>
+    <p>این ابیات آغاز منظومهٔ <b>«فرهاد و شیرین»</b> است. وحشی آن را ناتمام گذاشت و <b>وصال شیرازی</b> کاملش کرد. قالب شعر <b>مثنوی</b> است؛ یعنی هر بیت قافیهٔ جداگانه دارد.</p>
+  </div>
+  <div class="item">
+    <h3>❁ شعر در یک نگاه</h3>
+    <p>عزت و خواری به خواست خداست، بخششش همیشگی و نظم جهانش دقیق است. با لطف او بدبختی به خوشبختی بدل می‌شود و بی‌توفیقش تدبیری کارساز نیست. اوج دانایی، اعتراف به نادانی است.</p>
+  </div>
+</div>
+
+<h2 class="bakhsh">بررسی بیت‌به‌بیت در سه قلمرو</h2>
+<div class="naghsh">✦ ❖ ✦</div>
+
+<!-- بیت ۱ -->
+<div class="kart">
+  <div class="setareh">۱</div>
+  <div class="beyt"><div class="mesra">به نام چاشنی‌بخش زبان‌ها</div><span class="gol">❀</span><div class="mesra">حلاوت‌سنج معنی در بیان‌ها</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">به نام خدایی آغاز می‌کنم که به زبان‌ها شیرینی و لذت سخن گفتن می‌بخشد و شیرینی و زیبایی معنا را در سخن‌ها می‌سنجد و پدید می‌آورد.</p>
+      <ul class="vajeh">
+        <li><b>چاشنی:</b> مزه، طعم</li>
+        <li><b>چاشنی‌بخش:</b> مزه‌دهنده</li>
+        <li><b>حلاوت:</b> شیرینی</li>
+        <li><b>حلاوت‌سنج:</b> سنجندهٔ شیرینی</li>
+        <li><b>بیان:</b> سخن، گفتار</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>حس‌آمیزی:</b> «حلاوتِ معنی»؛ شیرینی که مربوط به حس چشایی است، به «معنی» نسبت داده شده.</li>
+        <li><b>مراعات نظیر:</b> «چاشنی، حلاوت، زبان» (همه مربوط به چشیدن).</li>
+        <li><b>ایهام تناسب:</b> «زبان» به معنای «سخن» است، اما معنای دیگرش (عضو چشایی) با «چاشنی» و «حلاوت» تناسب دارد.</li>
+        <li><b>جناس ناهمسان:</b> «زبان‌ها» و «بیان‌ها».</li>
+        <li><b>تلمیح:</b> آغاز با «به نام» یادآور «بسم الله» است.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p>شروع سخن با نام خدا؛ <b>خداوند سرچشمهٔ زیبایی و شیرینی سخن</b> است و توانایی گفتار را او به انسان بخشیده است.</p>
+      <div class="hammafhoom">آیهٔ «عَلَّمَهُ البَیان» (به انسان سخن گفتن آموخت).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۲ -->
+<div class="kart">
+  <div class="setareh">۲</div>
+  <div class="beyt"><div class="mesra">بلند آن سر که او خواهد بلندش</div><span class="gol">❀</span><div class="mesra">نژند آن دل که او خواهد نژندش</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">سربلند و ارجمند کسی است که خدا بخواهد او را سربلند کند، و اندوهگین و خوار کسی است که خدا بخواهد او را اندوهگین و خوار سازد.</p>
+      <ul class="vajeh">
+        <li><b>نَژَند:</b> اندوهگین، افسرده، خوار و زبون</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>کنایه:</b> «بلند بودن سر» کنایه از عزّت و سربلندی.</li>
+        <li><b>تضاد:</b> «بلند» و «نژند» (عزت و خواری).</li>
+        <li><b>موازنه:</b> دو مصراع ساختاری یکسان دارند.</li>
+        <li><b>تکرار:</b> «بلند»، «نژند»، «آن»، «او خواهد».</li>
+        <li><b>مجاز:</b> «سر» و «دل» مجاز از کلّ وجود انسان.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>عزّت و ذلّت انسان به خواست خداست.</b></p>
+      <div class="hammafhoom">آیهٔ «تُعِزُّ مَن تَشاءُ وَ تُذِلُّ مَن تَشاء» (هر که را بخواهی عزّت می‌دهی و هر که را بخواهی خوار می‌کنی).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۳ -->
+<div class="kart">
+  <div class="setareh">۳</div>
+  <div class="beyt"><div class="mesra">در نابستهٔ احسان گشاده‌ست</div><span class="gol">❀</span><div class="mesra">به هر کس آنچه می‌بایست داده‌ست</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">خداوند درِ بخشش و نیکی خود را که هرگز بسته نمی‌شود، گشوده است و به هر کس آنچه را که لازم و شایسته‌اش بوده، بخشیده است.</p>
+      <ul class="vajeh">
+        <li><b>نابسته:</b> باز، گشوده</li>
+        <li><b>احسان:</b> نیکی کردن، بخشش</li>
+        <li><b>گشاده‌ست:</b> گشوده است</li>
+        <li><b>می‌بایست:</b> لازم بود، شایسته بود</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>اضافهٔ استعاری:</b> «درِ احسان»؛ احسان به خانه‌ای مانند شده که در دارد.</li>
+        <li><b>کنایه:</b> «در نابسته گشادن» کنایه از بخشش همیشگی و بی‌دریغ.</li>
+        <li><b>تضاد:</b> «نابسته» و «گشاده» از نظر ظاهر واژه (بستن و گشودن).</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «س» و «ت».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>بخشش همیشگی و عدالت خداوند:</b> لطف خدا بی‌پایان است و به هر کس به اندازهٔ نیاز و شایستگی‌اش می‌بخشد.</p>
+      <div class="hammafhoom">آیهٔ «أعطیٰ کُلَّ شَیءٍ خَلقَه» (به هر چیزی آنچه لازمهٔ آفرینشش بود، بخشید).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۴ -->
+<div class="kart">
+  <div class="setareh">۴</div>
+  <div class="beyt"><div class="mesra">به ترتیبی نهاده وضع عالم</div><span class="gol">❀</span><div class="mesra">که نی یک موی باشد بیش و نی کم</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">خداوند جهان را با چنان نظم و ترتیبی بنا کرده است که حتی به اندازهٔ یک تار مو، نه چیزی زیادتر از اندازه است و نه کمتر.</p>
+      <ul class="vajeh">
+        <li><b>وضع:</b> نهادن، بنا کردن</li>
+        <li><b>نی:</b> نه</li>
+        <li><b>عالم:</b> جهان</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>کنایه:</b> «یک موی بیش و کم نبودن» کنایه از دقت و نظم کامل.</li>
+        <li><b>تضاد:</b> «بیش» و «کم».</li>
+        <li><b>اغراق:</b> در بیان دقت نظم جهان به اندازهٔ «یک موی».</li>
+        <li><b>تکرار:</b> «نی».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>نظم دقیق و حکیمانهٔ آفرینش</b> (نظام احسن): هر چیز در جهان سر جای خودش و به اندازهٔ درست آفریده شده است.</p>
+      <div class="hammafhoom">آیهٔ «إنّا کُلَّ شَیءٍ خَلَقناهُ بِقَدَر» (ما هر چیز را به اندازه آفریدیم).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۵ -->
+<div class="kart">
+  <div class="setareh">۵</div>
+  <div class="beyt"><div class="mesra">اگر لطفش قرین حال گردد</div><span class="gol">❀</span><div class="mesra">همه ادبارها اقبال گردد</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">اگر لطف و مهربانی خداوند همراه زندگی کسی شود، همهٔ بدبختی‌ها و ناکامی‌هایش به خوشبختی و کامیابی تبدیل می‌شود.</p>
+      <ul class="vajeh">
+        <li><b>قرین:</b> همراه، همنشین</li>
+        <li><b>اِدبار:</b> پشت کردن، بدبختی</li>
+        <li><b>اِقبال:</b> روی آوردن، خوشبختی</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تضاد:</b> «ادبار» و «اقبال» <span class="mohem">مهم</span></li>
+        <li><b>کنایه:</b> «قرین حال گشتن» کنایه از همراه و یاور شدن.</li>
+        <li><b>ردیف و قافیه:</b> «گردد» ردیف است؛ «حال» و «اقبال» قافیه‌اند.</li>
+        <li><b>واج‌آرایی:</b> تکرار صامت «ل».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>لطف خدا دگرگون‌کنندهٔ سرنوشت است</b>؛ با عنایت او، بدی‌ها به خوبی و ناکامی به کامیابی تبدیل می‌شود.</p>
+      <div class="hammafhoom">آیهٔ «یُبَدِّلُ اللهُ سَیِّئاتِهِم حَسَنات» (خداوند بدی‌هایشان را به نیکی تبدیل می‌کند).</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۶ -->
+<div class="kart">
+  <div class="setareh">۶</div>
+  <div class="beyt"><div class="mesra">وگر توفیق او یک سو نهد پای</div><span class="gol">❀</span><div class="mesra">نه از تدبیر کار آید نه از رای</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">و اگر یاری و توفیق خداوند از کسی دور شود و همراهش نباشد، نه چاره‌اندیشی او کاری از پیش می‌برد و نه فکر و اندیشه‌اش.</p>
+      <ul class="vajeh">
+        <li><b>توفیق:</b> یاری خدا برای رسیدن به خیر</li>
+        <li><b>تدبیر:</b> چاره‌اندیشی</li>
+        <li><b>رای:</b> اندیشه، فکر</li>
+        <li><b>کار آمدن:</b> سودمند بودن</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تشخیص (جان‌بخشی):</b> برای «توفیق» پا در نظر گرفته شده است.</li>
+        <li><b>کنایه:</b> «یک سو نهادن پای» کنایه از دوری کردن و همراه نبودن.</li>
+        <li><b>مراعات نظیر:</b> «تدبیر» و «رای».</li>
+        <li><b>تکرار:</b> «نه» و «از».</li>
+        <li><b>تقابل معنایی</b> با بیت پیشین: بیت ۵ از همراهی لطف خدا و بیت ۶ از دوری توفیق او سخن می‌گوید.</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>بی‌اثر بودن تدبیر انسان بدون توفیق الهی</b>؛ تلاش و فکر انسان تنها با خواست و یاری خدا به نتیجه می‌رسد.</p>
+      <div class="hammafhoom">«چو تیره شود مرد را روزگار / همه آن کند کِش نیاید به کار» و آیهٔ «وَ ما تَوفیقی إلّا بِالله».</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۷ -->
+<div class="kart">
+  <div class="setareh">۷</div>
+  <div class="beyt"><div class="mesra">خرد را گر نبخشد روشنایی</div><span class="gol">❀</span><div class="mesra">بماند تا ابد در تیره‌رایی</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">اگر خداوند به عقل، روشنی و آگاهی نبخشد، عقل تا همیشه در گمراهی و نادانی باقی می‌ماند.</p>
+      <ul class="vajeh">
+        <li><b>خرد:</b> عقل</li>
+        <li><b>ابد:</b> همیشه، زمان بی‌پایان</li>
+        <li><b>تیره‌رایی:</b> تاریک‌اندیشی، گمراهی</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>تضاد:</b> «روشنایی» و «تیره».</li>
+        <li><b>استعاره:</b> «روشنایی» استعاره از آگاهی و هدایت؛ «تیرگی» استعاره از نادانی و گمراهی.</li>
+        <li><b>تشخیص:</b> عقل مانند انسانی است که در تاریکی «می‌ماند».</li>
+        <li><b>قافیه:</b> «روشنایی» و «تیره‌رایی».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>عقل انسان بدون هدایت الهی ناتوان است</b> و به حقیقت نمی‌رسد؛ روشنی عقل از خداست.</p>
+      <div class="hammafhoom">آیهٔ «اللهُ وَلِیُّ الَّذینَ آمَنوا یُخرِجُهُم مِنَ الظُّلُماتِ إلَی النّور».</div>
+    </div>
+  </div>
+</div>
+
+<!-- بیت ۸ -->
+<div class="kart">
+  <div class="setareh">۸</div>
+  <div class="beyt"><div class="mesra">کمال عقل آن باشد در این راه</div><span class="gol">❀</span><div class="mesra">که گوید نیستم از هیچ آگاه</div></div>
+  <div class="kart-tan">
+    <div class="qalam zabani">
+      <h4><i>ز</i>قلمرو زبانی</h4>
+      <p class="mani">نهایت و اوج دانایی عقل در راه شناخت خداوند این است که اعتراف کند از هیچ چیز آگاه نیست.</p>
+      <ul class="vajeh">
+        <li><b>کمال:</b> نهایت، اوج</li>
+        <li><b>راه:</b> مسیر شناخت خدا</li>
+      </ul>
+    </div>
+    <div class="qalam adabi">
+      <h4><i>ا</i>قلمرو ادبی</h4>
+      <ul class="arayeh">
+        <li><b>متناقض‌نما (پارادوکس):</b> کمالِ عقل در اعتراف به نادانی است. <span class="mohem">مهم</span></li>
+        <li><b>استعاره:</b> «راه» استعاره از مسیر خداشناسی.</li>
+        <li><b>تشخیص:</b> عقل سخن می‌گوید («گوید»).</li>
+        <li><b>قافیه:</b> «راه» و «آگاه».</li>
+      </ul>
+    </div>
+    <div class="qalam fekri">
+      <h4><i>ف</i>قلمرو فکری</h4>
+      <p><b>اعتراف به ناتوانی عقل در شناخت کامل خداوند</b>؛ دانای واقعی کسی است که به محدود بودن دانش خود آگاه باشد. <span class="mohem">مهم‌ترین بیت</span></p>
+      <div class="hammafhoom">«تا بدانجا رسید دانش من / که بدانم همی که نادانم» و سخن پیامبر (ص): «ما عَرَفناکَ حَقَّ مَعرِفَتِک».</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  جزوهٔ آموزشی فارسی و نگارش یازدهم · ستایش: لطف خدا &nbsp;❖&nbsp; با آرزوی موفّقیت
+</footer>
+
+</div>
+</body>
+</html>
